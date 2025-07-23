@@ -128,7 +128,7 @@ throw e;}
 		 */
 	}
 	public void waitForVisibiltyofElementLocated(WebElement ele, int time,String Objname) throws Exception {
-		try {
+		//try {
 
 		/*	wait = new WebDriverWait(driver, time);
 			wait.until(ExpectedConditions.visibilityOf(ele));
@@ -138,9 +138,9 @@ throw e;}
 			mybasePagelog.error(Objname + " timeout exception");
 			throw e;
 		}*/
-	}
+	//}
 
-	public void waitForclickable(WebElement ele, int time, String Objname) throws Exception {
+	//public void waitForclickable(WebElement ele, int time, String Objname) throws Exception {
 		/*
 		 * try {
 		 * 
@@ -166,7 +166,7 @@ throw e;}
 		mybasePagelog.info(objectName + " is waited for visibility using fluent wait");
 		reportlog.logTestInfo(objectName + " is waited for visibility using fluent wait");*/
 	}
-	public void elementSendText(WebElement ele, String info, String objname) {
+	//public void elementSendText(WebElement ele, String info, String objname) {
 		/*try {
 			assertEquals(true, ele.isEnabled());
 			ele.click();
@@ -178,11 +178,12 @@ throw e;}
 			mybasePagelog.info(objname + "Is displayed  in textarea");
 			reportlog.logTestInfo(objname + "Is displayed  in textarea");
 		}catch(AssertionError e) {
+		
 			mybasePagelog.error(objname + " is not enabled :Please  check");
 			mybasePagelog.error(objname + "Is not entered  in textarea");
 
 	throw e;*/
-		}}
+	//	}}
 
 	public void clickElement(WebElement ele, String objectName) {
 		try {
@@ -413,11 +414,11 @@ throw e;
 			// after trimming whitespace");
 
 			mybasePagelog.info("Actual value " + actvalue + " match the expected value" + expvalue);
-			reportlog.logTestwithPassed("Actual value " + actvalue + " match the expected value" + expvalue);
+	//		reportlog.logTestwithPassed("Actual value " + actvalue + " match the expected value" + expvalue);
 		} catch (Exception e) {
 
 			mybasePagelog.error("Actual value " + actvalue + " do not  match the expected value" + expvalue);
-			reportlog.logTestwithFailed("Actual value " + actvalue + " do not  match the expected value" + expvalue);
+//			reportlog.logTestwithFailed("Actual value " + actvalue + " do not  match the expected value" + expvalue);
 		}
 	}
 
