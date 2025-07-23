@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-22T09:20:42 PDT" name="Default suite" finished-at="2025-07-22T09:21:09 PDT" duration-ms="26607">
+    <groups>
+    </groups>
+    <test started-at="2025-07-22T09:20:42 PDT" name="Default test" finished-at="2025-07-22T09:21:09 PDT" duration-ms="26607">
+      <class name="com.group3.CRMpages.AddContactsPage">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.group3.CRMpages.AddContactsPage@7cc0cdad]" started-at="2025-07-22T09:20:43 PDT" name="launchApp" finished-at="2025-07-22T09:20:52 PDT" duration-ms="9509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="login()[pri:0, instance:com.group3.CRMpages.AddContactsPage@7cc0cdad]" started-at="2025-07-22T09:20:52 PDT" name="login" finished-at="2025-07-22T09:21:09 PDT" duration-ms="16665" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.group3.CRMpages.AddContactsPage@7cc0cdad]" started-at="2025-07-22T09:21:09 PDT" name="tearDown" finished-at="2025-07-22T09:21:09 PDT" duration-ms="313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.group3.CRMpages.AddContactsPage -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
