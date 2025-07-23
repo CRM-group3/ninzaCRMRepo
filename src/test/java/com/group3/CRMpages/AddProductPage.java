@@ -14,6 +14,9 @@ public class AddProductPage {
 	
 	@FindBy(xpath="//a[text()=\"Products\"]")
 	public WebElement productsPage;
+	
+	@FindBy(xpath="//button[@class='btn btn-info']")
+	public WebElement addProduct;
 
 	
 	
