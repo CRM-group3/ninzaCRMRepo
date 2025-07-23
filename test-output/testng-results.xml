@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-22T20:58:27 PDT" name="Automation" finished-at="2025-07-22T20:58:27 PDT" duration-ms="336">
+  <suite started-at="2025-07-23T09:48:47 PDT" name="Default suite" finished-at="2025-07-23T09:48:47 PDT" duration-ms="50">
     <groups>
     </groups>
-    <test started-at="2025-07-22T20:58:27 PDT" name="OpportunityTest" finished-at="2025-07-22T20:58:27 PDT" duration-ms="336">
+    <test started-at="2025-07-23T09:48:47 PDT" name="Default test" finished-at="2025-07-23T09:48:47 PDT" duration-ms="50">
       <class name="com.group3.CRMtests.OpportunityTest">
-        <test-method signature="test()[pri:0, instance:com.group3.CRMtests.OpportunityTest@73a1e9a9]" started-at="2025-07-22T20:58:27 PDT" name="test" finished-at="2025-07-22T20:58:27 PDT" duration-ms="262" status="PASS">
+        <test-method signature="test()[pri:0, instance:com.group3.CRMtests.OpportunityTest@6302bbb1]" started-at="2025-07-23T09:48:47 PDT" name="test" finished-at="2025-07-23T09:48:47 PDT" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
       </class> <!-- com.group3.CRMtests.OpportunityTest -->
-    </test> <!-- OpportunityTest -->
-  </suite> <!-- Automation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
