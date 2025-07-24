@@ -2,12 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
+  <suite started-at="2025-07-23T09:53:07 PDT" name="Automation" finished-at="2025-07-23T09:53:07 PDT" duration-ms="338">
+=======
   <suite started-at="2025-07-23T09:48:47 PDT" name="Default suite" finished-at="2025-07-23T09:48:47 PDT" duration-ms="50">
+>>>>>>> branch 'main' of https://github.com/CRM-group3/ninzaCRMRepo.git
     <groups>
     </groups>
+<<<<<<< HEAD
+    <test started-at="2025-07-23T09:53:07 PDT" name="OpportunityTest" finished-at="2025-07-23T09:53:07 PDT" duration-ms="338">
+=======
     <test started-at="2025-07-23T09:48:47 PDT" name="Default test" finished-at="2025-07-23T09:48:47 PDT" duration-ms="50">
+>>>>>>> branch 'main' of https://github.com/CRM-group3/ninzaCRMRepo.git
       <class name="com.group3.CRMtests.OpportunityTest">
+<<<<<<< HEAD
+        <test-method signature="test()[pri:0, instance:com.group3.CRMtests.OpportunityTest@2d901eb0]" started-at="2025-07-23T09:53:07 PDT" name="test" finished-at="2025-07-23T09:53:07 PDT" duration-ms="301" status="PASS">
+=======
         <test-method signature="test()[pri:0, instance:com.group3.CRMtests.OpportunityTest@6302bbb1]" started-at="2025-07-23T09:48:47 PDT" name="test" finished-at="2025-07-23T09:48:47 PDT" duration-ms="14" status="PASS">
+>>>>>>> branch 'main' of https://github.com/CRM-group3/ninzaCRMRepo.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
