@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-23T09:48:47 PDT" name="Default suite" finished-at="2025-07-23T09:48:47 PDT" duration-ms="50">
+  <suite started-at="2025-07-24T09:22:41 PDT" name="Default suite" finished-at="2025-07-24T09:22:52 PDT" duration-ms="10484">
     <groups>
     </groups>
-    <test started-at="2025-07-23T09:48:47 PDT" name="Default test" finished-at="2025-07-23T09:48:47 PDT" duration-ms="50">
-      <class name="com.group3.CRMtests.OpportunityTest">
-        <test-method signature="test()[pri:0, instance:com.group3.CRMtests.OpportunityTest@6302bbb1]" started-at="2025-07-23T09:48:47 PDT" name="test" finished-at="2025-07-23T09:48:47 PDT" duration-ms="14" status="PASS">
+    <test started-at="2025-07-24T09:22:41 PDT" name="Default test" finished-at="2025-07-24T09:22:52 PDT" duration-ms="10484">
+      <class name="com.group3.CRMtests.LoginTest">
+        <test-method signature="login()[pri:0, instance:com.group3.CRMtests.LoginTest@1ed4ae0f]" started-at="2025-07-24T09:22:41 PDT" name="login" finished-at="2025-07-24T09:22:52 PDT" duration-ms="10382" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- com.group3.CRMtests.OpportunityTest -->
+        </test-method> <!-- login -->
+      </class> <!-- com.group3.CRMtests.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
