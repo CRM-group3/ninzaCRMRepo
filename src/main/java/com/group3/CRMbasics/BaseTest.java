@@ -34,9 +34,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 //import com.google.common.io.Files;
 
 
-
-
-
 public class BaseTest {
 	
 WebDriver driver;
@@ -62,6 +59,7 @@ WebDriver driver;
 		driver.close();
 		driver = null;
 	}
+	
 ////	--------------------------------------
 //	//protected static WebDriver driver = null;
 //	//protected ExtentUtility reportlog = ExtentUtility.getinstance();
