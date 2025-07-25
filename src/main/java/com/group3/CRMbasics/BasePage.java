@@ -69,6 +69,8 @@ public class BasePage {
 WebDriver driver;
 public ExtentReports reportlog = ExtentManager.getInstance();
 protected Actions action;
+public ExtentReports reportlog = ExtentManager.getInstance();
+protected Actions action;
 	
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
@@ -651,11 +653,16 @@ protected Actions action;
 		action.moveToElement(ele, 10, 10).click().build().perform();
 		Logs.info("Cursor hovered to the desired element");
 		ExtentManager.logTestInfo("Cursor hovered to the desired element");
+		action.moveToElement(ele, 10, 10).click().build().perform();
+		Logs.info("Cursor hovered to the desired element");
+		ExtentManager.logTestInfo("Cursor hovered to the desired element");
 	}
 
 	public void ContextClickOnElement(WebElement ele, String objName) {
 		Actions action = new Actions(driver);
 		action.contextClick(ele).build().perform();
+		Logs.info("right click persormed on web element " + objName);
+		ExtentManager.logTestInfo("right click persormed on web element " + objName);
 		Logs.info("right click persormed on web element " + objName);
 		ExtentManager.logTestInfo("right click persormed on web element " + objName);
 	}
@@ -664,10 +671,14 @@ protected Actions action;
 		action = new Actions(driver);
 		Logs.info("Action object created");
 		ExtentManager.logTestInfo("Action object created");		
+		Logs.info("Action object created");
+		ExtentManager.logTestInfo("Action object created");		
 	}
 
 	public void actionDragandDropCall(WebElement ele1, WebElement ele2) {
 		action.dragAndDrop(ele1, ele2).build().perform();
+		Logs.info("Dragand drop action is performed successfully....");
+		ExtentManager.logTestInfo("Dragand drop action is performed successfully.");
 		Logs.info("Dragand drop action is performed successfully....");
 		ExtentManager.logTestInfo("Dragand drop action is performed successfully.");
 		;
@@ -681,6 +692,8 @@ protected Actions action;
 		String str = tooltipele.getText();
 		Logs.info("tooltiptext ---> " + str);
 		ExtentManager.logTestInfo("tooltiptext ---> " + str);
+		Logs.info("tooltiptext ---> " + str);
+		ExtentManager.logTestInfo("tooltiptext ---> " + str);
 	}
 
 	public void screenshotWebElement(WebElement ele, String filepath) {
@@ -690,10 +703,12 @@ protected Actions action;
 		try {
 			Files.copy(srcFile, descFile);
 			Logs.info("captures the screenshot");
+			Logs.info("captures the screenshot");
 			//reportlog.logTestInfo("captures the screenshot");
 
 		} catch (IOException e) {
 
+			Logs.error("Error while capturing  the screenshot" + e.getMessage());
 			Logs.error("Error while capturing  the screenshot" + e.getMessage());
 
 		}
@@ -708,6 +723,8 @@ protected Actions action;
 
 			Logs.info("Actual value " + actvalue + " match the expected value" + expvalue);
 			ExtentManager.logTestwithPassed("Actual value " + actvalue + " match the expected value" + expvalue);
+			Logs.info("Actual value " + actvalue + " match the expected value" + expvalue);
+			ExtentManager.logTestwithPassed("Actual value " + actvalue + " match the expected value" + expvalue);
 		} catch (Exception e) {
 
 			Logs.error("Actual value " + actvalue + " do not  match the expected value" + expvalue);
@@ -715,5 +732,9 @@ protected Actions action;
 		}
 	}	
 >>>>>>> Stashed changes
+			Logs.error("Actual value " + actvalue + " do not  match the expected value" + expvalue);
+			ExtentManager.logTestwithFailed("Actual value " + actvalue + " do not  match the expected value" + expvalue);
+		}
+	}	
 	
 }
