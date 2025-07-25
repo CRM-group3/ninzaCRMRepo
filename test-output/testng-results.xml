@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-23T15:03:21 PDT" name="Default suite" finished-at="2025-07-23T15:03:21 PDT" duration-ms="58">
+    <groups>
+    </groups>
+    <test started-at="2025-07-23T15:03:21 PDT" name="Default test" finished-at="2025-07-23T15:03:21 PDT" duration-ms="58">
+      <class name="com.group3.CRMtests.OpportunityTest">
+        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.OpportunityTest@5bf0d49]" started-at="2025-07-23T15:03:21 PDT" name="setUpBeforeMethod" finished-at="2025-07-23T15:03:21 PDT" duration-ms="15" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeMethod -->
+        <test-method signature="test()[pri:0, instance:com.group3.CRMtests.OpportunityTest@5bf0d49]" started-at="2025-07-23T15:03:21 PDT" name="test" finished-at="2025-07-23T15:03:21 PDT" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- com.group3.CRMtests.OpportunityTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

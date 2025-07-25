@@ -42,22 +42,48 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+<<<<<<< Updated upstream
+=======
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
+import org.testng.asserts.SoftAssert;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.io.Files;
+//import com.salesforce.utility.ExtentUtility;
+import com.group3.CRMlistners.ExtentManager;
+import com.group3.CRMlistners.ExtentTestManager;
+import com.group3.CRMlistners.TestListner;
+import com.group3.CRMlogs.Logs;
+
+import com.group3.CRMutilities.ScreenShots;
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+=======
+>>>>>>> stash
 
 //@Listeners(com.salesforce.utility.SalesforceListenerUtility.class)
 
 
 public class BasePage {
-WebDriver driver;
-	
+	WebDriver driver;
+	WebDriverWait wait;
+	ExtentTestManager test;
+	public static ExtentTest testlog;
+
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		//this.test = ExtentTestManager.getTest();
 	}
-	
+
 	public void waitForElement(WebElement element, Duration time) {
-		WebDriverWait wait = new WebDriverWait(driver, time);
+		wait = new WebDriverWait(driver, time);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
+<<<<<<< Updated upstream
 //	//----------------------------------------------------------------------------------
 //	
 //	
@@ -621,4 +647,118 @@ WebDriver driver;
 //		
 //	}
 	
+=======
+	//----------------------------------------------------------------------------------
+
+
+	//protected Wait<WebDriver> wait = null;
+	protected Logger mybasePagelog = LogManager.getLogger();
+	protected ExtentReports reportlog = ExtentManager.getInstance();
+	TestListner tstListner=new TestListner();
+	protected Alert alert;
+	protected Actions action;
+
+
+	public void logoutAccount(WebElement accountele, WebElement logoutele) throws InterruptedException {
+
+		accountele.click();
+		Thread.sleep(1000);
+		logoutele.click();
+	}
+
+	public void clickbutton(WebElement ele, String objname) {
+		try {
+			assertEquals(true, ele.isEnabled());
+			ele.click();
+			Logs.info(objname + "Is enabled and clicked");
+			ExtentManager.logTestInfo(objname + "Is enabled and clicked");
+		}catch(AssertionError e) {
+			Logs.error(objname + " is not clickable Please check");
+			throw e;}
+
+	}
+
+	public void waitForVisibilty(WebElement ele, Duration time, String Objname) throws Exception {
+
+		try {
+
+			wait = new WebDriverWait(driver, time);
+			wait.until(ExpectedConditions.visibilityOf(ele));
+			Logs.info(Objname + " IS WAITED FOR VISIBLITY");
+			ExtentManager.logTestInfo(Objname +" IS WAITED FOR VISIBLITY"); 
+		} 
+		catch (Exception e) {
+			Logs.error(Objname + " timeout exception"); throw e; }
+
+	}
+
+	public void waitForVisibiltyofElementLocated(By ele, Duration time, String Objname) throws Exception {
+
+		try {
+
+			wait = new WebDriverWait(driver, time);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(ele));
+			Logs.info(Objname +" IS WAITED FOR VISIBLITY OF ELEMENT TO BE LOCATED");
+			ExtentManager.logTestInfo(Objname +" IS WAITED FOR VISIBLITY OF ELEMENT TO BE LOCATED"); 
+		}
+		catch (Exception e) {
+			Logs.error(Objname + " timeout exception"); throw e; }
+
+	}
+
+	public void waitForVisibiltyofElementLocated(WebElement ele, Duration time,String Objname) throws Exception {
+		try {
+
+			wait = new WebDriverWait(driver, time);
+			wait.until(ExpectedConditions.visibilityOf(ele));
+			Logs.info(Objname + " IS WAITED FOR VISIBLITY OF ELEMENT TO BE LOCATED");
+			ExtentManager.logTestInfo(Objname + " IS WAITED FOR VISIBLITY OF ELEMENT TO BE LOCATED");
+		} catch (Exception e) {
+			Logs.error(Objname + " timeout exception");
+			throw e;
+		}
+	}
+
+	public void waitForclickable(WebElement ele, Duration time, String Objname) throws Exception {
+
+		try {
+
+			Logs.info(Objname + " IS WAITED FOR clickable"); 
+			wait = new  WebDriverWait(driver,time);//time is in seconds
+			wait.until(ExpectedConditions.elementToBeClickable(ele)); 
+		}
+		catch (Exception e) 
+		{ Logs.error(Objname +" did not become visible within the specified time" + e.getMessage());
+		ExtentManager.logTestInfo(Objname + " did not become visible within the specified time"); 
+		throw e; }
+
+	}
+
+	public void waitForVisibilityusingFluentWait(WebElement ele, int time, int pollingtime, String objectName) {
+		try {
+			Logs.info(objectName + " IS WAITED FOR Visibility");
+
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+		wait.withTimeout(Duration.ofSeconds(time)).pollingEvery(Duration.ofMillis(pollingtime))
+				.ignoring(ElementNotInteractableException.class)
+				.withMessage(objectName + " is not visible.fluent wait time expires");
+
+		wait.until(ExpectedConditions.visibilityOf(ele));
+		Logs.info(objectName + " is waited for visibility using fluent wait");
+		ExtentManager.logTestInfo(objectName + " is waited for visibility using fluent wait");
+	}
+			catch (Exception e) {
+			Logs.error("Desired Value is not selected");
+			ExtentManager.logTestfailwithException(e);
+			throw e;
+
+		}
+	}
+
+	
+
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+=======
+>>>>>>> stash
 }

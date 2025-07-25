@@ -63,5 +63,63 @@ public class ExtentManager {
         }
 		return reportFileLocation;
     }
+    public static void logTestInfo(String text) {
+
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+
+		testlog.info(text);
+
+
+
+	}
+
+
+
+	public static void logTestwithPassed(String text) {
+
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+
+		testlog.pass(MarkupHelper.createLabel(text, ExtentColor.GREEN));
+
+	}
+
+	
+
+	public static void logTestfailwithException(Throwable e) {
+
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+
+		testlog.fail(e);
+
+
+
+	}
+
+
+
+	public static void logTestwithFailed(String text) {
+
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+
+		testlog.fail(MarkupHelper.createLabel(text, ExtentColor.RED));
+
+
+
+	}
+
+
+
+	public static void logTestfailwithScreenshot(String filepath) {
+
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+
+		testlog.fail(MediaEntityBuilder.createScreenCaptureFromPath(filepath).build());
+
+
+
+	}
+
+	
+
 
 }
