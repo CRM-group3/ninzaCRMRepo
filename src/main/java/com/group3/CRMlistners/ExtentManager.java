@@ -5,12 +5,17 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentManager {
 	
-	private static ExtentReports extent;
+	public static ExtentReports extent;
+	public static ExtentTest testlog;
 	  
  	static Date currentDate = new Date();
   	static String timestamp = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(currentDate);
@@ -63,5 +68,34 @@ public class ExtentManager {
         }
 		return reportFileLocation;
     }
+    
+    public static void logTestInfo(String text) {
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+		testlog.info(text);
 
+	}
+
+	public static void logTestwithPassed(String text) {
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+		testlog.pass(MarkupHelper.createLabel(text, ExtentColor.GREEN));
+	}
+	
+	public static void logTestfailwithException(Throwable e) {
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+		testlog.fail(e);
+
+	}
+
+	public static void logTestwithFailed(String text) {
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+		testlog.fail(MarkupHelper.createLabel(text, ExtentColor.RED));
+
+	}
+
+	public static void logTestfailwithScreenshot(String filepath) {
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+		testlog.fail(MediaEntityBuilder.createScreenCaptureFromPath(filepath).build());
+
+	}
+	
 }

@@ -1,4 +1,5 @@
 package com.group3.CRMbasics;
+<<<<<<< Updated upstream
 //import static org.testng.Assert.assertEquals;
 //
 //import java.io.File;
@@ -34,8 +35,11 @@ package com.group3.CRMbasics;
 //import com.google.common.collect.ImmutableMap;
 //import com.google.common.io.Files;
 //import com.salesforce.utility.ExtentUtility;
+=======
+>>>>>>> Stashed changes
 
 import java.time.Duration;
+<<<<<<< Updated upstream
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -45,9 +49,26 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 //@Listeners(com.salesforce.utility.SalesforceListenerUtility.class)
 
+=======
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import com.google.common.io.Files;
+import com.aventstack.extentreports.ExtentReports;
+import com.group3.CRMlogs.Logs;
+import com.group3.CRMlistners.ExtentManager;
+
+>>>>>>> Stashed changes
 
 public class BasePage {
 WebDriver driver;
+public ExtentReports reportlog = ExtentManager.getInstance();
+protected Actions action;
 	
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
@@ -58,6 +79,7 @@ WebDriver driver;
 		WebDriverWait wait = new WebDriverWait(driver, time);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
+<<<<<<< Updated upstream
 //	//----------------------------------------------------------------------------------
 //	
 //	
@@ -620,5 +642,78 @@ WebDriver driver;
 //		action.moveToElement(element).perform();;
 //		
 //	}
+=======
+	//----------------------------------------------------------------------------------	
+
+	public void mouseHover_Interaction(WebElement ele) {
+		action = new Actions(driver);
+
+		action.moveToElement(ele, 10, 10).click().build().perform();
+		Logs.info("Cursor hovered to the desired element");
+		ExtentManager.logTestInfo("Cursor hovered to the desired element");
+	}
+
+	public void ContextClickOnElement(WebElement ele, String objName) {
+		Actions action = new Actions(driver);
+		action.contextClick(ele).build().perform();
+		Logs.info("right click persormed on web element " + objName);
+		ExtentManager.logTestInfo("right click persormed on web element " + objName);
+	}
+
+	public void actionCall() {
+		action = new Actions(driver);
+		Logs.info("Action object created");
+		ExtentManager.logTestInfo("Action object created");		
+	}
+
+	public void actionDragandDropCall(WebElement ele1, WebElement ele2) {
+		action.dragAndDrop(ele1, ele2).build().perform();
+		Logs.info("Dragand drop action is performed successfully....");
+		ExtentManager.logTestInfo("Dragand drop action is performed successfully.");
+		;
+	}
+
+	public void toolTip(WebElement ele, WebElement tooltipele) {
+		action.moveToElement(ele).build().perform();
+		;
+		driver.switchTo().activeElement();
+
+		String str = tooltipele.getText();
+		Logs.info("tooltiptext ---> " + str);
+		ExtentManager.logTestInfo("tooltiptext ---> " + str);
+	}
+
+	public void screenshotWebElement(WebElement ele, String filepath) {
+
+		File srcFile = ele.getScreenshotAs(OutputType.FILE);
+		File descFile = new File(filepath);
+		try {
+			Files.copy(srcFile, descFile);
+			Logs.info("captures the screenshot");
+			//reportlog.logTestInfo("captures the screenshot");
+
+		} catch (IOException e) {
+
+			Logs.error("Error while capturing  the screenshot" + e.getMessage());
+
+		}
+	}
+
+	public void twoStringVerify(String actvalue, String expvalue) {
+
+		try {
+			Assert.assertEquals((actvalue).replaceAll("\\s+", ""), (expvalue.replaceAll("\\s+", "")));
+			// Assert.assertTrue(actvalue.trim().equals(expvalue), "Strings are not equal
+			// after trimming whitespace");
+
+			Logs.info("Actual value " + actvalue + " match the expected value" + expvalue);
+			ExtentManager.logTestwithPassed("Actual value " + actvalue + " match the expected value" + expvalue);
+		} catch (Exception e) {
+
+			Logs.error("Actual value " + actvalue + " do not  match the expected value" + expvalue);
+			ExtentManager.logTestwithFailed("Actual value " + actvalue + " do not  match the expected value" + expvalue);
+		}
+	}	
+>>>>>>> Stashed changes
 	
 }
