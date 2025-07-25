@@ -1,4 +1,5 @@
 package com.group3.CRMbasics;
+//<<<<<<< HEAD
 import static org.testng.Assert.assertEquals;
 import com.group3.CRMlogs.Logs;
 import com.group3.CRMutilities.ScreenShots;
@@ -11,6 +12,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import com.aventstack.extentreports.ExtentReports;
+import java.time.Duration;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
@@ -26,6 +30,7 @@ public ExtentReports reportlog = ExtentManager.getInstance();
 		PageFactory.initElements(driver, this);
 	}
 	
+//<<<<<<< HEAD
 	public void clickElement(WebElement element, String objectName) {
 		try {
 			assertEquals(true, element.isEnabled());//enabled to interact with like buttons 
@@ -110,5 +115,12 @@ throw e;
 
 		return actual;
 		}
-	}
+	
 
+//=======
+	public void waitForElement(WebElement element, Duration time) {
+		WebDriverWait wait = new WebDriverWait(driver, time);
+		wait.until(ExpectedConditions.visibilityOf(element));
+	
+}
+}
