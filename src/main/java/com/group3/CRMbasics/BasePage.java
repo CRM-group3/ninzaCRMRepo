@@ -60,7 +60,10 @@ import com.group3.CRMlogs.Logs;
 
 import com.group3.CRMutilities.ScreenShots;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> stash
 =======
 >>>>>>> stash
 
@@ -758,7 +761,10 @@ public class BasePage {
 	
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> stash
 =======
 >>>>>>> stash
 }
