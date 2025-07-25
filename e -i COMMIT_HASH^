@@ -1,0 +1,39 @@
+[33mcommit 82620e566e27bed6e3f19c1ab7986dbf4c597f16[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32msowmya[m[33m, [m[1;31morigin/sowmya[m[33m)[m
+Author: CRM-group3 <tekarchgroup3@gmail.com>
+Date:   Sat Jul 19 22:44:21 2025 -0700
+
+    Added Contacts Page
+
+[33mcommit 02514674089616495387385b264201083b72c853[m[33m ([m[1;32mmain[m[33m)[m
+Merge: 90b9a99 238c765
+Author: Sowmya TM <sowmyatm@tekarch.com>
+Date:   Sat Jul 19 22:21:11 2025 -0700
+
+    Removed build files and added target/ to .gitignore
+
+[33mcommit 90b9a99e04aa195d00fa18fd105264ad9e85e46c[m
+Author: Sowmya TM <sowmyatm@tekarch.com>
+Date:   Sat Jul 19 22:16:28 2025 -0700
+
+    first commit
+
+[33mcommit 238c76599f0a5f16bcad7da4545ad1c5e0412df3[m
+Merge: 28708f5 6a61875
+Author: CRM-group3 <tekarchgroup3@gmail.com>
+Date:   Fri Jul 18 10:58:08 2025 -0700
+
+    Merge pull request #1 from CRM-group3/BanN
+    
+    add product page
+
+[33mcommit 6a6187527c0e55966e3995fa378aa97bc783f5a7[m
+Author: CRM-group3 <tekarchgroup3@gmail.com>
+Date:   Fri Jul 18 10:49:46 2025 -0700
+
+    add product page
+
+[33mcommit 28708f55882fadbfba8561d598b95b68c6d51792[m
+Author: CRM-group3 <tekarchgroup3@gmail.com>
+Date:   Fri Jul 18 09:36:43 2025 -0700
+
+    first check in
