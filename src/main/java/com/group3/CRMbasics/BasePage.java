@@ -59,6 +59,7 @@ import com.group3.CRMlistners.TestListner;
 import com.group3.CRMlogs.Logs;
 
 import com.group3.CRMutilities.ScreenShots;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,6 +70,8 @@ import com.group3.CRMutilities.ScreenShots;
 >>>>>>> stash
 =======
 >>>>>>> stash
+=======
+>>>>>>> Stashed changes
 
 //@Listeners(com.salesforce.utility.SalesforceListenerUtility.class)
 
@@ -763,6 +766,7 @@ public class BasePage {
 
 	
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -773,4 +777,6 @@ public class BasePage {
 >>>>>>> stash
 =======
 >>>>>>> stash
+=======
+>>>>>>> Stashed changes
 }
