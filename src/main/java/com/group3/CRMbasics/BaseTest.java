@@ -39,7 +39,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	
-WebDriver driver;
+static WebDriver driver;
 	
 	public WebDriver getDriver() {
 		if(driver == null) {
