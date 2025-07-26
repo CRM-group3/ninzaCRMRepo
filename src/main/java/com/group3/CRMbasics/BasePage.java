@@ -1,5 +1,4 @@
 package com.group3.CRMbasics;
-<<<<<<< Updated upstream
 //import static org.testng.Assert.assertEquals;
 //
 //import java.io.File;
@@ -33,13 +32,10 @@ package com.group3.CRMbasics;
 //import org.testng.asserts.SoftAssert;
 //
 //import com.google.common.collect.ImmutableMap;
-//import com.google.common.io.Files;
+import com.google.common.io.Files;
 //import com.salesforce.utility.ExtentUtility;
-=======
->>>>>>> Stashed changes
 
 import java.time.Duration;
-<<<<<<< Updated upstream
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -49,7 +45,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 //@Listeners(com.salesforce.utility.SalesforceListenerUtility.class)
 
-=======
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -63,7 +58,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.group3.CRMlogs.Logs;
 import com.group3.CRMlistners.ExtentManager;
 
->>>>>>> Stashed changes
 
 public class BasePage {
 WebDriver driver;
@@ -81,7 +75,6 @@ protected Actions action;
 		WebDriverWait wait = new WebDriverWait(driver, time);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-<<<<<<< Updated upstream
 //	//----------------------------------------------------------------------------------
 //	
 //	
@@ -644,7 +637,6 @@ protected Actions action;
 //		action.moveToElement(element).perform();;
 //		
 //	}
-=======
 	//----------------------------------------------------------------------------------	
 
 	public void mouseHover_Interaction(WebElement ele) {
@@ -731,7 +723,6 @@ protected Actions action;
 			ExtentManager.logTestwithFailed("Actual value " + actvalue + " do not  match the expected value" + expvalue);
 		}
 	}	
->>>>>>> Stashed changes
 			Logs.error("Actual value " + actvalue + " do not  match the expected value" + expvalue);
 			ExtentManager.logTestwithFailed("Actual value " + actvalue + " do not  match the expected value" + expvalue);
 		}
