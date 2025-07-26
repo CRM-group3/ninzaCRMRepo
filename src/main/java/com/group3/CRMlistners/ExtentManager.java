@@ -14,7 +14,9 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentManager {
 	
+
 	public static ExtentReports extent;
+
 	public static ExtentTest testlog;
 	  
  	static Date currentDate = new Date();
@@ -70,10 +72,12 @@ public class ExtentManager {
     }
     
     public static void logTestInfo(String text) {
+
 		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
 		testlog.info(text);
+		
+    }
 
-	}
 
 	public static void logTestwithPassed(String text) {
 		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
