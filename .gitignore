@@ -10,3 +10,12 @@ test-output/
 extent-reports/
 ExtentReports.html
 ExtentReport.html
+
+
+
+
+# Ignore Git conflict backup files
+*_*BACKUP_*.java
+*_*BASE_*.java
+*_*LOCAL_*.java
+*_*REMOTE_*.java
