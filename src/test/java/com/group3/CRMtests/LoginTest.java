@@ -32,10 +32,6 @@ public class LoginTest extends BaseTest{
 	loginpage.clickSignIn();	
 	Logs.info("Successfully logged in");
 	Thread.sleep(10000);
-	loginpage.clickQuotes();
-	Thread.sleep(10000);
-	loginpage.clickCreateQuote();
-	loginpage.clickOpportunity();
 	}	
 
 	

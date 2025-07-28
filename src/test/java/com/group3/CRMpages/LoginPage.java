@@ -32,26 +32,4 @@ public class LoginPage extends BasePage{
 	public void clickSignIn() {
 		signIn.click();
 	}
-	@FindBy(xpath="//a[normalize-space()='Quotes']")
-	WebElement quotes;
-	
-	public void clickQuotes() {
-		quotes.click();
-	}
-	
-	
-	@FindBy(xpath="//span[normalize-space()='Create Quote']")
-	WebElement createQuotesButton;
-	
-	public void clickCreateQuote() {
-		createQuotesButton.click();
-	}
-	
-	@FindBy(xpath="(//button[@class='action-button'])[position()=1]")
-	WebElement opportunity;
-	
-	
-	public void clickOpportunity() {
-		opportunity.click();
-	}
 }
