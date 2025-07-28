@@ -16,7 +16,7 @@ public class PropertiesFile {
 			
 			String userDir = System.getProperty("user.dir");
 			String fileseparator = System.getProperty("file.separator");
-			String filepath = userDir + fileseparator + "properties" + fileseparator + "application.properties";
+			String filepath = userDir + fileseparator + "src" + fileseparator + "main" + fileseparator + "resources" + fileseparator + "properties" + fileseparator + "application.properties";
 			
 			try {
 				fileinput = new FileInputStream(filepath);

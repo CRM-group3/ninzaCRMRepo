@@ -3,41 +3,6 @@ package com.group3.CRMpages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-//<<<<<<< HEAD
-import org.openqa.selenium.support.PageFactory;
-
-import com.group3.CRMbasics.BasePage;
-
-//public class LoginPage extends BasePage {
-	
-
-//		@FindBy(id="username") 
-//		 public WebElement username;
-//		
-//		@FindBy(name="password")
-//		public WebElement password;
-//		
-//		@FindBy(xpath="//button[@type='submit']")
-//		public WebElement signin;
-//	
-//
-//	
-//	
-//
-//    public LoginPage(WebDriver driver) {
-//        super(driver);
-//        PageFactory.initElements(driver, this);
-//    }
-//    
-//    public void login(String user, String pass) {
-//        username.sendKeys(user);
-//        password.sendKeys(pass);
-//
-//        // Use your base method:
-//        clickElement(signin, "Signin button");
-//    }
-//=======
-
 import com.group3.CRMbasics.BasePage;
 
 public class LoginPage extends BasePage{
@@ -56,19 +21,37 @@ public class LoginPage extends BasePage{
 	WebElement signIn;
 	
 	
-	public void enterintoUsername() {
-		username.sendKeys("rmgyantra");
+	public void enterintoUsername(String userName) {
+		username.sendKeys(userName);
 	}
 	
-	public void enterintoPassword() {
-		password.sendKeys("rmgy@9999");
+	public void enterintoPassword(String passWord) {
+		password.sendKeys(passWord);
 	}
 	
 	public void clickSignIn() {
 		signIn.click();
 	}
+	@FindBy(xpath="//a[normalize-space()='Quotes']")
+	WebElement quotes;
+	
+	public void clickQuotes() {
+		quotes.click();
+	}
 	
 	
-
-//>>>>>>> 8de0d3dc9ea5b721173bc94b4613e164894dceff
+	@FindBy(xpath="//span[normalize-space()='Create Quote']")
+	WebElement createQuotesButton;
+	
+	public void clickCreateQuote() {
+		createQuotesButton.click();
+	}
+	
+	@FindBy(xpath="(//button[@class='action-button'])[position()=1]")
+	WebElement opportunity;
+	
+	
+	public void clickOpportunity() {
+		opportunity.click();
+	}
 }

@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-25T10:42:52 PDT" name="Default suite" finished-at="2025-07-25T10:43:03 PDT" duration-ms="11102">
+  <suite started-at="2025-07-27T21:56:03 PDT" name="Default suite" finished-at="2025-07-27T21:56:34 PDT" duration-ms="31573">
     <groups>
     </groups>
-    <test started-at="2025-07-25T10:42:52 PDT" name="Default test" finished-at="2025-07-25T10:43:03 PDT" duration-ms="11102">
+    <test started-at="2025-07-27T21:56:03 PDT" name="Default test" finished-at="2025-07-27T21:56:34 PDT" duration-ms="31573">
       <class name="com.group3.CRMtests.LoginTest">
-        <test-method signature="login()[pri:0, instance:com.group3.CRMtests.LoginTest@66d3eec0]" started-at="2025-07-25T10:42:52 PDT" name="login" finished-at="2025-07-25T10:43:03 PDT" duration-ms="11038" status="PASS">
+        <test-method signature="login()[pri:0, instance:com.group3.CRMtests.LoginTest@6d4d66d2]" started-at="2025-07-27T21:56:03 PDT" name="login" finished-at="2025-07-27T21:56:34 PDT" duration-ms="31465" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
