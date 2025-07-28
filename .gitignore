@@ -11,10 +11,7 @@ extent-reports/
 ExtentReports.html
 ExtentReport.html
 
-# Ignore Eclipse IDE specific files
-.classpath
-.project
-.settings/
+
 
 
 # Ignore Git conflict backup files
