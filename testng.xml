@@ -10,7 +10,7 @@
 	<test name="OpportunityTest">
 
 		<classes>
-			<class name="com.group3.CRMtests.OpportunityTest" />
+			<class name="com.group3.CRMtests.QuoteTest" />
 		</classes>
 
 	</test>
