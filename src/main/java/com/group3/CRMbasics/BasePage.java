@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
@@ -560,5 +562,30 @@ public class BasePage {
 
 		}
 	}
+	
+	// other fns
+	
+
+//	public void waitForVisibility(WebElement element, int timeout, String elementName) {
+//		// Placeholder for WebDriverWait/ExpectedConditions
+//		Logs.info("Waited for visibility: " + elementName);
+//	}
+
+	public void elementSendText(WebElement element, String text, String fieldName) {
+		element.clear();
+		element.sendKeys(text);
+		Logs.info(text + " entered into " + fieldName);
+	}
+
+	public void buttonCheck(WebElement element, String buttonName) {
+		if (element.isDisplayed() && element.isEnabled()) {
+			element.click();
+			Logs.info(buttonName + " clicked");
+		} else {
+			Logs.error(buttonName + " is not clickable");
+		}
+	}
+
+	
 
 }
