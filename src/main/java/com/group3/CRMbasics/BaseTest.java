@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.group3.CRMlogs.Logs;
 import com.group3.CRMutilities.PropertiesFile;
 import com.group3.CRMlistners.ExtentManager;
@@ -24,6 +25,7 @@ public class BaseTest {
     static WebDriver driver;
     public BasePage basepage;
     public ExtentReports reportlog = ExtentManager.getInstance();
+    public static ExtentTest testlog = ExtentManager.startExtentCreateReport("NinzaCRMReport");
     PropertiesFile prop = new PropertiesFile();
 
     public WebDriver getDriver() {
@@ -59,10 +61,13 @@ public class BaseTest {
         System.out.println("Appln url:" +url);
         baseURL(url);
         
-        //basepage.waitUntilPageLoads(20);
+        basepage.waitUntilPageLoads(20);
         driver.manage().window().maximize();
         initialSetup();
+       
+        
     }
+    
 
     @AfterMethod
     public void tearDownAfterTestMethod() {
@@ -113,7 +118,7 @@ public class BaseTest {
         try {
             driver.get(url);
             Logs.info(url + " is entered");
-           // ExtentManager.logTestInfo("Valid URL is launched");
+            ExtentManager.logTestInfo("Valid URL is launched");
         } catch (Exception e) {
             Logs.error("Error occurred while navigating to URL: " + e.getMessage());
             throw e;
@@ -154,10 +159,10 @@ public class BaseTest {
         WebElement password = driver.findElement(By.id("inputPassword"));
         basepage.elementSendText(password, passwrd, "Password");
         WebElement SignInButton = driver.findElement(By.xpath("//button[text()='Sign In']"));
-        //basepage.waitForVisibilty(SignInButton, Duration.ofSeconds(30), "Sign In button");
+        basepage.waitForVisibilty(SignInButton, Duration.ofSeconds(30), "Sign In button");
         basepage.buttonCheck(SignInButton, "Sign In");
         Logs.info("Successfully logged to the Home page");
-       // ExtentManager.logTestInfo("Successfully logged in to Home page");
+        ExtentManager.logTestInfo("Successfully logged in to Home page");
         
     }
 

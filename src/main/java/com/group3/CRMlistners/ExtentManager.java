@@ -28,10 +28,11 @@ public class ExtentManager {
     private static String reportFileLocation =  reportFilepath +fileSeperator+ reportFileName;
   
  
-	public void startExtentCreateReport(String methodname) {
+	public static ExtentTest startExtentCreateReport(String str) {
+		 extent = ExtentManager.getInstance();
 		// this will return methodname to the testlog
-		testlog = extent.createTest("method1");
-
+		testlog = extent.createTest(str);
+		return testlog;
 	}
     
     public static ExtentReports getInstance() {

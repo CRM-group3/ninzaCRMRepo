@@ -25,16 +25,21 @@ public class LeadTest extends BaseTest{
 	
 	@Test
 	
-	 public void testLogin() throws Throwable{
+	 public void leadtestLogin() throws Throwable{
 		 
 		//initializeBrowser("chrome");
 		// initialSetup();
 		
-		System.out.println("Logged In");
-		 
-		 
+		System.out.println("Logged In");			 		 
 		 
 	 }
+	
+	@Test
+	public void createLeadPageOpens()
+	{
+		
+		System.out.println("createLeadPageOpens");
+	}
 	 
 	
 	
