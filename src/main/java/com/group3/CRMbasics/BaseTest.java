@@ -145,6 +145,7 @@ public class BaseTest {
         basepage.buttonCheck(loginButton, "Login");
         Logs.info("Successfully logged to the Home page");
         ExtentManager.logTestInfo("Successfully logged in to Home page");
+        
     }
 
 
