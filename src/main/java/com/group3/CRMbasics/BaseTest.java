@@ -33,7 +33,6 @@ public class BaseTest {
             chromePrefs.put("credentials_enable_service", false);
             chromePrefs.put("profile.password_manager_enabled", false);
             chromePrefs.put("profile.password_manager_leak_detection", false);
-
             ChromeOptions options = new ChromeOptions();
             options.setExperimentalOption("prefs", chromePrefs);
             driver = new ChromeDriver(options);
@@ -54,10 +53,16 @@ public class BaseTest {
     public void setUpBeforeMethod(@Optional("chrome") String browserName) throws Exception {
         Logs.info(".........BeforeClass executed---------------");
         initializeBrowser(browserName);
+<<<<<<< HEAD
         //String url = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "url");
         String url = prop.getProperty("application.properties","url");
         baseURL(url);
         basepage.waitUntilPageLoads(20);
+=======
+      //  String url = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "url");
+      //  baseURL(url);
+        waitUntilPageLoads(20);
+>>>>>>> 7227cfa (before pulling the main branch)
         driver.manage().window().maximize();
     }
 
@@ -132,6 +137,7 @@ public class BaseTest {
 
     public void initialSetup() throws Throwable {
         driver.manage().window().maximize();
+<<<<<<< HEAD
         basepage = new BasePage(driver); 
         String username = prop.getProperty("application.properties","username");
         String passwrd = prop.getProperty("application.properties","password");
@@ -140,6 +146,18 @@ public class BaseTest {
         basepage.elementSendText(emailField, username, "Username");
         WebElement password = driver.findElement(By.xpath("//*[@id='password']"));
         basepage.elementSendText(password, passwrd, "Password");
+=======
+      //  String username = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "username");
+        //String passwrd = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "password");
+
+        WebElement emailField = driver.findElement(By.xpath("//*[@id='username']"));
+        waitForVisibility(emailField, 30, "Email field");
+       // elementSendText(emailField, username, "Username");
+
+        WebElement password = driver.findElement(By.xpath("//*[@id='password']"));
+       // elementSendText(password, passwrd, "Password");
+
+>>>>>>> 7227cfa (before pulling the main branch)
         WebElement loginButton = driver.findElement(By.id("Login"));
         basepage.waitForVisibilty(loginButton, Duration.ofSeconds(30), "Login button");
         basepage.buttonCheck(loginButton, "Login");
