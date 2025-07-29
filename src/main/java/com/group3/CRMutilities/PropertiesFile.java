@@ -12,12 +12,14 @@ public class PropertiesFile {
 	
 		FileInputStream fileinput;
 		
-		public String getProperty(String Key)  {
+		public String getProperty(String nameOfFile,String Key)  {
 			
 			String userDir = System.getProperty("user.dir");
 			String fileseparator = System.getProperty("file.separator");
-			String filepath = userDir + fileseparator + "src" + fileseparator + "main" + fileseparator + "resources" + fileseparator + "properties" + fileseparator + "application.properties";
-			
+
+			//String filepath = userDir + fileseparator + "properties" + fileseparator + "application.properties";
+			String filepath = userDir + fileseparator + "properties" + fileseparator + nameOfFile;
+
 			try {
 				fileinput = new FileInputStream(filepath);
 			} catch (FileNotFoundException e) {
