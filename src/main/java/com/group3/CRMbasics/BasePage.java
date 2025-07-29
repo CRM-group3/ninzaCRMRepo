@@ -281,7 +281,7 @@ public class BasePage {
 	public void waitUntilPageLoads(long seconds) {
 		Logs.info("Waiting until page loads within  expectedtime period");
 
-		ExtentManager.logTestInfo("Waiting until page loads within expectedtime period");
+		//ExtentManager.logTestInfo("Waiting until page loads within expectedtime period");
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(seconds));
 
 	}

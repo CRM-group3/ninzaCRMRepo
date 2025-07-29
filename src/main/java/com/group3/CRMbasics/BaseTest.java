@@ -51,20 +51,31 @@ public class BaseTest {
 
     @Parameters({ "browser" })
     @BeforeMethod
-    public void setUpBeforeMethod(@Optional("chrome") String browserName) throws Exception {
+    public void setUpBeforeMethod(@Optional("chrome") String browserName) throws Throwable {
         Logs.info(".........BeforeClass executed---------------");
         initializeBrowser(browserName);
         //String url = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "url");
         String url = prop.getProperty("application.properties","url");
+        System.out.println("Appln url:" +url);
         baseURL(url);
-        basepage.waitUntilPageLoads(20);
+        
+        //basepage.waitUntilPageLoads(20);
         driver.manage().window().maximize();
+        initialSetup();
     }
 
     @AfterMethod
     public void tearDownAfterTestMethod() {
-        driverClose();
-        Logs.info("******tearDownAfterTestMethod executed***********");
+//        driverClose();
+//        Logs.info("******tearDownAfterTestMethod executed***********");
+    	
+    	try {
+            driverClose();
+            Logs.info("******tearDownAfterTestMethod executed***********");
+        }
+        catch (Exception e) {
+            Logs.error("Error in tearDown: " + e.getMessage());
+        }
     }
 
     public void initializeBrowser(String browser) {
@@ -102,7 +113,7 @@ public class BaseTest {
         try {
             driver.get(url);
             Logs.info(url + " is entered");
-            ExtentManager.logTestInfo("Valid URL is launched");
+           // ExtentManager.logTestInfo("Valid URL is launched");
         } catch (Exception e) {
             Logs.error("Error occurred while navigating to URL: " + e.getMessage());
             throw e;
@@ -135,16 +146,18 @@ public class BaseTest {
         basepage = new BasePage(driver); 
         String username = prop.getProperty("application.properties","username");
         String passwrd = prop.getProperty("application.properties","password");
-        WebElement emailField = driver.findElement(By.xpath("//*[@id='username']"));
-        basepage.waitForVisibilty(emailField, Duration.ofSeconds(30), "Email field");
+       // WebElement emailField = driver.findElement(By.xpath("//*[@id='username']"));
+        WebElement emailField = driver.findElement(By.id("username"));
+        //basepage.waitForVisibilty(emailField, Duration.ofSeconds(30), "Email field");
         basepage.elementSendText(emailField, username, "Username");
-        WebElement password = driver.findElement(By.xpath("//*[@id='password']"));
+       // WebElement password = driver.findElement(By.xpath("//*[@id='inputPassword']"));
+        WebElement password = driver.findElement(By.id("inputPassword"));
         basepage.elementSendText(password, passwrd, "Password");
-        WebElement loginButton = driver.findElement(By.id("Login"));
-        basepage.waitForVisibilty(loginButton, Duration.ofSeconds(30), "Login button");
-        basepage.buttonCheck(loginButton, "Login");
+        WebElement SignInButton = driver.findElement(By.xpath("//button[text()='Sign In']"));
+        //basepage.waitForVisibilty(SignInButton, Duration.ofSeconds(30), "Sign In button");
+        basepage.buttonCheck(SignInButton, "Sign In");
         Logs.info("Successfully logged to the Home page");
-        ExtentManager.logTestInfo("Successfully logged in to Home page");
+       // ExtentManager.logTestInfo("Successfully logged in to Home page");
         
     }
 
