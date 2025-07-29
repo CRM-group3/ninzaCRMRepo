@@ -48,11 +48,6 @@ public class BaseTest {
         }
     }
     
-//    @BeforeMethod
-//    public void setUp() {
-//        driver = new ChromeDriver(); // or DriverFactory.getDriver() if using DriverManager
-//        basepage = new BasePage(driver);
- //   }
 
     @Parameters({ "browser" })
     @BeforeMethod
@@ -137,23 +132,17 @@ public class BaseTest {
 
     public void initialSetup() throws Throwable {
         driver.manage().window().maximize();
-      // basepage = new BasePage(driver);
-       // String username = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "username");
-       // String passwrd = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "password");
+        basepage = new BasePage(driver); 
         String username = prop.getProperty("application.properties","username");
         String passwrd = prop.getProperty("application.properties","password");
-
         WebElement emailField = driver.findElement(By.xpath("//*[@id='username']"));
         basepage.waitForVisibilty(emailField, Duration.ofSeconds(30), "Email field");
         basepage.elementSendText(emailField, username, "Username");
-
         WebElement password = driver.findElement(By.xpath("//*[@id='password']"));
         basepage.elementSendText(password, passwrd, "Password");
-
         WebElement loginButton = driver.findElement(By.id("Login"));
         basepage.waitForVisibilty(loginButton, Duration.ofSeconds(30), "Login button");
         basepage.buttonCheck(loginButton, "Login");
-
         Logs.info("Successfully logged to the Home page");
         ExtentManager.logTestInfo("Successfully logged in to Home page");
     }
