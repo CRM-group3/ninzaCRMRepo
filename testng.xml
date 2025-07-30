@@ -2,31 +2,19 @@
 
 
 <suite name="Automation">
-<<<<<<< HEAD
-    <listeners>
-        <listener class-name="com.group3.CRMlistners.TestListner"></listener>
-    </listeners>
-    
-    <test name="LeadTest">
-        <classes>
-            <class name="com.group3.CRMtests.LeadTest" />
-        </classes>
-    </test>
-</suite>
-=======
+
 	 <parameter name="browser" value="chrome"/>
 <listeners>
 		<listener class-name="com.group3.CRMlistners.TestListner"></listener>
 	</listeners>
 
 	
-	<test name="LoginTest">
+	<test name="addContacts">
 
 		<classes>
-			<class name="com.group3.CRMtests.LoginTest" />
+			<class name="com.group3.CRMtests.AddContacts" />
 		</classes>
 
 	</test>
 
 </suite>
->>>>>>> 1ccf402 (did some changes to conacttest and basetest to resolve the conflict of multiple driver instacnce and generation of extent reports)
