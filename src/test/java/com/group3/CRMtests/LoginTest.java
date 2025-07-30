@@ -4,6 +4,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import com.group3.CRMbasics.BaseTest;
+import com.group3.CRMlistners.ExtentManager;
 import com.group3.CRMpages.LoginPage;
 import com.group3.CRMutilities.PropertiesFile;
 import com.group3.CRMutilities.ScreenShots;
@@ -18,6 +19,7 @@ public class LoginTest extends BaseTest{
 	
 	@Test
 	public void login() throws Exception {
+<<<<<<< HEAD
 	driver = getDriver();
 	prop = new PropertiesFile();
 	String url = prop.getProperty("application.properties","url");
@@ -32,6 +34,11 @@ public class LoginTest extends BaseTest{
 	loginpage.clickSignIn();	
 	Logs.info("Successfully logged in");
 	Thread.sleep(10000);
+=======
+		
+		System.out.println("login successfull");
+
+>>>>>>> 1ccf402 (did some changes to conacttest and basetest to resolve the conflict of multiple driver instacnce and generation of extent reports)
 	}	
 
 	

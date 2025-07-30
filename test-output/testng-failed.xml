@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.group3.CRMtests.LeadTest">
         <methods>
           <include name="testLogin"/>
@@ -10,6 +11,17 @@
           <include name="setUpBeforeMethod"/>
         </methods>
       </class> <!-- com.group3.CRMtests.LeadTest -->
+=======
+      <class name="com.group3.CRMtests.ContactsTest">
+        <methods>
+          <include name="flushReport"/>
+          <include name="setupReport"/>
+          <include name="clickCreateContactButton"/>
+          <include name="tearDownAfterTestClass"/>
+          <include name="setUpBeforeClass"/>
+        </methods>
+      </class> <!-- com.group3.CRMtests.ContactsTest -->
+>>>>>>> 1ccf402 (did some changes to conacttest and basetest to resolve the conflict of multiple driver instacnce and generation of extent reports)
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

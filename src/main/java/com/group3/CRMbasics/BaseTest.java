@@ -3,6 +3,10 @@ package com.group3.CRMbasics;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.LogManager;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,22 +19,73 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+<<<<<<< HEAD
+=======
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+>>>>>>> 1ccf402 (did some changes to conacttest and basetest to resolve the conflict of multiple driver instacnce and generation of extent reports)
 import com.group3.CRMlogs.Logs;
 import com.group3.CRMutilities.PropertiesFile;
 import com.group3.CRMlistners.ExtentManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeSuite;
 
 public class BaseTest {
-
-    static WebDriver driver;
+	protected static final Logger log = Logger.getLogger(BaseTest.class);//added
+    protected WebDriver driver; //changes to protected from static
+   //protected Logger myBaseTestLog = LogManager.getLogger();
+    
     public BasePage basepage;
     public ExtentReports reportlog = ExtentManager.getInstance();
     public static ExtentTest testlog = ExtentManager.startExtentCreateReport("NinzaCRMReport");
     PropertiesFile prop = new PropertiesFile();
+    protected static ExtentReports extent;// 
+    protected ExtentTest test;//added by me tms
+    
+//    //public class BaseTest {
+//        protected static final Logger Logs = Logger.getLogger(BaseTest.class);
+//
+//        @BeforeClass(alwaysRun = true)
+//        public void initLogger() {
+//            PropertyConfigurator.configure("log4j.xml");
+//        }
+//        
+//    @BeforeClass
+//    public void initialiseLogger() {
+//        PropertyConfigurator.configure("log4j.properties");
+//    }
+    @BeforeSuite
+    public void setupReport() {
+        ExtentManager.getInstance(); // creates the report
+    }
 
-    public WebDriver getDriver() {
-        if (driver == null) {
-            WebDriverManager.chromedriver().setup();
+    @AfterSuite
+    public void flushReport() {
+        ExtentManager.getInstance().flush(); // writes it to index.html
+    }
+
+//@BeforeSuite
+//public void setupReport() {
+//    ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir") + "/ExtentReport/index.html");
+//    extent = new ExtentReports();
+//    extent.attachReporter(spark);
+//}
+////
+//@AfterSuite
+//public void flushReport() {
+//    extent.flush();
+//}
+//
+////............
+	
+   
+	public WebDriver getDriver() {
+		if(driver == null) {
+			WebDriverManager.chromedriver().setup();
+//			// 🔐 Disable password manager and breach popups
+
             Map<String, Object> chromePrefs = new HashMap<>();
             chromePrefs.put("credentials_enable_service", false);
             chromePrefs.put("profile.password_manager_enabled", false);
@@ -38,6 +93,7 @@ public class BaseTest {
 
             ChromeOptions options = new ChromeOptions();
             options.setExperimentalOption("prefs", chromePrefs);
+
             driver = new ChromeDriver(options);
         }
         return driver;
@@ -50,15 +106,32 @@ public class BaseTest {
         }
     }
     
-
+//here i changed from beforemethod to beforeclass Each test method is 
+//running independently and creating its own WebDriver instance. 
+//   If you want one browser for the whole class, then change beforemthod to beforeclass
+   
     @Parameters({ "browser" })
+<<<<<<< HEAD
     @BeforeMethod
     public void setUpBeforeMethod(@Optional("chrome") String browserName) throws Throwable {
         Logs.info(".........BeforeClass executed---------------");
+=======
+    @BeforeClass
+    public void setUpBeforeClass(@Optional("chrome") String browserName) throws Exception {
+    	
+    	ExtentManager.testlog = ExtentManager.getInstance().createTest("Test: " + browserName);
+    	
+    	test = ExtentManager.testlog;
+    	
+    	
+    	
+    	Logs.info(".........BeforeClass executed---------------");
+>>>>>>> 1ccf402 (did some changes to conacttest and basetest to resolve the conflict of multiple driver instacnce and generation of extent reports)
         initializeBrowser(browserName);
-        //String url = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "url");
+       
         String url = prop.getProperty("application.properties","url");
         System.out.println("Appln url:" +url);
+<<<<<<< HEAD
         baseURL(url);
         
         basepage.waitUntilPageLoads(20);
@@ -66,9 +139,23 @@ public class BaseTest {
         initialSetup();
        
         
+=======
+        //String url = prop.getProperty("url"); //tms changed
+        baseURL(url);
+       // basepage.waitUntilPageLoads(20);
+        driver.manage().window().maximize();
+        
+        try {
+			initialSetup();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+>>>>>>> 1ccf402 (did some changes to conacttest and basetest to resolve the conflict of multiple driver instacnce and generation of extent reports)
     }
     
 
+<<<<<<< HEAD
     @AfterMethod
     public void tearDownAfterTestMethod() {
 //        driverClose();
@@ -81,6 +168,19 @@ public class BaseTest {
         catch (Exception e) {
             Logs.error("Error in tearDown: " + e.getMessage());
         }
+=======
+ 
+
+	@AfterClass
+    public void tearDownAfterTestClass() {
+    	try {
+        driverClose();
+        Logs.info("******tearDownAfterTestMethod executed***********");
+>>>>>>> 1ccf402 (did some changes to conacttest and basetest to resolve the conflict of multiple driver instacnce and generation of extent reports)
+    }
+    catch (Exception e) {
+        Logs.error("Error in tearDown: " + e.getMessage());
+    }
     }
 
     public void initializeBrowser(String browser) {
@@ -127,11 +227,17 @@ public class BaseTest {
 
     public void driverClose() {
         if (driver != null) {
-            driver.close();
+        	try { //added
+            driver.quit();//added
             Logs.info("Browser is closed");
             ExtentManager.logTestInfo("Browser is closed");
+        	}
+        	catch (Exception e) { 
+                Logs.error("Error while closing browser: " + e.getMessage());
+            } finally {
             driver = null;
-            Assert.assertNull(driver);
+            //Assert.assertNull(driver); //removed
+            }
         }
     }
 
@@ -149,9 +255,15 @@ public class BaseTest {
     public void initialSetup() throws Throwable {
         driver.manage().window().maximize();
         basepage = new BasePage(driver); 
+<<<<<<< HEAD
         String username = prop.getProperty("application.properties","username");
         String passwrd = prop.getProperty("application.properties","password");
        // WebElement emailField = driver.findElement(By.xpath("//*[@id='username']"));
+=======
+        String username = prop.getProperty("application.properties","username"); //changed
+        String passwrd = prop.getProperty("application.properties","password"); //changed
+        
+>>>>>>> 1ccf402 (did some changes to conacttest and basetest to resolve the conflict of multiple driver instacnce and generation of extent reports)
         WebElement emailField = driver.findElement(By.id("username"));
         //basepage.waitForVisibilty(emailField, Duration.ofSeconds(30), "Email field");
         basepage.elementSendText(emailField, username, "Username");
@@ -159,12 +271,15 @@ public class BaseTest {
         WebElement password = driver.findElement(By.id("inputPassword"));
         basepage.elementSendText(password, passwrd, "Password");
         WebElement SignInButton = driver.findElement(By.xpath("//button[text()='Sign In']"));
+<<<<<<< HEAD
         basepage.waitForVisibilty(SignInButton, Duration.ofSeconds(30), "Sign In button");
+=======
+        //basepage.waitForVisibilty(SignInButton, Duration.ofSeconds(30), "Sign In button");
+>>>>>>> 1ccf402 (did some changes to conacttest and basetest to resolve the conflict of multiple driver instacnce and generation of extent reports)
         basepage.buttonCheck(SignInButton, "Sign In");
         Logs.info("Successfully logged to the Home page");
         ExtentManager.logTestInfo("Successfully logged in to Home page");
         
     }
-
-
 }
+

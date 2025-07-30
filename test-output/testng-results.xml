@@ -2,6 +2,7 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2025-07-29T15:11:42 PDT" name="Automation" finished-at="2025-07-29T15:12:20 PDT" duration-ms="37528">
     <groups>
     </groups>
@@ -48,4 +49,45 @@
       </class> <!-- com.group3.CRMtests.LeadTest -->
     </test> <!-- LeadTest -->
   </suite> <!-- Automation -->
+=======
+  <suite started-at="2025-07-29T16:03:13 PDT" name="Default suite" finished-at="2025-07-29T16:03:29 PDT" duration-ms="15930">
+    <groups>
+    </groups>
+    <test started-at="2025-07-29T16:03:13 PDT" name="Default test" finished-at="2025-07-29T16:03:29 PDT" duration-ms="15930">
+      <class name="com.group3.CRMtests.ContactsTest">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:com.group3.CRMtests.ContactsTest@626abbd0]" started-at="2025-07-29T16:03:13 PDT" name="setupReport" finished-at="2025-07-29T16:03:13 PDT" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@626abbd0]" started-at="2025-07-29T16:03:13 PDT" name="setUpBeforeClass" finished-at="2025-07-29T16:03:22 PDT" duration-ms="8267" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="clickContacts()[pri:1, instance:com.group3.CRMtests.ContactsTest@626abbd0]" started-at="2025-07-29T16:03:22 PDT" name="clickContacts" finished-at="2025-07-29T16:03:26 PDT" duration-ms="4015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickContacts -->
+        <test-method signature="clickCreateContactButton()[pri:2, instance:com.group3.CRMtests.ContactsTest@626abbd0]" started-at="2025-07-29T16:03:26 PDT" name="clickCreateContactButton" finished-at="2025-07-29T16:03:29 PDT" duration-ms="3218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickCreateContactButton -->
+        <test-method is-config="true" signature="tearDownAfterTestClass()[pri:0, instance:com.group3.CRMtests.ContactsTest@626abbd0]" started-at="2025-07-29T16:03:29 PDT" name="tearDownAfterTestClass" finished-at="2025-07-29T16:03:29 PDT" duration-ms="384" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterTestClass -->
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.group3.CRMtests.ContactsTest@626abbd0]" started-at="2025-07-29T16:03:29 PDT" name="flushReport" finished-at="2025-07-29T16:03:30 PDT" duration-ms="793" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
+      </class> <!-- com.group3.CRMtests.ContactsTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+>>>>>>> 1ccf402 (did some changes to conacttest and basetest to resolve the conflict of multiple driver instacnce and generation of extent reports)
 </testng-results>

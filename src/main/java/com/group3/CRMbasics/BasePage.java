@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
@@ -33,13 +35,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 
-	WebDriver driver;
 	WebDriverWait wait;
 	protected Alert alert;
 	protected Actions action;
-	public ExtentReports reportlog = ExtentManager.getInstance();
-	TestListner tstListner = new TestListner();
+	protected WebDriver driver;
+	public ExtentReports reportlog = ExtentManager.getInstance();//added
+	//protected static final Logger ObjectLogger = Logger.getLogger(BasePage.class);
+	TestListner tstListner=new TestListner();
 
+
+//	 public BasePage() {
+//	        PropertyConfigurator.configure("log4j.properties");
+//	    }
+	 
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -202,6 +210,7 @@ public class BasePage {
 			Logs.error("Error while capturing  the screenshot" + e.getMessage());
 
 		}
+//<<<<<<< HEAD
 	}
 
 	public void twoStringVerify(String actvalue, String expvalue) {
@@ -585,7 +594,5 @@ public class BasePage {
 			Logs.error(buttonName + " is not clickable");
 		}
 	}
-
-	
 
 }

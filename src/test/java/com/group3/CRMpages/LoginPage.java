@@ -21,15 +21,21 @@ public class LoginPage extends BasePage{
 	WebElement signIn;
 	
 	
+
 	public void enterintoUsername(String userName) {
 		username.sendKeys(userName);
 	}
 	
 	public void enterintoPassword(String passWord) {
 		password.sendKeys(passWord);
+
 	}
 	
 	public void clickSignIn() {
 		signIn.click();
+		
+		driver.manage().window().maximize();
+		
+		
 	}
 }

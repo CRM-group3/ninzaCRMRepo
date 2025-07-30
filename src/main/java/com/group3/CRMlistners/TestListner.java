@@ -14,12 +14,19 @@ import com.group3.CRMutilities.ScreenShots;
 import com.group3.CRMbasics.*;
 import com.group3.CRMlistners.*;
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 public class TestListner extends BaseTest implements ITestListener {
 	
 	ScreenShots ss = new ScreenShots();
 	private static ExtentReports report = ExtentManager.getInstance();
+//
+//	@Override
+//	public void onTestStart(ITestResult result) {
+//	    ExtentTest test = ExtentManager.getInstance().createTest(result.getMethod().getMethodName());
+//	    ExtentManager.setTestlog(test);
+//	}
 
 
 	public void onStart(ITestContext context) {
@@ -33,6 +40,7 @@ public class TestListner extends BaseTest implements ITestListener {
 		ExtentTestManager.endTest();
 		ExtentManager.getInstance().flush();
 	}
+	
 
 	public void onTestStart(ITestResult result) {
 		System.out.println(("*** Running test method " + result.getMethod().getMethodName() + "..."));
