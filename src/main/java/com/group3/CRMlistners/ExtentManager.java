@@ -27,13 +27,12 @@ public class ExtentManager {
     private static String reportFilepath = System.getProperty("user.dir") +fileSeperator+ "ExtentReport";
     private static String reportFileLocation =  reportFilepath +fileSeperator+ reportFileName;
   
- 
-	public static ExtentTest startExtentCreateReport(String str) {
+    public static ExtentTest startExtentCreateReport(String str) {
 		 extent = ExtentManager.getInstance();
 		// this will return methodname to the testlog
 		testlog = extent.createTest(str);
 		return testlog;
-	}
+    }
     
     public static ExtentReports getInstance() {
         if (extent == null)

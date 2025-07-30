@@ -18,10 +18,7 @@ public class PropertiesFile {
 			String userDir = System.getProperty("user.dir");
 			String fileseparator = System.getProperty("file.separator");
 
-<<<<<<< HEAD
-			//String filepath = userDir + fileseparator + "properties" + fileseparator + "application.properties";
-=======
->>>>>>> 1ccf402 (did some changes to conacttest and basetest to resolve the conflict of multiple driver instacnce and generation of extent reports)
+
 			String filepath = userDir + fileseparator + "src/main/resources/properties" + fileseparator + nameOfFile;
 
 			try {
