@@ -1,4 +1,4 @@
-package com.group3.CRMtests;
+/*package com.group3.CRMtests;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
@@ -43,7 +43,7 @@ public class LoginTest extends BaseTest{
 	loginpage.clickSignIn();
 	return driver;
 	
->>>>>>> 7227cfa (before pulling the main branch)
+>>>>>>> 7227cfa (before pulling the main branch) */
 	}	
 
 	
