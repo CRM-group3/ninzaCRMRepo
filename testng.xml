@@ -9,10 +9,10 @@
 	</listeners>
 
 	
-	<test name="addContacts">
+	<test name="ContactsTest">
 
 		<classes>
-			<class name="com.group3.CRMtests.AddContacts" />
+			<class name="com.group3.CRMtests.ContactsTest" />
 		</classes>
 
 	</test>

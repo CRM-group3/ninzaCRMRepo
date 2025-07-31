@@ -18,7 +18,6 @@ public class PropertiesFile {
 			String userDir = System.getProperty("user.dir");
 			String fileseparator = System.getProperty("file.separator");
 
-
 			String filepath = userDir + fileseparator + "src/main/resources/properties" + fileseparator + nameOfFile;
 
 			try {

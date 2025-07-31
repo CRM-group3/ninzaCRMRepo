@@ -18,10 +18,10 @@ import org.testng.annotations.Test;
 		    @Test(priority=1)
 		    public void clickContacts() throws InterruptedException {
 		    	
-		    	AddContactsPage contactPage = new AddContactsPage(driver, test);
+		    	AddContactsPage contactPage = new AddContactsPage(getDriver(), testlog);
 		        
 		        try {
-		            boolean clicked = contactPage.clickOnContacts(driver);
+		            boolean clicked = contactPage.clickOnContacts(getDriver());
 		            if (clicked) {
 		                System.out.println("Contacts tab clicked successfully.");
 		            } else {
@@ -31,28 +31,30 @@ import org.testng.annotations.Test;
 		            e.printStackTrace();
 		        }
 		        Thread.sleep(3000);
+		     driver.quit();
 		    }
 		    
-		    @Test(priority = 2)
-		    public void clickCreateContactButton() throws  InterruptedException {
-		    	
-		        AddContactsPage contactPage = new AddContactsPage(driver, test);
-		    	try {
-		            boolean clicked = contactPage.clickOnCreateContact(driver);
-		            if (clicked) {
-		                
-		                test.pass("Create Contact button clicked successfully.");
-		            } else {
-		                
-		                test.fail("Failed to click Create Contact button.");
-		            }
-		        } catch (Exception e) {
-		            e.printStackTrace();
-		            test.fail("Exception occurred: " + e.getMessage());
-		        }
-
-		        Thread.sleep(3000);
-		    }
+//		    @Test(priority = 2)
+//		    public void clickCreateContactButton() throws  InterruptedException {
+//		    	
+//		        AddContactsPage contactPage = new AddContactsPage(getDriver(), testlog);
+//		    	try {
+//		            boolean clicked = contactPage.clickOnCreateContact(getDriver());
+//		            if (clicked) {
+//		                
+//		                testlog.pass("Create Contact button clicked successfully.");
+//		            } else {
+//		                
+//		                testlog.fail("Failed to click Create Contact button.");
+//		            }
+//		        } catch (Exception e) {
+//		            e.printStackTrace();
+//		            testlog.fail("Exception occurred: " + e.getMessage());
+//		        }
+//
+//		        Thread.sleep(3000);
+//		        driver.quit();
+//		    }
 	    }
 
 

@@ -35,19 +35,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 
+	WebDriver driver;
 	WebDriverWait wait;
 	protected Alert alert;
 	protected Actions action;
-	protected WebDriver driver;
-	public ExtentReports reportlog = ExtentManager.getInstance();//added
-	//protected static final Logger ObjectLogger = Logger.getLogger(BasePage.class);
+	public ExtentReports reportlog = ExtentManager.getInstance();
 	TestListner tstListner=new TestListner();
 
 
-//	 public BasePage() {
-//	        PropertyConfigurator.configure("log4j.properties");
-//	    }
-	 
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);

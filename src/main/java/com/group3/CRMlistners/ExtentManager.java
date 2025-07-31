@@ -33,7 +33,6 @@ public class ExtentManager {
 		testlog = extent.createTest(str);
 		return testlog;
     }
-    
     public static ExtentReports getInstance() {
         if (extent == null)
             createInstance();

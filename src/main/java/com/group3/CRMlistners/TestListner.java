@@ -52,7 +52,6 @@ public class TestListner extends BaseTest implements ITestListener {
 		System.out.println("*** Executed " + result.getMethod().getMethodName() + " test successfully...");
 		Logs.info("*** Executed " + result.getMethod().getMethodName() + " test successfully...");
 		ExtentTestManager.getTest().log(Status.PASS, "Test passed");
-		//ExtentManager.logTestwithPassed("NinaCRMpass");
 	}
 
 	public void onTestFailure(ITestResult result) {

@@ -30,7 +30,8 @@ public class AddContactsPage extends BasePage{
 	@FindBy(xpath="//a[@href='/contacts']")
 	public WebElement contacts;
 	
-	@FindBy(xpath="//button[@class='btn btn-info']")
+	//@FindBy(xpath="//button[@class='btn btn-info']")
+	@FindBy(xpath="//*[@id=\"content\"]/div[2]/div[1]/div/div[1]/div/div[2]/button/span")
 	public WebElement createContact;
 	
 	

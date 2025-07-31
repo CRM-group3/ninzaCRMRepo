@@ -30,28 +30,19 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeSuite;
 
 public class BaseTest {
-	protected static final Logger log = Logger.getLogger(BaseTest.class);//added
-    protected WebDriver driver; //changes to protected from static
-   //protected Logger myBaseTestLog = LogManager.getLogger();
+	
+	//protected static final Logger log = Logger.getLogger(BaseTest.class);//added
+     public static WebDriver driver; //changes to protected from static
+   
     
     public BasePage basepage;
     public ExtentReports reportlog = ExtentManager.getInstance();
+    public static ExtentTest testlog = ExtentManager.startExtentCreateReport("NinzaCRMReport");
     PropertiesFile prop = new PropertiesFile();
-    protected static ExtentReports extent;// 
-    protected ExtentTest test;//added by me tms
     
+    protected ExtentTest test;
 
-    @BeforeSuite
-    public void setupReport() {
-        ExtentManager.getInstance(); // creates the report
-    }
-
-    @AfterSuite
-    public void flushReport() {
-        ExtentManager.getInstance().flush(); // writes it to index.html
-    }
-
-   	public WebDriver getDriver() {
+	public WebDriver getDriver() {
 		if(driver == null) {
 			WebDriverManager.chromedriver().setup();
 //			// 🔐 Disable password manager and breach popups
@@ -76,17 +67,24 @@ public class BaseTest {
         }
     }
     
-//here i changed from beforemethod to beforeclass Each test method is 
-//running independently and creating its own WebDriver instance. 
-//   If you want one browser for the whole class, then change beforemthod to beforeclass
-   
+    
+//    @BeforeSuite
+//    public void setupReport() {
+//        ExtentManager.getInstance(); // creates the report
+//    }
+//
+//    @AfterSuite
+//    public void flushReport() {
+//        ExtentManager.getInstance().flush(); // writes it to index.html
+//    }
+
     @Parameters({ "browser" })
-    @BeforeClass
-    public void setUpBeforeClass(@Optional("chrome") String browserName) throws Exception {
+    @BeforeMethod
+    public void setUpBeforeMethod(@Optional("chrome") String browserName) throws Throwable {
     	
-    	ExtentManager.testlog = ExtentManager.getInstance().createTest("Test: " + browserName);
     	
-    	test = ExtentManager.testlog;
+    	
+    	//test = ExtentManager.testlog;
     	
     	
     	
@@ -100,18 +98,15 @@ public class BaseTest {
        // basepage.waitUntilPageLoads(20);
         driver.manage().window().maximize();
         
-        try {
+       
 			initialSetup();
-		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
     }
 
  
 
-	@AfterClass
-    public void tearDownAfterTestClass() {
+	@AfterMethod
+    public void tearDownAfterTestMethod() {
     	try {
         driverClose();
         Logs.info("******tearDownAfterTestMethod executed***********");
@@ -174,7 +169,7 @@ public class BaseTest {
                 Logs.error("Error while closing browser: " + e.getMessage());
             } finally {
             driver = null;
-            //Assert.assertNull(driver); //removed
+            Assert.assertNull(driver); //removed
             }
         }
     }

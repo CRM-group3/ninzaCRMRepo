@@ -7,6 +7,7 @@ import com.group3.CRMbasics.BasePage;
 
 public class LoginPage extends BasePage{
 	
+	
 	public LoginPage(WebDriver driver) {
 		super(driver);
 	}
@@ -34,7 +35,7 @@ public class LoginPage extends BasePage{
 	public void clickSignIn() {
 		signIn.click();
 		
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		
 		
 	}
