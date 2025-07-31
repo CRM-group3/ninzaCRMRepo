@@ -35,7 +35,6 @@ public class BaseTest {
             chromePrefs.put("credentials_enable_service", false);
             chromePrefs.put("profile.password_manager_enabled", false);
             chromePrefs.put("profile.password_manager_leak_detection", false);
-
             ChromeOptions options = new ChromeOptions();
             options.setExperimentalOption("prefs", chromePrefs);
             driver = new ChromeDriver(options);
@@ -59,9 +58,9 @@ public class BaseTest {
         //String url = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "url");
         String url = prop.getProperty("application.properties","url");
         System.out.println("Appln url:" +url);
-        baseURL(url);
-        
+        baseURL(url);      
         basepage.waitUntilPageLoads(20);
+        waitUntilPageLoads(20);
         driver.manage().window().maximize();
         initialSetup();
        
@@ -148,6 +147,7 @@ public class BaseTest {
 
     public void initialSetup() throws Throwable {
         driver.manage().window().maximize();
+
         basepage = new BasePage(driver); 
         String username = prop.getProperty("application.properties","username");
         String passwrd = prop.getProperty("application.properties","password");
@@ -158,6 +158,9 @@ public class BaseTest {
        // WebElement password = driver.findElement(By.xpath("//*[@id='inputPassword']"));
         WebElement password = driver.findElement(By.id("inputPassword"));
         basepage.elementSendText(password, passwrd, "Password");
+        WebElement loginButton = driver.findElement(By.id("Login"));
+        basepage.waitForVisibilty(loginButton, Duration.ofSeconds(30), "Login button");
+        basepage.buttonCheck(loginButton, "Login");
         WebElement SignInButton = driver.findElement(By.xpath("//button[text()='Sign In']"));
         basepage.waitForVisibilty(SignInButton, Duration.ofSeconds(30), "Sign In button");
         basepage.buttonCheck(SignInButton, "Sign In");

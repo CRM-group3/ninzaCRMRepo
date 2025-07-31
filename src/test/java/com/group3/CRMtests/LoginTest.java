@@ -17,6 +17,7 @@ public class LoginTest extends BaseTest{
 	ScreenShots screen = new ScreenShots();
 	
 	@Test
+<<<<<<< HEAD
 	public void login() throws Exception {
 	driver = getDriver();
 	prop = new PropertiesFile();
@@ -32,6 +33,17 @@ public class LoginTest extends BaseTest{
 	loginpage.clickSignIn();	
 	Logs.info("Successfully logged in");
 	Thread.sleep(10000);
+=======
+	public WebDriver login() {
+	driver = getDriver();
+	driver.get("http://49.249.28.218:8098/");
+	LoginPage loginpage = new LoginPage(driver);
+	loginpage.enterintoUsername();
+	loginpage.enterintoPassword();
+	loginpage.clickSignIn();
+	return driver;
+	
+>>>>>>> 7227cfa (before pulling the main branch)
 	}	
 
 	
