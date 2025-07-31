@@ -2,19 +2,28 @@
 <testng-results ignored="1" total="2" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
+
   <suite started-at="2025-07-29T18:43:12 PDT" name="Default suite" finished-at="2025-07-29T18:43:13 PDT" duration-ms="176">
     <groups>
     </groups>
     <test started-at="2025-07-29T18:43:12 PDT" name="Default test" finished-at="2025-07-29T18:43:13 PDT" duration-ms="176">
       <class name="com.group3.CRMtests.QuoteTest">
         <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.QuoteTest@6531a794]" started-at="2025-07-29T18:43:13 PDT" name="setUpBeforeMethod" finished-at="2025-07-29T18:43:13 PDT" duration-ms="24" status="FAIL">
+
+  <suite started-at="2025-07-29T15:11:42 PDT" name="Automation" finished-at="2025-07-29T15:12:20 PDT" duration-ms="37528">
+    <groups>
+    </groups>
+    <test started-at="2025-07-29T15:11:42 PDT" name="LeadTest" finished-at="2025-07-29T15:12:20 PDT" duration-ms="37528">
+      <class name="com.group3.CRMtests.LeadTest">
+        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:11:42 PDT" name="setUpBeforeMethod" finished-at="2025-07-29T15:11:57 PDT" duration-ms="14793" status="PASS">
+
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
-          </params>
+
           <exception class="java.lang.Error">
             <message>
               <![CDATA[Unresolved compilation problems: 
@@ -22,7 +31,7 @@ PropertyUtility cannot be resolved
 Constants cannot be resolved to a variable
 ]]>
             </message>
-            <full-stacktrace>
+         
               <![CDATA[java.lang.Error: Unresolved compilation problems: 
 PropertyUtility cannot be resolved
 Constants cannot be resolved to a variable
@@ -113,4 +122,39 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
       </class> <!-- com.group3.CRMtests.QuoteTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
+
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeMethod -->
+        <test-method signature="createLeadPageOpens()[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:11:57 PDT" name="createLeadPageOpens" finished-at="2025-07-29T15:11:57 PDT" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLeadPageOpens -->
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:11:57 PDT" name="tearDownAfterTestMethod" finished-at="2025-07-29T15:11:57 PDT" duration-ms="265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterTestMethod -->
+        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:11:57 PDT" name="setUpBeforeMethod" finished-at="2025-07-29T15:12:20 PDT" duration-ms="22277" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+              
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeMethod -->
+        <test-method signature="leadtestLogin()[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:12:20 PDT" name="leadtestLogin" finished-at="2025-07-29T15:12:20 PDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- leadtestLogin -->
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:12:20 PDT" name="tearDownAfterTestMethod" finished-at="2025-07-29T15:12:20 PDT" duration-ms="122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterTestMethod -->
+      </class> <!-- com.group3.CRMtests.LeadTest -->
+    </test> <!-- LeadTest -->
+  </suite> <!-- Automation -->
+
 </testng-results>
