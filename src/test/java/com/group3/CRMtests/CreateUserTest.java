@@ -34,7 +34,7 @@ public class CreateUserTest extends BaseTest {
 		userPage= new CreateUserPage(driver);
 		Actions actions= new Actions(driver);
 		Thread.sleep(3000);
-		WebElement adminMenu=userPage.getAdminMenu();
+		adminMenu=userPage.getAdminMenu();
 		//river.findElement(By.xpath("//div[@class='nav-link' and contains(., 'Admin Console')]"));
 		actions.moveToElement(adminMenu).perform();
 		WebElement createUserLink=userPage.getCreateUserLink();
