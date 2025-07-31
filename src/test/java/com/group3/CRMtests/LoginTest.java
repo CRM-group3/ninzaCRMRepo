@@ -21,13 +21,13 @@ public class LoginTest extends BaseTest{
 	public void login() throws Exception {
 	driver = getDriver();
 	prop = new PropertiesFile();
-	String url = prop.getProperty("url");
+	String url = prop.getProperty("application.properties","url");
 	driver.get(url);
 	driver.manage().window().maximize();
 	loginpage = new LoginPage(driver);
 	DOMConfigurator.configure("log4j.xml");
-	String username = prop.getProperty("username");
-	String password = prop.getProperty("password");
+	String username = prop.getProperty("application.properties","username");
+	String password = prop.getProperty("application.properties","password");
 	loginpage.enterintoUsername(username);
 	loginpage.enterintoPassword(password);
 	loginpage.clickSignIn();	

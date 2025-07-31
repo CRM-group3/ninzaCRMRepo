@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.group3.CRMlogs.Logs;
 import com.group3.CRMutilities.PropertiesFile;
 import com.group3.CRMlistners.ExtentManager;
@@ -24,6 +25,7 @@ public class BaseTest {
     static WebDriver driver;
     public BasePage basepage;
     public ExtentReports reportlog = ExtentManager.getInstance();
+    public static ExtentTest testlog = ExtentManager.startExtentCreateReport("NinzaCRMReport");
     PropertiesFile prop = new PropertiesFile();
 
     public WebDriver getDriver() {
@@ -50,26 +52,34 @@ public class BaseTest {
 
     @Parameters({ "browser" })
     @BeforeMethod
-    public void setUpBeforeMethod(@Optional("chrome") String browserName) throws Exception {
+    public void setUpBeforeMethod(@Optional("chrome") String browserName) throws Throwable {
         Logs.info(".........BeforeClass executed---------------");
         initializeBrowser(browserName);
-<<<<<<< HEAD
         //String url = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "url");
         String url = prop.getProperty("application.properties","url");
-        baseURL(url);
+        System.out.println("Appln url:" +url);
+        baseURL(url);      
         basepage.waitUntilPageLoads(20);
-=======
-      //  String url = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "url");
-      //  baseURL(url);
         waitUntilPageLoads(20);
->>>>>>> 7227cfa (before pulling the main branch)
         driver.manage().window().maximize();
+        initialSetup();
+       
+        
     }
+    
 
     @AfterMethod
     public void tearDownAfterTestMethod() {
-        driverClose();
-        Logs.info("******tearDownAfterTestMethod executed***********");
+//        driverClose();
+//        Logs.info("******tearDownAfterTestMethod executed***********");
+    	
+    	try {
+            driverClose();
+            Logs.info("******tearDownAfterTestMethod executed***********");
+        }
+        catch (Exception e) {
+            Logs.error("Error in tearDown: " + e.getMessage());
+        }
     }
 
     public void initializeBrowser(String browser) {
@@ -137,30 +147,23 @@ public class BaseTest {
 
     public void initialSetup() throws Throwable {
         driver.manage().window().maximize();
-<<<<<<< HEAD
+
         basepage = new BasePage(driver); 
         String username = prop.getProperty("application.properties","username");
         String passwrd = prop.getProperty("application.properties","password");
-        WebElement emailField = driver.findElement(By.xpath("//*[@id='username']"));
-        basepage.waitForVisibilty(emailField, Duration.ofSeconds(30), "Email field");
+       // WebElement emailField = driver.findElement(By.xpath("//*[@id='username']"));
+        WebElement emailField = driver.findElement(By.id("username"));
+        //basepage.waitForVisibilty(emailField, Duration.ofSeconds(30), "Email field");
         basepage.elementSendText(emailField, username, "Username");
-        WebElement password = driver.findElement(By.xpath("//*[@id='password']"));
+       // WebElement password = driver.findElement(By.xpath("//*[@id='inputPassword']"));
+        WebElement password = driver.findElement(By.id("inputPassword"));
         basepage.elementSendText(password, passwrd, "Password");
-=======
-      //  String username = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "username");
-        //String passwrd = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "password");
-
-        WebElement emailField = driver.findElement(By.xpath("//*[@id='username']"));
-        waitForVisibility(emailField, 30, "Email field");
-       // elementSendText(emailField, username, "Username");
-
-        WebElement password = driver.findElement(By.xpath("//*[@id='password']"));
-       // elementSendText(password, passwrd, "Password");
-
->>>>>>> 7227cfa (before pulling the main branch)
         WebElement loginButton = driver.findElement(By.id("Login"));
         basepage.waitForVisibilty(loginButton, Duration.ofSeconds(30), "Login button");
         basepage.buttonCheck(loginButton, "Login");
+        WebElement SignInButton = driver.findElement(By.xpath("//button[text()='Sign In']"));
+        basepage.waitForVisibilty(SignInButton, Duration.ofSeconds(30), "Sign In button");
+        basepage.buttonCheck(SignInButton, "Sign In");
         Logs.info("Successfully logged to the Home page");
         ExtentManager.logTestInfo("Successfully logged in to Home page");
         
