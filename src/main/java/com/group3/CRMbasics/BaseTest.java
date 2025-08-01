@@ -22,7 +22,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
-    static WebDriver driver;
+    public static WebDriver driver;
     public BasePage basepage;
     public ExtentReports reportlog = ExtentManager.getInstance();
     public static ExtentTest testlog = ExtentManager.startExtentCreateReport("NinzaCRMReport");
