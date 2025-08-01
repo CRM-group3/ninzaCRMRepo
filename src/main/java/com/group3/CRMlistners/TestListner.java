@@ -19,7 +19,7 @@ import com.aventstack.extentreports.Status;
 public class TestListner extends BaseTest implements ITestListener {
 	
 	ScreenShots ss = new ScreenShots();
-	private static ExtentReports report = ExtentManager.getInstance();
+	//private static ExtentReports report = ExtentManager.getInstance();
 
 
 	public void onStart(ITestContext context) {
@@ -43,19 +43,15 @@ public class TestListner extends BaseTest implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		System.out.println("*** Executed " + result.getMethod().getMethodName() + " test successfully...");
 		Logs.info("*** Executed " + result.getMethod().getMethodName() + " test successfully...");
-		ExtentTestManager.getTest().log(Status.PASS, "Test passed");
-		//ExtentManager.logTestwithPassed("NinaCRMpass");
+		ExtentTestManager.getTest().log(Status.PASS, "Test passed");		
 	}
 
 	public void onTestFailure(ITestResult result) {
 		System.out.println("*** Test execution " + result.getMethod().getMethodName() + " failed...");
 		Logs.error("*** Test execution " + result.getMethod().getMethodName() + " failed...");
 		ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");
-		ss.takescreenshot(getDriver());
-		//String filename = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new Date());
-		//String path = constants.screenshotsFilepath + filename + ".png";
-		//report.logTestfailwithScreenshot(path);
-		//report.logTestfailwithException(result.getThrowable());
+		ss.takescreenshot(driver);
+		
 	}
 
 	public void onTestSkipped(ITestResult result) {

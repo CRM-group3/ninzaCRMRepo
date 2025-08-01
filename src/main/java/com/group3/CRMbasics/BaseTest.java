@@ -22,11 +22,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
-    static WebDriver driver;
-    public BasePage basepage;
+    public static WebDriver driver;
+    public static  BasePage basepage;
     public ExtentReports reportlog = ExtentManager.getInstance();
     public static ExtentTest testlog = ExtentManager.startExtentCreateReport("NinzaCRMReport");
     PropertiesFile prop = new PropertiesFile();
+   
 
     public WebDriver getDriver() {
         if (driver == null) {
@@ -54,7 +55,7 @@ public class BaseTest {
     @Parameters({ "browser" })
     @BeforeMethod
     public void setUpBeforeMethod(@Optional("chrome") String browserName) throws Throwable {
-        Logs.info(".........BeforeClass executed---------------");
+        Logs.info(".........BeforeClass executed---------------");      
         initializeBrowser(browserName);
         //String url = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "url");
         String url = prop.getProperty("application.properties","url");
@@ -63,8 +64,7 @@ public class BaseTest {
         
         basepage.waitUntilPageLoads(20);
         driver.manage().window().maximize();
-        initialSetup();
-       
+        initialSetup();     
         
     }
     
@@ -97,17 +97,17 @@ public class BaseTest {
             ChromeOptions options = new ChromeOptions();
             options.setExperimentalOption("prefs", chromePrefs);
             driver = new ChromeDriver(options);
-            basepage = new BasePage(driver);
+           basepage = new BasePage(driver);
             Logs.info("Chrome browser instance has started");
         } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
-            basepage = new BasePage(driver);
+           basepage = new BasePage(driver);
             Logs.info("Firefox browser instance has started");
         } else if (browser.equalsIgnoreCase("safari")) {
             WebDriverManager.safaridriver().setup();
             driver = new SafariDriver();
-            basepage = new BasePage(driver);
+           basepage = new BasePage(driver);
             Logs.info("Safari browser instance has started");
         } else {
             Logs.error("Browser is not available: " + browser);
@@ -148,12 +148,12 @@ public class BaseTest {
 
     public void initialSetup() throws Throwable {
         driver.manage().window().maximize();
-        basepage = new BasePage(driver); 
+       basepage = new BasePage(driver); 
         String username = prop.getProperty("application.properties","username");
         String passwrd = prop.getProperty("application.properties","password");
        // WebElement emailField = driver.findElement(By.xpath("//*[@id='username']"));
         WebElement emailField = driver.findElement(By.id("username"));
-        //basepage.waitForVisibilty(emailField, Duration.ofSeconds(30), "Email field");
+        basepage.waitForVisibilty(emailField, Duration.ofSeconds(30), "Email field");
         basepage.elementSendText(emailField, username, "Username");
        // WebElement password = driver.findElement(By.xpath("//*[@id='inputPassword']"));
         WebElement password = driver.findElement(By.id("inputPassword"));
