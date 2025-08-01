@@ -34,9 +34,10 @@ public class CreateUserTest extends BaseTest {
 		userPage= new CreateUserPage(driver);
 		Actions actions= new Actions(driver);
 		Thread.sleep(3000);
-		WebElement adminMenu=userPage.getAdminMenu();
+		//adminMenu=userPage.getAdminMenu();
 		//river.findElement(By.xpath("//div[@class='nav-link' and contains(., 'Admin Console')]"));
-		actions.moveToElement(adminMenu).perform();
+		actions.moveToElement(userPage.getAdminMenu()).perform();
+		//actions.moveToElement(adminMenu).perform();
 		WebElement createUserLink=userPage.getCreateUserLink();
 		//iver.findElement(By.xpath("//div[@class='dropdown-item' and text()='Create User']")); 
 		actions.moveToElement(createUserLink).click().perform();

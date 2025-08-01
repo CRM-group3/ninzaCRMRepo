@@ -60,7 +60,6 @@ public class BaseTest {
         System.out.println("Appln url:" +url);
         baseURL(url);      
         basepage.waitUntilPageLoads(20);
-       
         driver.manage().window().maximize();
         initialSetup();
        

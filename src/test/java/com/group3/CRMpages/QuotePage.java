@@ -1,4 +1,4 @@
-package com.group3.CRMpages;
+/*package com.group3.CRMpages;
 
 import java.time.Duration;
 
@@ -249,4 +249,4 @@ public class QuotePage extends BasePage{
 	}
 	
 	
-}
+} */
