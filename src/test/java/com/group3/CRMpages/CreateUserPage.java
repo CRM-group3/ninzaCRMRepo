@@ -12,10 +12,98 @@ import org.openqa.selenium.support.PageFactory;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+//@Getter
+//@Setter
 public class CreateUserPage {
-    WebDriver driver;
+    public WebDriver getDriver() {
+		return driver;
+	}
+
+	public void setDriver(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public Actions getActions() {
+		return actions;
+	}
+
+	public void setActions(Actions actions) {
+		this.actions = actions;
+	}
+
+	public WebElement getFirstNameInput() {
+		return firstNameInput;
+	}
+
+	public void setFirstNameInput(WebElement firstNameInput) {
+		this.firstNameInput = firstNameInput;
+	}
+
+	public WebElement getMobileNumber() {
+		return mobileNumber;
+	}
+
+	public void setMobileNumber(WebElement mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
+
+	public WebElement getEmailInput() {
+		return emailInput;
+	}
+
+	public void setEmailInput(WebElement emailInput) {
+		this.emailInput = emailInput;
+	}
+
+	public WebElement getUserName() {
+		return userName;
+	}
+
+	public void setUserName(WebElement userName) {
+		this.userName = userName;
+	}
+
+	public WebElement getPasswordInput() {
+		return passwordInput;
+	}
+
+	public void setPasswordInput(WebElement passwordInput) {
+		this.passwordInput = passwordInput;
+	}
+
+	public WebElement getSubmitBtn() {
+		return submitBtn;
+	}
+
+	public void setSubmitBtn(WebElement submitBtn) {
+		this.submitBtn = submitBtn;
+	}
+
+	public WebElement getAdminMenu() {
+		return adminMenu;
+	}
+
+	public void setAdminMenu(WebElement adminMenu) {
+		this.adminMenu = adminMenu;
+	}
+
+	public WebElement getCreateUserLink() {
+		return createUserLink;
+	}
+
+	public void setCreateUserLink(WebElement createUserLink) {
+		this.createUserLink = createUserLink;
+	}
+
+	public WebElement getAlertMsg() {
+		return alertMsg;
+	}
+
+	public void setAlertMsg(WebElement alertMsg) {
+		this.alertMsg = alertMsg;
+	}
+
+	WebDriver driver;
     Actions actions;
 
     public CreateUserPage(WebDriver driver) {
