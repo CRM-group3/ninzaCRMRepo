@@ -7,6 +7,7 @@
     </listeners>
     
     <test name="LeadTest">
+    <parameter name="campaignName" value="Roshal"/>
         <classes>
             <class name="com.group3.CRMtests.LeadTest" />
         </classes>
