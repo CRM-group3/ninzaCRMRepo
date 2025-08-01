@@ -6,7 +6,7 @@
         <listener class-name="com.group3.CRMlistners.TestListner"></listener>
     </listeners>
     
-    <test name="LeadTest">
+    <test name="LeadTests">
         <classes>
             <class name="com.group3.CRMtests.LeadTest" />
         </classes>

@@ -31,6 +31,13 @@
 
 
 	<dependencies>
+
+		<dependency>
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>
+    <version>30.1-jre</version>  <!-- Use the version that fits your project -->
+</dependency>
+
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
