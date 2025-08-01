@@ -33,8 +33,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 
-	WebDriver driver;
-	WebDriverWait wait;
+	public WebDriver driver;
+	public WebDriverWait wait;
 	protected Alert alert;
 	protected Actions action;
 	public ExtentReports reportlog = ExtentManager.getInstance();
