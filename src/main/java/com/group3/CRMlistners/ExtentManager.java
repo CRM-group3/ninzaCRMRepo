@@ -12,6 +12,10 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+
+import com.group3.CRMlistners.ExtentManager;
+
+
 public class ExtentManager {
 	
 
@@ -70,6 +74,7 @@ public class ExtentManager {
         }
 		return reportFileLocation;
     }
+<<<<<<< HEAD
     
     public static void logTestInfo(String text) {
 
@@ -102,4 +107,62 @@ public class ExtentManager {
 
 	}
 	
+=======
+    public static ExtentTest testlog;
+    public static void logTestInfo(String text) {
+
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+
+		testlog.info(text);
+
+
+
+	}
+
+
+
+	public static void logTestwithPassed(String text) {
+
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+
+		testlog.pass(MarkupHelper.createLabel(text, ExtentColor.GREEN));
+
+	}
+
+	
+
+	public static void logTestfailwithException(Throwable e) {
+
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+
+		testlog.fail(e);
+
+
+
+	}
+
+
+
+	public static void logTestwithFailed(String text) {
+
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+
+		testlog.fail(MarkupHelper.createLabel(text, ExtentColor.RED));
+
+
+
+	}
+
+
+
+	public static void logTestfailwithScreenshot(String filepath) {
+
+		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
+
+		testlog.fail(MediaEntityBuilder.createScreenCaptureFromPath(filepath).build());
+
+
+
+	}
+>>>>>>> 808a7be3f63646efd797508a5d3a1145aa44cc35
 }

@@ -2,6 +2,7 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2025-07-25T10:42:52 PDT" name="Default suite" finished-at="2025-07-25T10:43:03 PDT" duration-ms="11102">
     <groups>
     </groups>
@@ -14,4 +15,32 @@
       </class> <!-- com.group3.CRMtests.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
+=======
+<<<<<<< HEAD
+  <suite started-at="2025-07-23T12:28:23 CDT" name="Automation" finished-at="2025-07-23T12:28:23 CDT" duration-ms="363">
+    <groups>
+    </groups>
+    <test started-at="2025-07-23T12:28:23 CDT" name="OpportunityTest" finished-at="2025-07-23T12:28:23 CDT" duration-ms="363">
+      <class name="com.group3.CRMtests.OpportunityTest">
+        <test-method signature="test()[pri:0, instance:com.group3.CRMtests.OpportunityTest@1de76cc7]" started-at="2025-07-23T12:28:23 CDT" name="test" finished-at="2025-07-23T12:28:23 CDT" duration-ms="321" status="PASS">
+=======
+  <suite started-at="2025-07-23T09:48:47 PDT" name="Default suite" finished-at="2025-07-23T09:48:47 PDT" duration-ms="50">
+    <groups>
+    </groups>
+    <test started-at="2025-07-23T09:48:47 PDT" name="Default test" finished-at="2025-07-23T09:48:47 PDT" duration-ms="50">
+      <class name="com.group3.CRMtests.OpportunityTest">
+        <test-method signature="test()[pri:0, instance:com.group3.CRMtests.OpportunityTest@6302bbb1]" started-at="2025-07-23T09:48:47 PDT" name="test" finished-at="2025-07-23T09:48:47 PDT" duration-ms="14" status="PASS">
+>>>>>>> 5017ebe70f363b22d5c32dee598c9deaa0d44adb
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- com.group3.CRMtests.OpportunityTest -->
+<<<<<<< HEAD
+    </test> <!-- OpportunityTest -->
+  </suite> <!-- Automation -->
+=======
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+>>>>>>> 5017ebe70f363b22d5c32dee598c9deaa0d44adb
+>>>>>>> 808a7be3f63646efd797508a5d3a1145aa44cc35
 </testng-results>
