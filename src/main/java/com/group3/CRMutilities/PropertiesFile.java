@@ -3,13 +3,12 @@ package com.group3.CRMutilities;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
 
 public class PropertiesFile {
 	
-
+	//call this by creating an instance of PropertiesFile and then calling the method
 	
 		FileInputStream fileinput;
 		
@@ -18,6 +17,7 @@ public class PropertiesFile {
 			String userDir = System.getProperty("user.dir");
 			String fileseparator = System.getProperty("file.separator");
 
+			//String filepath = userDir + fileseparator + "properties" + fileseparator + "application.properties";
 			String filepath = userDir + fileseparator + "src/main/resources/properties" + fileseparator + nameOfFile;
 
 			try {
@@ -25,7 +25,7 @@ public class PropertiesFile {
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
+			} 
 			
 			Properties prop = new Properties();
 			try {

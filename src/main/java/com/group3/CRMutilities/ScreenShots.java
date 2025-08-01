@@ -13,7 +13,7 @@ import org.openqa.selenium.WebDriver;
 
 public class ScreenShots {
 	
-	public static  String takescreenshot(WebDriver driver) { //added static string tms
+	public static String takescreenshot(WebDriver driver) {
 		//Take screen shot object
 		TakesScreenshot screenshot = ((TakesScreenshot) driver);
 		
@@ -31,14 +31,15 @@ public class ScreenShots {
 		//Convert file path to file object
 		File destFile = new File(filepath);
 		
-		//copy source file into destination file
+		//copy source file into destination file 
 		try {
 			FileUtils.copyFile(srcFile, destFile);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return filepath; 
+		return filepath;
+	
 	}
 
 }

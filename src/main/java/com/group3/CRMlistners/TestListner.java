@@ -14,19 +14,12 @@ import com.group3.CRMutilities.ScreenShots;
 import com.group3.CRMbasics.*;
 import com.group3.CRMlistners.*;
 import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 public class TestListner extends BaseTest implements ITestListener {
 	
 	ScreenShots ss = new ScreenShots();
 	private static ExtentReports report = ExtentManager.getInstance();
-//
-//	@Override
-//	public void onTestStart(ITestResult result) {
-//	    ExtentTest test = ExtentManager.getInstance().createTest(result.getMethod().getMethodName());
-//	    ExtentManager.setTestlog(test);
-//	}
 
 
 	public void onStart(ITestContext context) {
@@ -40,7 +33,6 @@ public class TestListner extends BaseTest implements ITestListener {
 		ExtentTestManager.endTest();
 		ExtentManager.getInstance().flush();
 	}
-	
 
 	public void onTestStart(ITestResult result) {
 		System.out.println(("*** Running test method " + result.getMethod().getMethodName() + "..."));
@@ -52,13 +44,14 @@ public class TestListner extends BaseTest implements ITestListener {
 		System.out.println("*** Executed " + result.getMethod().getMethodName() + " test successfully...");
 		Logs.info("*** Executed " + result.getMethod().getMethodName() + " test successfully...");
 		ExtentTestManager.getTest().log(Status.PASS, "Test passed");
+		//ExtentManager.logTestwithPassed("NinaCRMpass");
 	}
 
 	public void onTestFailure(ITestResult result) {
 		System.out.println("*** Test execution " + result.getMethod().getMethodName() + " failed...");
 		Logs.error("*** Test execution " + result.getMethod().getMethodName() + " failed...");
 		ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");
-		ss.takescreenshot(getDriver());
+		ss.takescreenshot(driver);
 		//String filename = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new Date());
 		//String path = constants.screenshotsFilepath + filename + ".png";
 		//report.logTestfailwithScreenshot(path);

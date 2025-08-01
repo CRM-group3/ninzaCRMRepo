@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-30T18:25:17 PDT" name="Default suite" finished-at="2025-07-30T18:25:31 PDT" duration-ms="14460">
+  <suite started-at="2025-07-31T23:57:00 PDT" name="Default suite" finished-at="2025-07-31T23:57:29 PDT" duration-ms="28060">
     <groups>
     </groups>
-    <test started-at="2025-07-30T18:25:17 PDT" name="Default test" finished-at="2025-07-30T18:25:31 PDT" duration-ms="14460">
+    <test started-at="2025-07-31T23:57:00 PDT" name="Default test" finished-at="2025-07-31T23:57:29 PDT" duration-ms="28060">
       <class name="com.group3.CRMtests.ContactsTest">
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@6f43c82]" started-at="2025-07-30T18:25:17 PDT" name="setUpBeforeMethod" finished-at="2025-07-30T18:25:27 PDT" duration-ms="10337" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@6e2aa843]" started-at="2025-07-31T23:57:00 PDT" name="setUpBeforeMethod" finished-at="2025-07-31T23:57:09 PDT" duration-ms="8752" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,14 +18,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="clickContacts()[pri:1, instance:com.group3.CRMtests.ContactsTest@6f43c82]" started-at="2025-07-30T18:25:27 PDT" name="clickContacts" finished-at="2025-07-30T18:25:31 PDT" duration-ms="4061" status="PASS">
+        <test-method signature="createContactWithMandatoryFields()[pri:2, instance:com.group3.CRMtests.ContactsTest@6e2aa843]" started-at="2025-07-31T23:57:09 PDT" name="createContactWithMandatoryFields" finished-at="2025-07-31T23:57:28 PDT" duration-ms="19020" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickContacts -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@6f43c82]" started-at="2025-07-30T18:25:31 PDT" name="tearDownAfterTestMethod" finished-at="2025-07-30T18:25:31 PDT" duration-ms="3" status="PASS">
+        </test-method> <!-- createContactWithMandatoryFields -->
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@6e2aa843]" started-at="2025-07-31T23:57:28 PDT" name="tearDownAfterTestMethod" finished-at="2025-07-31T23:57:29 PDT" duration-ms="249" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.group3.CRMtests.ContactsTest@6e2aa843]" started-at="2025-07-31T23:57:29 PDT" name="flushReport" finished-at="2025-07-31T23:57:29 PDT" duration-ms="415" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
       </class> <!-- com.group3.CRMtests.ContactsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

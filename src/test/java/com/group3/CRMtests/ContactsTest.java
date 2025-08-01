@@ -2,62 +2,83 @@ package com.group3.CRMtests;
 
 import com.group3.CRMbasics.BaseTest;
 import com.group3.CRMlistners.ExtentManager;
+import com.group3.CRMlogs.Logs;
 import com.group3.CRMpages.AddContactsPage;
-import com.group3.CRMpages.LoginPage;
 import com.group3.CRMutilities.PropertiesFile;
 
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
-	import com.aventstack.extentreports.ExtentTest;
+import java.time.Duration;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+//import org.openqa.selenium.logging.Logs;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+       
 	    
 	    public class ContactsTest extends BaseTest {
+	    	
+	    	@Test(priority=0)
+	    	public void clickContacts() throws Throwable {
+	    	    
+	    		AddContactsPage contactPage = new AddContactsPage(driver);
+	    	    contactPage.clickOnContacts();
+	    	    Thread.sleep(3000);
+	    	    driver.quit(); 
+	    	}
+	    	
+	    	 @Test(priority=1)
+		    public void clickCreateContactButton() throws  InterruptedException {
 
-		 PropertiesFile prop = new PropertiesFile(); 
-		   
-		    @Test(priority=1)
-		    public void clickContacts() throws InterruptedException {
-		    	
-		    	AddContactsPage contactPage = new AddContactsPage(getDriver(), testlog);
-		        
-		        try {
-		            boolean clicked = contactPage.clickOnContacts(getDriver());
-		            if (clicked) {
-		                System.out.println("Contacts tab clicked successfully.");
-		            } else {
-		                System.out.println("Failed to click Contacts tab.");
-		            }
-		        } catch (Exception e) {
-		            e.printStackTrace();
-		        }
-		        Thread.sleep(3000);
-		     driver.quit();
-		    }
-		    
-//		    @Test(priority = 2)
-//		    public void clickCreateContactButton() throws  InterruptedException {
-//		    	
-//		        AddContactsPage contactPage = new AddContactsPage(getDriver(), testlog);
-//		    	try {
-//		            boolean clicked = contactPage.clickOnCreateContact(getDriver());
-//		            if (clicked) {
-//		                
-//		                testlog.pass("Create Contact button clicked successfully.");
-//		            } else {
-//		                
-//		                testlog.fail("Failed to click Create Contact button.");
-//		            }
-//		        } catch (Exception e) {
-//		            e.printStackTrace();
-//		            testlog.fail("Exception occurred: " + e.getMessage());
-//		        }
-//
-//		        Thread.sleep(3000);
-//		        driver.quit();
-//		    }
-	    }
+	    		AddContactsPage contactPage = new AddContactsPage(driver);
+			    contactPage.clickOnCreateContact();
+			    Thread.sleep(3000);
+			    driver.quit(); 
+			   
+	    	 }
+	    	 
+	    	 @Test(priority=2)    	 
+	    	 public void createContactWithMandatoryFields() throws InterruptedException {
+	    	       
+	    		 AddContactsPage contactPage = new AddContactsPage(driver);
+	    		 contactPage.clickOnContacts();
+	    		 Thread.sleep(2000);
+	    	        contactPage.clickOnCreateContact();
+	    	        Thread.sleep(2000);
+	    	        
+	    	        contactPage.enterOrganization("Test Org");
+	    	        Thread.sleep(2000);
+	    	        contactPage.enterTitle("QAEngineer");
+	    	        Thread.sleep(2000);
+	    	        contactPage.enterContactName("TMS");
+	    	        Thread.sleep(2000);
+	    	        contactPage.enterMobile("9346789998");
+	    	        Thread.sleep(2000);
 
+	    	        // Select campaign using lookup
+	    	        contactPage.selectCampaignFromLookup("Campaigntest");
+	    		 
+//	    	
+	    	        contactPage.clickCreateContact();
+	    	        Thread.sleep(2000);
+	    	        
+//	    	        String actualMessage = contactPage.getSuccessMessage();
+//	    	        Assert.assertEquals(actualMessage, "Contact TMS created successfully");
+	    	    }
+	    	 
+	    	 
+	    	}
+			    	
+	    	  
+	    	
 
-	
+    	
+	    	
+	    
 
-
+		
+//	     	

@@ -3,10 +3,6 @@ package com.group3.CRMbasics;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.LogManager;
-
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,39 +10,28 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.group3.CRMlogs.Logs;
 import com.group3.CRMutilities.PropertiesFile;
 import com.group3.CRMlistners.ExtentManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeSuite;
 
 public class BaseTest {
-	
-	//protected static final Logger log = Logger.getLogger(BaseTest.class);//added
-     public static WebDriver driver; //changes to protected from static
-   
-    
+
+    public static WebDriver driver;
     public BasePage basepage;
     public ExtentReports reportlog = ExtentManager.getInstance();
     public static ExtentTest testlog = ExtentManager.startExtentCreateReport("NinzaCRMReport");
     PropertiesFile prop = new PropertiesFile();
-    
-    protected ExtentTest test;
 
-	public WebDriver getDriver() {
-		if(driver == null) {
-			WebDriverManager.chromedriver().setup();
-//			// 🔐 Disable password manager and breach popups
-
+    public WebDriver getDriver() {
+        if (driver == null) {
+            WebDriverManager.chromedriver().setup();
             Map<String, Object> chromePrefs = new HashMap<>();
             chromePrefs.put("credentials_enable_service", false);
             chromePrefs.put("profile.password_manager_enabled", false);
@@ -54,7 +39,6 @@ public class BaseTest {
 
             ChromeOptions options = new ChromeOptions();
             options.setExperimentalOption("prefs", chromePrefs);
-
             driver = new ChromeDriver(options);
         }
         return driver;
@@ -67,53 +51,45 @@ public class BaseTest {
         }
     }
     
-    
-//    @BeforeSuite
-//    public void setupReport() {
-//        ExtentManager.getInstance(); // creates the report
-//    }
-//
-//    @AfterSuite
-//    public void flushReport() {
-//        ExtentManager.getInstance().flush(); // writes it to index.html
-//    }
 
     @Parameters({ "browser" })
     @BeforeMethod
     public void setUpBeforeMethod(@Optional("chrome") String browserName) throws Throwable {
-    	
-    	
-    	
-    	//test = ExtentManager.testlog;
-    	
-    	
-    	
-    	Logs.info(".........BeforeClass executed---------------");
+        Logs.info(".........BeforeClass executed---------------");
         initializeBrowser(browserName);
-       
+        //String url = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "url");
         String url = prop.getProperty("application.properties","url");
         System.out.println("Appln url:" +url);
-        //String url = prop.getProperty("url"); //tms changed
         baseURL(url);
-       // basepage.waitUntilPageLoads(20);
-        driver.manage().window().maximize();
         
+        basepage.waitUntilPageLoads(20);
+        driver.manage().window().maximize();
+        initialSetup();
        
-			initialSetup();
-		
+        
     }
+    
 
- 
-
-	@AfterMethod
+    @AfterMethod
     public void tearDownAfterTestMethod() {
+//        driverClose();
+//        Logs.info("******tearDownAfterTestMethod executed***********");
+    	
     	try {
-        driverClose();
-        Logs.info("******tearDownAfterTestMethod executed***********");
+            driver.quit();
+            Logs.info("******tearDownAfterTestMethod executed***********");
+        }
+        catch (Exception e) {
+            Logs.error("Error in tearDown: " + e.getMessage());
+        }
     }
-    catch (Exception e) {
-        Logs.error("Error in tearDown: " + e.getMessage());
-    }
+    
+    @AfterSuite
+    public void flushReport() {
+        if (reportlog != null) {
+            reportlog.flush();
+            Logs.info("Extent Report flushed successfully.");
+        }
     }
 
     public void initializeBrowser(String browser) {
@@ -160,17 +136,11 @@ public class BaseTest {
 
     public void driverClose() {
         if (driver != null) {
-        	try { //added
-            driver.quit();//added
+            driver.close();
             Logs.info("Browser is closed");
             ExtentManager.logTestInfo("Browser is closed");
-        	}
-        	catch (Exception e) { 
-                Logs.error("Error while closing browser: " + e.getMessage());
-            } finally {
             driver = null;
-            Assert.assertNull(driver); //removed
-            }
+            Assert.assertNull(driver);
         }
     }
 
@@ -188,9 +158,9 @@ public class BaseTest {
     public void initialSetup() throws Throwable {
         driver.manage().window().maximize();
         basepage = new BasePage(driver); 
-        String username = prop.getProperty("application.properties","username"); //changed
-        String passwrd = prop.getProperty("application.properties","password"); //changed
-        
+        String username = prop.getProperty("application.properties","username");
+        String passwrd = prop.getProperty("application.properties","password");
+       // WebElement emailField = driver.findElement(By.xpath("//*[@id='username']"));
         WebElement emailField = driver.findElement(By.id("username"));
         //basepage.waitForVisibilty(emailField, Duration.ofSeconds(30), "Email field");
         basepage.elementSendText(emailField, username, "Username");
@@ -198,11 +168,12 @@ public class BaseTest {
         WebElement password = driver.findElement(By.id("inputPassword"));
         basepage.elementSendText(password, passwrd, "Password");
         WebElement SignInButton = driver.findElement(By.xpath("//button[text()='Sign In']"));
-        //basepage.waitForVisibilty(SignInButton, Duration.ofSeconds(30), "Sign In button");
+        basepage.waitForVisibilty(SignInButton, Duration.ofSeconds(30), "Sign In button");
         basepage.buttonCheck(SignInButton, "Sign In");
         Logs.info("Successfully logged to the Home page");
         ExtentManager.logTestInfo("Successfully logged in to Home page");
         
     }
-}
 
+
+}
