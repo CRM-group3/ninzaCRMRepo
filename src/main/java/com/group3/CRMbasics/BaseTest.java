@@ -22,7 +22,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
-    static WebDriver driver;
+    public static WebDriver driver;
     public BasePage basepage;
     public ExtentReports reportlog = ExtentManager.getInstance();
     public static ExtentTest testlog = ExtentManager.startExtentCreateReport("NinzaCRMReport");
@@ -60,7 +60,7 @@ public class BaseTest {
         System.out.println("Appln url:" +url);
         baseURL(url);      
         basepage.waitUntilPageLoads(20);
-        waitUntilPageLoads(20);
+       
         driver.manage().window().maximize();
         initialSetup();
        
