@@ -157,9 +157,11 @@ public class BaseTest {
        // WebElement password = driver.findElement(By.xpath("//*[@id='inputPassword']"));
         WebElement password = driver.findElement(By.id("inputPassword"));
         basepage.elementSendText(password, passwrd, "Password");
-        WebElement loginButton = driver.findElement(By.id("Login"));
-        basepage.waitForVisibilty(loginButton, Duration.ofSeconds(30), "Login button");
-        basepage.buttonCheck(loginButton, "Login");
+		/*
+		 * WebElement loginButton = driver.findElement(By.id("Login"));
+		 * basepage.waitForVisibilty(loginButton, Duration.ofSeconds(30),
+		 * "Login button"); basepage.buttonCheck(loginButton, "Login");
+		 */
         WebElement SignInButton = driver.findElement(By.xpath("//button[text()='Sign In']"));
         basepage.waitForVisibilty(SignInButton, Duration.ofSeconds(30), "Sign In button");
         basepage.buttonCheck(SignInButton, "Sign In");
