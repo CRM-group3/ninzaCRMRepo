@@ -22,7 +22,8 @@
 				<version>3.3.0</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFiles>testng.xml</suiteXmlFiles>
+						
+						<suiteXmlFiles>testng_addProduct.xml</suiteXmlFiles>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
