@@ -56,7 +56,7 @@ import org.testng.annotations.Test;
 	    	        Thread.sleep(2000);
 	    	        contactPage.enterContactName("TMS");
 	    	        Thread.sleep(2000);
-	    	        contactPage.enterMobile("9346789998");
+	    	        contactPage.enterMobile("9346789098");
 	    	        Thread.sleep(2000);
 
 	    	        // Select campaign using lookup
@@ -69,11 +69,70 @@ import org.testng.annotations.Test;
 //	    	        String actualMessage = contactPage.getSuccessMessage();
 //	    	        Assert.assertEquals(actualMessage, "Contact TMS created successfully");
 	    	    }
+	    	 @Test(priority=3)
+	    	 public void createContactWithAllFields() throws InterruptedException {
 	    	 
+	    		 AddContactsPage contactPage = new AddContactsPage(driver);
+	    		 contactPage.clickOnContacts();
+	    		 Thread.sleep(2000);
+	    	        contactPage.clickOnCreateContact();
+	    	        Thread.sleep(2000);
+	    	        
+	    	        contactPage.enterOrganization("Test Org");
+	    	        Thread.sleep(2000);
+	    	        contactPage.enterTitle("QAEngineer");
+	    	        Thread.sleep(2000);
+	    	        contactPage.enterDepartment("Quality Assurance");
+	    	        Thread.sleep(2000);
+	    	        contactPage.enterOfficePhone("1234567890");
+	    	        Thread.sleep(2000);
+	    	        contactPage.enterContactName("TMSO");
+	    	        Thread.sleep(2000);
+	    	        contactPage.enterMobile("9346789108");
+	    	        Thread.sleep(2000);
+	    	        contactPage.enterEmail("tms1@example.com");
+	    	        Thread.sleep(2000);
+
+	    	        // Select campaign using lookup
+	    	        contactPage.selectCampaignFromLookup("Campaigntest");
+	    		 
+//	    	
+	    	        contactPage.clickCreateContact();
+	    	        Thread.sleep(2000);
+	    	 }
 	    	 
+	    	 @Test(priority=4)
+	    	 public void createContactWithSpecialCharacters() throws InterruptedException {
+	    	     AddContactsPage contactPage = new AddContactsPage(driver);
+
+	    	     contactPage.clickOnContacts();
+	    	     Thread.sleep(1000);
+
+	    	     contactPage.clickCreateContact();
+	    	     Thread.sleep(1000);
+
+	    	     // Input alphanumeric + special characters
+	    	     contactPage.enterOrganization("Org@123#Inc!");
+	    	     Thread.sleep(2000);
+	    	     contactPage.enterTitle("QA Lead!@#123");
+	    	     Thread.sleep(2000);
+	    	     contactPage.enterDepartment("Dept_456$%^");
+	    	     Thread.sleep(2000);
+	    	     contactPage.enterOfficePhone("1234567890@#"); 
+	    	     Thread.sleep(2000);
+	    	     contactPage.enterContactName("Sowmya@123!");
+	    	     Thread.sleep(2000);
+	    	     contactPage.enterMobile("98765!@#"); 
+	    	     Thread.sleep(2000);
+	    	     contactPage.enterEmail("crm@openai.com");
+	    	     Thread.sleep(2000);
+	    	     contactPage.selectCampaignFromLookup("Campaigntest");
+	    	     Thread.sleep(2000);
+	    	     contactPage.clickCreateContact();
+	    	     Thread.sleep(3000);
 	    	}
 			    	
-	    	  
+	    }	  
 	    	
 
     	

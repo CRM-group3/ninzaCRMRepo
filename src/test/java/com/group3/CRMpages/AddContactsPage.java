@@ -39,10 +39,10 @@ public class AddContactsPage extends BasePage{
 	
 	
 	@FindBy(xpath = "//*[@name='department']")
-	WebElement dept;
+	WebElement departmentField;
 	
 	@FindBy(xpath = "//input[@type='tel']")
-	WebElement officePh;
+	WebElement officePhoneField;
 	
 	@FindBy(xpath = "//*[@name='contactName']")
 	WebElement contactNameField;
@@ -51,7 +51,7 @@ public class AddContactsPage extends BasePage{
 	WebElement mobileField;
 	
 	@FindBy(xpath = "//*[@name='email']")
-	WebElement email;
+	WebElement emailField;
 	
 	@FindBy(xpath = "(//button[@type='button'])[2]")
 	WebElement campaignLookupButton;
@@ -85,6 +85,7 @@ public class AddContactsPage extends BasePage{
 		        return false;
 		    }
 		}
+	
 	public void enterOrganization(String orgName) {
         organization.sendKeys(orgName);
     }
@@ -93,12 +94,24 @@ public class AddContactsPage extends BasePage{
         titleField.sendKeys(title);
     }
 
+    public void enterDepartment(String dept) {
+        departmentField.sendKeys(dept);
+    }
+    
+    public void enterOfficePhone(String phone) {
+      officePhoneField.sendKeys(phone);
+    }
+    
     public void enterContactName(String name) {
         contactNameField.sendKeys(name);
     }
 
     public void enterMobile(String number) {
         mobileField.sendKeys(number);
+    }
+    
+    public void enterEmail(String email) {
+       emailField.sendKeys(email);
     }
 
 	
@@ -118,8 +131,6 @@ public class AddContactsPage extends BasePage{
 	        }
 	    }
 	        	   
-	    
-	    
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    
 	    // Locate the select button next to the given campaign name
@@ -133,7 +144,6 @@ public class AddContactsPage extends BasePage{
 	}             	   
 	        
 	    
-	  
 	  public void clickCreateContact() {
 		  createContactSaveButton.click();
 	    }
