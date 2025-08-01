@@ -10,7 +10,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
@@ -22,8 +24,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
-    static WebDriver driver;
-    public BasePage basepage;
+    public static WebDriver driver;
+    public BasePage basePage;
     public ExtentReports reportlog = ExtentManager.getInstance();
     public static ExtentTest testlog = ExtentManager.startExtentCreateReport("NinzaCRMReport");
     PropertiesFile prop = new PropertiesFile();
@@ -61,7 +63,7 @@ public class BaseTest {
         System.out.println("Appln url:" +url);
         baseURL(url);
         
-        basepage.waitUntilPageLoads(20);
+        basePage.waitUntilPageLoads(20);
         driver.manage().window().maximize();
         initialSetup();
        
@@ -97,17 +99,17 @@ public class BaseTest {
             ChromeOptions options = new ChromeOptions();
             options.setExperimentalOption("prefs", chromePrefs);
             driver = new ChromeDriver(options);
-            basepage = new BasePage(driver);
+            basePage = new BasePage(driver);
             Logs.info("Chrome browser instance has started");
         } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
-            basepage = new BasePage(driver);
+            basePage = new BasePage(driver);
             Logs.info("Firefox browser instance has started");
         } else if (browser.equalsIgnoreCase("safari")) {
             WebDriverManager.safaridriver().setup();
             driver = new SafariDriver();
-            basepage = new BasePage(driver);
+            basePage = new BasePage(driver);
             Logs.info("Safari browser instance has started");
         } else {
             Logs.error("Browser is not available: " + browser);
@@ -148,19 +150,19 @@ public class BaseTest {
 
     public void initialSetup() throws Throwable {
         driver.manage().window().maximize();
-        basepage = new BasePage(driver); 
+        basePage = new BasePage(driver); 
         String username = prop.getProperty("application.properties","username");
         String passwrd = prop.getProperty("application.properties","password");
        // WebElement emailField = driver.findElement(By.xpath("//*[@id='username']"));
         WebElement emailField = driver.findElement(By.id("username"));
         //basepage.waitForVisibilty(emailField, Duration.ofSeconds(30), "Email field");
-        basepage.elementSendText(emailField, username, "Username");
+        basePage.elementSendText(emailField, username, "Username");
        // WebElement password = driver.findElement(By.xpath("//*[@id='inputPassword']"));
         WebElement password = driver.findElement(By.id("inputPassword"));
-        basepage.elementSendText(password, passwrd, "Password");
+        basePage.elementSendText(password, passwrd, "Password");
         WebElement SignInButton = driver.findElement(By.xpath("//button[text()='Sign In']"));
-        basepage.waitForVisibilty(SignInButton, Duration.ofSeconds(30), "Sign In button");
-        basepage.buttonCheck(SignInButton, "Sign In");
+        basePage.waitForVisibilty(SignInButton, Duration.ofSeconds(30), "Sign In button");
+        basePage.buttonCheck(SignInButton, "Sign In");
         Logs.info("Successfully logged to the Home page");
         ExtentManager.logTestInfo("Successfully logged in to Home page");
         
