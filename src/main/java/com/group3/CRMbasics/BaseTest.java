@@ -52,8 +52,10 @@ public class BaseTest {
     @BeforeMethod
     public void setUpBeforeMethod(@Optional("chrome") String browser, Method method) throws Throwable {
         Logs.info(".........BeforeMethod executed---------------");
-
+        System.out.println("Method is :" + method);
+        System.out.println("Method Name  is :" + method.getName());
         // Start Extent test
+        ExtentManager.startExtentCreateReport("NinzaCRMReport");
         ExtentTestManager.startTest(method.getName());
         ExtentManager.logTestInfo("Starting test: " + method.getName());
 
