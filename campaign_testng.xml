@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Automation">
-    <listeners>
-        <listener class-name="com.group3.CRMlistners.TestListner"></listener>
-    </listeners>
-    
-    <test name="CampaignTest">
+<listeners>
+		<listener class-name="com.group3.CRMlistners.TestListner"></listener>
+	</listeners>
 
-        <classes>
-            <class name="com.group3.CRMtests.CampaignTest" />
-        </classes>
-    </test>
+	
+	<test name="CampaignTest">
+
+		<classes>
+			<class name="com.group3.CRMtests.CampaignTest" />
+		</classes>
+
+	</test>
+
 </suite>
