@@ -93,6 +93,11 @@ public class AddContactsPage extends BasePage{
     public void enterTitle(String title) {
         titleField.sendKeys(title);
     }
+    
+    public void enterTitle(String string1, String string2) {
+		titleField.sendKeys(string1,string2);
+		
+	}
 
     public void enterDepartment(String dept) {
         departmentField.sendKeys(dept);
@@ -113,6 +118,11 @@ public class AddContactsPage extends BasePage{
     public void enterEmail(String email) {
        emailField.sendKeys(email);
     }
+    
+    public String getAlertText() {
+        return driver.getPageSource(); // or use alert.getText() if it's a popup for duplicate contact name
+    }
+
 
 	
 
@@ -161,6 +171,8 @@ public class AddContactsPage extends BasePage{
 	  public String generateUniqueContactId() {
 		    return "CID_" + UUID.randomUUID().toString().substring(0, 8); // Shortened UUID
 		}
+
+	
 
 }
   
