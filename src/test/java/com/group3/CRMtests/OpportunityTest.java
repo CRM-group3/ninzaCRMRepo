@@ -2,51 +2,35 @@ package com.group3.CRMtests;
 
 import java.time.Duration;
 
-
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import org.testng.annotations.Test;
 
-
 import com.group3.CRMbasics.BaseTest;
-import com.group3.CRMpages.LoginPage;
+import com.group3.CRMlistners.ExtentManager;
+import com.group3.CRMlogs.Logs;
 import com.group3.CRMpages.OpportunityPage;
-import com.group3.CRMutilities.PropertiesFile;
-import com.group3.CRMutilities.ScreenShots;
+
 
 public class OpportunityTest extends BaseTest{
 	
-	PropertiesFile prop;
-	ScreenShots screensht = new ScreenShots();
-	LoginPage login;
-	OpportunityPage oppo;
 	
-		
-	@Test
-	public void opportunity() throws InterruptedException
+	OpportunityPage oppo;
+	@Test public void opportunity() throws InterruptedException 
 	{
-		oppo=new OpportunityPage(driver);
-	  
-	  Thread.sleep(2000);
-	  oppo.clickOpportunity();	
-	   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-	       WebElement header = wait.until(ExpectedConditions
-	         .visibilityOfElementLocated(By.xpath("//h1[contains(text(),'Opportunities')]")));
-	   
-	   Assert.assertTrue(driver.getCurrentUrl().contains("/opportunities"),
-		        "Failed to navigate to Opportunities page");
-	   
-	   
-	   
-	   
-	   
-	  
+	 ExtentManager.logTestInfo("Opening opportunity Page"); 
+	Logs.info("OPening opportunity Page"); 
+	oppo=new OpportunityPage(driver); 
+	basepage.waitForElement(oppo.opportunity, Duration.ofSeconds(2000)); 
+	oppo.clickOpportunity(); 
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
+	WebElement header = wait.until(ExpectedConditions .visibilityOfElementLocated(By.xpath("//h1[contains(text(),'Opportunities')]"))); 
+	Assert.assertTrue(driver.getCurrentUrl().contains("/opportunities"), "Failed to navigate to Opportunities page"); 
+	
 	}
 	
 	@Test
@@ -137,4 +121,7 @@ public class OpportunityTest extends BaseTest{
 		Thread.sleep(2000);
 		oppo.checksalesstage();
 	}
+
+	
+		
 }
