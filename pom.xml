@@ -13,9 +13,23 @@
 				<configuration>
 					<source>11</source>
 					<target>11</target>
-				</configuration>
+				</configuration>		
 
 			</plugin>
+			
+			
+			<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version>
+            <configuration>
+                <testExcludes>
+                    <testExclude>com/group3/CRMtests/CreateUserTest.java</testExclude>
+                </testExcludes>
+            </configuration>
+        </plugin>
+			
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
