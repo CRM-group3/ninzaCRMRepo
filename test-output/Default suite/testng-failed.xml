@@ -3,13 +3,9 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.group3.CRMtests.LeadTest">
-        <methods>
-          <include name="testLogin"/>
-          <include name="tearDownAfterTestMethod"/>
-          <include name="setUpBeforeMethod"/>
-        </methods>
-      </class> <!-- com.group3.CRMtests.LeadTest -->
+
+      </class> <!-- com.group3.CRMtests.QuoteTest -->
+
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

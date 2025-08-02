@@ -1,4 +1,4 @@
-package com.group3.CRMpages;
+/*package com.group3.CRMpages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,4 +32,4 @@ public class LoginPage extends BasePage{
 	public void clickSignIn() {
 		signIn.click();
 	}
-}
+}*/
