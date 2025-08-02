@@ -89,6 +89,7 @@ WebDriver driver;
 	public String expValue = "Auto Generated";
 	public String expErrorMsg = "Campaign name should be unique";
 	public String successMsg = "Campaign SaveResources Successfully Added";
+	public String expSucMsg = "Campaign SaveAir is successfully Added";
 	
 	public void clickOnCreateCampaign() throws InterruptedException {
 	
@@ -244,6 +245,16 @@ WebDriver driver;
 		
 	}
 	
+	public void verifyThatPastDateIsAllowedInExpectedCloseDateField() {
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String patternMessage = (String) js.executeScript(
+			    "return arguments[0].validationMessage;", expectedClosedDate );
+
+			System.out.println("Pattern Validation Message: " + patternMessage);
+			String expectedMessage = "Past date can not be accepted";
+			
+	}
 	
 	
 

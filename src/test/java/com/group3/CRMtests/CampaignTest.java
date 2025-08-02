@@ -1,5 +1,7 @@
 package com.group3.CRMtests;
 
+import java.time.Duration;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -166,7 +168,7 @@ public class CampaignTest extends BaseTest {
 		String campaignName = prop.getProperty("campaign.properties","CampaignName6");
         String targetSize = prop.getProperty("campaign.properties","TargetSize6");
 		campaignPage.campaignName.sendKeys(campaignName);
-		Thread.sleep(3000);
+		basepage.waitForElement(campaignPage.targetSize, Duration.ofSeconds(10));
 		campaignPage.targetSize.clear();
 		campaignPage.targetSize.sendKeys(targetSize);
 		Logs.info("Target size is entered");
@@ -235,7 +237,7 @@ public class CampaignTest extends BaseTest {
 		campaignPage.clickOnCreateCampaign();
 		Logs.info("Clicked on Create Campaign");
 		campaignPage.verifyThatStatusDropdownIsDisplayed();
-		Thread.sleep(3000);
+		basepage.waitForElement(campaignPage.campaignStatus, Duration.ofSeconds(10));
 		Assert.fail("Campaign Status dropdown is missing in the UI");
 		Logs.info("Campaign Status dropdown is missing in the UI");
 		ExtentManager.logTestInfo("Dropdown is missing");
@@ -253,7 +255,7 @@ public class CampaignTest extends BaseTest {
 		String campaignName = prop.getProperty("campaign.properties","CampaignName9");
         String targetSize = prop.getProperty("campaign.properties","TargetSize9");
 		campaignPage.campaignName.sendKeys(campaignName);
-		Thread.sleep(3000);
+		basepage.waitForElement(campaignPage.targetSize, Duration.ofSeconds(10));
 		campaignPage.targetSize.clear();
 		campaignPage.targetSize.sendKeys(targetSize);
 		campaignPage.create_Campaign.click();
@@ -276,7 +278,7 @@ public class CampaignTest extends BaseTest {
 		String campaignName = prop.getProperty("campaign.properties","CampaignName10");
         String targetSize = prop.getProperty("campaign.properties","TargetSize10");
 		campaignPage.campaignName.sendKeys(campaignName);
-		Thread.sleep(3000);
+		basepage.waitForElement(campaignPage.targetSize, Duration.ofSeconds(10));
 		campaignPage.targetSize.clear();
 		campaignPage.targetSize.sendKeys(targetSize);
 		campaignPage.create_Campaign.click();
@@ -386,14 +388,15 @@ public class CampaignTest extends BaseTest {
 		campaignPage = new CampaignPage(driver);
 		campaignPage.clickOnCreateCampaign();
 		Logs.info("Clicked on Create Campaign");
+		basepage.waitForElement(campaignPage.campaignName, Duration.ofSeconds(5));
 		campaignPage.campaignName.sendKeys("SaveEarth");
-		Thread.sleep(3000);
+		basepage.waitForElement(campaignPage.campaignStatus, Duration.ofSeconds(10));
 		campaignPage.campaignStatus.sendKeys("planned");
-		Thread.sleep(3000);
+		basepage.waitForElement(campaignPage.targetSize, Duration.ofSeconds(10));
 		campaignPage.targetSize.clear();
 		campaignPage.targetSize.sendKeys("50");
 		campaignPage.expectedClosedDate.sendKeys("07/28/20025");
-		Thread.sleep(4000);
+		basepage.waitForElement(campaignPage.create_Campaign, Duration.ofSeconds(10));
 		campaignPage.create_Campaign.click();
 		Assert.fail("Year field should be valid digits");
 	}
@@ -407,10 +410,10 @@ public class CampaignTest extends BaseTest {
 		campaignPage.clickOnCreateCampaign();
 		Logs.info("Clicked on Create Campaign");
 		campaignPage.campaignName.sendKeys("   ");
-		Thread.sleep(3000);
+		basepage.waitForElement(campaignPage.targetSize, Duration.ofSeconds(5));
 		campaignPage.targetSize.clear();
 		campaignPage.targetSize.sendKeys("80");
-		Thread.sleep(3000);
+		basepage.waitForElement(campaignPage.expectedClosedDate, Duration.ofSeconds(10));
 		campaignPage.expectedClosedDate.sendKeys("07/31/2025");
 		campaignPage.create_Campaign.click();
 		Logs.info("Clicked on Create_Campaign");
@@ -443,14 +446,75 @@ public class CampaignTest extends BaseTest {
 		campaignPage.expectedClosedDate.sendKeys(expectedClosedDate);
 		campaignPage.create_Campaign.click();
 		Logs.info("Campaign form is submitted");
-		Thread.sleep(3000);
+		basepage.waitForElement(campaignPage.editIcon, Duration.ofSeconds(10));
 		campaignPage.editIcon.click();
-		Thread.sleep(3000);
+		basepage.waitForElement(campaignPage.campaignId, Duration.ofSeconds(5));
 		campaignPage.campaignId.sendKeys("23456");
-		Thread.sleep(3000);
+		basepage.waitForElement(campaignPage.updateCampaign, Duration.ofSeconds(10));
 		campaignPage.updateCampaign.click();
-		 Assert.assertEquals(campaignPage.verifyThatCampaignIDIsReadOnly(), "Campaign Id field is editable");
+		Assert.assertEquals(campaignPage.verifyThatCampaignIDIsReadOnly(), "Campaign Id field is editable");
 		 
 	}
 
+		
+	//  description = "Create a Campaign with Past date in Expected Closed Date field"
+		@Test(priority = 20)
+		public void CampaignTC_021() throws InterruptedException {
+			driver = getDriver();
+			campaignPage = new CampaignPage(driver);
+			campaignPage.clickOnCreateCampaign();
+			Logs.info("Clicked on Create Campaign");
+			String campaignName = prop.getProperty("campaign.properties","CampaignName16");
+	        String targetSize = prop.getProperty("campaign.properties","TargetSize16");
+	        String expectedClosedDate = prop.getProperty("campaign.properties","ExpectedCloseDate16");
+			campaignPage.campaignName.sendKeys(campaignName);
+			Logs.info("Campaign name is entered");
+			campaignPage.targetSize.clear();
+			campaignPage.targetSize.sendKeys(targetSize);
+			Logs.info("Target size is entered");
+			basepage.waitForElement(campaignPage.expectedClosedDate, Duration.ofSeconds(10));
+			campaignPage.expectedClosedDate.clear();
+			campaignPage.expectedClosedDate.sendKeys(expectedClosedDate);
+		//	Thread.sleep(3000);
+			basepage.waitForElement(campaignPage.create_Campaign,Duration.ofSeconds(10)) ;
+			campaignPage.create_Campaign.click();
+			Logs.info("Clicked on Create_Campaign");
+			boolean isValid = campaignPage.isFieldValid(campaignPage.expectedClosedDate);
+			String tooltipMessage = campaignPage.getValidationMessage(campaignPage.expectedClosedDate);
+			Assert.assertFalse(isValid, "Expected input is not getting entered due to past value");
+		    Assert.assertEquals(tooltipMessage, "Value must be 08/03/2025 or later.");
+			Logs.info("Past date is not accepted");
+			ExtentManager.logTestInfo("Error message is shown");
+
+		}	
+		
+		
+	// description = "Verify that Description field accepts long text"
+		@Test
+		public void CampaignTC_022() throws InterruptedException {
+			driver = getDriver();
+			campaignPage = new CampaignPage(driver);
+			campaignPage.clickOnCreateCampaign();
+			Logs.info("Clicked on Create Campaign");
+			String campaignName = prop.getProperty("campaign.properties","CampaignName17");
+	        String targetSize = prop.getProperty("campaign.properties","TargetSize17");
+	        String expectedClosedDate = prop.getProperty("campaign.properties","ExpectedCloseDate17");
+	        String description = prop.getProperty("campaign.properties","Description17");
+			campaignPage.campaignName.sendKeys(campaignName);
+			Logs.info("Campaign name is entered");
+			campaignPage.targetSize.clear();
+			campaignPage.targetSize.sendKeys(targetSize);
+			Logs.info("Target size is entered");
+			basepage.waitForElement(campaignPage.description, Duration.ofSeconds(5));
+			campaignPage.description.clear();
+			campaignPage.description.sendKeys(description);
+			basepage.waitForElement(campaignPage.create_Campaign,Duration.ofSeconds(10)) ;
+			campaignPage.create_Campaign.click();
+			Logs.info("Clicked on Create_Campaign");
+			Assert.assertTrue(campaignPage.verifyCampaignIsCreated(), campaignPage.expSucMsg);
+			Logs.info("Long text is accepted in description field");
+			ExtentManager.logTestInfo("Campaign is successfully created");
+
+			
+		}
 }
