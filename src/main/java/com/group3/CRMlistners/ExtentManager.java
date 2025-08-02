@@ -78,6 +78,7 @@ public class ExtentManager {
 		return reportFileLocation;
     }
     
+    
     public static void logTestInfo(String text) {
 
 		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname

@@ -47,15 +47,15 @@ public class BaseTest {
         }
     }
     
-    @BeforeSuite
-    public void setupReport() {
-        ExtentManager.getInstance(); // creates the report
-    }
-
-    @AfterSuite
-    public void flushReport() {
-        ExtentManager.getInstance().flush(); // writes it to index.html
-    }
+//    @BeforeSuite
+//    public void setupReport() {
+//        ExtentManager.getInstance(); // creates the report
+//    }
+//
+//    @AfterSuite
+//    public void flushReport() {
+//        ExtentManager.getInstance().flush(); // writes it to index.html
+//    }
     
     
 
