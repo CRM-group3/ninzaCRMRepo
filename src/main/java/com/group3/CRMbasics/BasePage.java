@@ -3,6 +3,7 @@ package com.group3.CRMbasics;
 import com.google.common.io.Files;
 import static org.testng.Assert.assertEquals;
 import com.group3.CRMlogs.Logs;
+import com.group3.CRMutilities.ScreenShots;
 import com.group3.CRMlistners.ExtentTestManager;
 import com.group3.CRMlistners.TestListner;
 import com.group3.CRMlistners.ExtentManager;
@@ -561,103 +562,6 @@ public class BasePage {
 
 		}
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import java.time.Duration;
->>>>>>> f769f75 (WIP: saving changes before switching to main)
-=======
-	
-	// other fns
-	
-
-//	public void waitForVisibility(WebElement element, int timeout, String elementName) {
-//		// Placeholder for WebDriverWait/ExpectedConditions
-//		Logs.info("Waited for visibility: " + elementName);
-//	}
-
-	public void elementSendText(WebElement element, String text, String fieldName) {
-		element.clear();
-		element.sendKeys(text);
-		Logs.info(text + " entered into " + fieldName);
-	}
-
-	public void buttonCheck(WebElement element, String buttonName) {
-		if (element.isDisplayed() && element.isEnabled()) {
-			element.click();
-			Logs.info(buttonName + " clicked");
-		} else {
-			Logs.error(buttonName + " is not clickable");
-		}
-	}
-
-	
->>>>>>> origin/main
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-<<<<<<< HEAD
-import org.testng.Assert;
-import org.testng.annotations.Listeners;
-import org.testng.asserts.SoftAssert;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.io.Files;
-import org.openqa.selenium.WebElement;
-import com.group3.CRMlogs.Logs;
-
-import com.group3.CRMutilities.ScreenShots;
-
-import com.group3.CRMlistners.ExtentTestManager;
-
-import com.group3.CRMlistners.ExtentManager;
-
-
-
-
-
-//import com.salesforce.utility.ExtentUtility;
-=======
->>>>>>> 8de0d3dc9ea5b721173bc94b4613e164894dceff
-
-<<<<<<< HEAD
-public class BasePage 
-{
-	protected WebDriver driver;
-=======
-//@Listeners(com.salesforce.utility.SalesforceListenerUtility.class)
-
-
-<<<<<<< HEAD
-import java.time.Duration;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-<<<<<<< HEAD
-import java.time.Duration;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-
-public class BasePage 
-{
-
-	public ExtentReports reportlog = ExtentManager.getInstance();
-	protected WebDriver driver;
-=======
->>>>>>> 5a006f1636b7b4a0c5715c5bedfbf987f8d0b745
 	
 	// other fns
 	
