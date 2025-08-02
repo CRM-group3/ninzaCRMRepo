@@ -1,5 +1,6 @@
 package com.group3.CRMbasics;
 
+import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
@@ -18,6 +19,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.group3.CRMlogs.Logs;
 import com.group3.CRMutilities.PropertiesFile;
 import com.group3.CRMlistners.ExtentManager;
+import com.group3.CRMlistners.ExtentTestManager;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
@@ -52,13 +55,30 @@ public class BaseTest {
 
     @Parameters({ "browser" })
     @BeforeMethod
+
     public void setUpBeforeMethod(@Optional("chrome") String browserName) throws Throwable {
         Logs.info(".........BeforeClass executed---------------");
         initializeBrowser(browserName);
         //String url = PropertyUtility.readdatatofile(Constants.applicationPropertyPath, "url");
         String url = prop.getProperty("application.properties","url");
         System.out.println("Appln url:" +url);
-        baseURL(url);      
+        baseURL(url);  }    
+
+    public void setUpBeforeMethod(@Optional("chrome") String browser, Method method) throws Throwable {
+        Logs.info(".........BeforeMethod executed---------------");
+        System.out.println("Method is :" + method);
+        System.out.println("Method Name  is :" + method.getName());
+        // Start Extent test
+        ExtentManager.startExtentCreateReport("NinzaCRMReport");
+        ExtentTestManager.startTest(method.getName());
+        ExtentManager.logTestInfo("Starting test: " + method.getName());
+
+        initializeBrowser(browser);
+
+        String url = prop.getProperty("application.properties", "url");
+        System.out.println("App URL: " + url);
+        baseURL(url);
+
         basepage.waitUntilPageLoads(20);
         driver.manage().window().maximize();
         initialSetup();
