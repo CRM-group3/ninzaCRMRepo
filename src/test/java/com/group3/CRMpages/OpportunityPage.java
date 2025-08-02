@@ -18,31 +18,31 @@ public class OpportunityPage extends BasePage{
 		
 	}
 	
-	@FindBy(xpath="//a[@class='nav-link' and text()='Opportunities']")
+	public @FindBy(xpath="//a[@class='nav-link' and text()='Opportunities']")
 	WebElement opportunity;
 	
-	@FindBy(xpath="//span[contains(text(),'Create Opportunity')]")
+	public @FindBy(xpath="//span[contains(text(),'Create Opportunity')]")
 	WebElement createoppo;
 	
-	@FindBy(xpath="//input[@value='Auto Generated']")
+	public @FindBy(xpath="//input[@value='Auto Generated']")
 	WebElement oppoid;
 	
-	@FindBy(xpath="//input[@name='opportunityName']")
+	public @FindBy(xpath="//input[@name='opportunityName']")
 	WebElement opponame;
 	
-	@FindBy(xpath="//button[@type='submit']")
+	public @FindBy(xpath="//button[@type='submit']")
 	WebElement submit;
 		
-	@FindBy(xpath="//input[@name='amount']")
+	public @FindBy(xpath="//input[@name='amount']")
 	WebElement amount;
 	
-	@FindBy(xpath="//input[@name='businessType']")
+	public @FindBy(xpath="//input[@name='businessType']")
 	WebElement businesstype;
 	
-	@FindBy(xpath="//input[@name='nextStep']")
+	public @FindBy(xpath="//input[@name='nextStep']")
 	WebElement nextstep;
 	
-	@FindBy(xpath="//input[@name='salesStage']")
+	public @FindBy(xpath="//input[@name='salesStage']")
 	WebElement salesstage;
 	
 	public void clickOpportunity() throws InterruptedException
