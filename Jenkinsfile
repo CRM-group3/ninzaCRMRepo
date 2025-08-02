@@ -22,15 +22,11 @@ pipeline {
 
     post {
     always {
-        // Archive JUnit-style reports from Maven Surefire
-        junit allowEmptyResults: true, testResults: '**/surefire-reports/TEST-*.xml'
-
-        // Archive raw Surefire report files (e.g., .txt files)
-        archiveArtifacts allowEmptyArchive: true, artifacts: 'target/surefire-reports/*.txt'
-
-        // Archive TestNG HTML reports (if generated)
-        archiveArtifacts allowEmptyArchive: true, artifacts: 'test-output/**/*.html'
-    }
+	        junit allowEmptyResults: true, testResults: '**/surefire-reports/TEST-*.xml'
+	        archiveArtifacts allowEmptyArchive: true, artifacts: 'target/surefire-reports/*.txt'
+	        archiveArtifacts allowEmptyArchive: true, artifacts: '**/*.html'
+    	}
+	}
 }
 
 }
