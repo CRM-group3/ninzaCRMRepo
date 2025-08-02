@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,11 +21,12 @@
      -->
   </head>
 
-  <body>    <div class="top-banner-root">
+  <body>
+    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +39,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-
+            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
+              <span class="suite-name border-skipped">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,10 +50,8 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-
-                  <a href="#" panel-name="test-xml-Automation" class="navigator-link ">
-                    <span>testng.xml</span>
-
+                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
+                    <span>C:\Users\darsh\AppData\Local\Temp\testng-eclipse--267852697\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -103,25 +103,11 @@
                     </span>
                     <div class="method-list-content skipped suite-Default_suite">
                       <span>
-
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.group3.CRMtests.QuoteTest" class="method navigator-link" hash-for-method="createQuoteWithValid">createQuoteWithValid</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.group3.CRMtests.OpportunityTest" class="method navigator-link" hash-for-method="createoppo">createoppo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Default_suite -->
-
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Automation" title="com.group3.CRMtests.LeadTest" class="method navigator-link" hash-for-method="createLeadPageOpens">createLeadPageOpens</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Automation" title="com.group3.CRMtests.LeadTest" class="method navigator-link" hash-for-method="leadtestLogin">leadtestLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Automation -->
-
-
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -132,31 +118,32 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-
-              <img src="failed.png"/>
-              <span class="class-name">com.group3.CRMtests.CreateUserTest</span>
-=======
         <div panel-name="suite-Default_suite" class="panel Default_suite">
           <div class="suite-Default_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">com.group3.CRMtests.QuoteTest</span>
-
-                  <a name="testCreateUserValidData">
-                  </a> <!-- testCreateUserValidData -->
-                  <span class="method-name">testCreateUserValidData</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;dropdown-item&apos; and text()=&apos;Create User&apos;]&quot;}
-  (Session info: chrome=138.0.7204.168)
+              <span class="class-name">com.group3.CRMtests.OpportunityTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createoppo">
+                  </a> <!-- createoppo -->
+                  <span class="method-name">createoppo</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#Login&quot;}
+  (Session info: chrome=138.0.7204.184)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ec0d3352837b7ee3b96abcc24c183ef4, findElement {value=//div[@class=&apos;dropdown-item&apos; and text()=&apos;Create User&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.168, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: C:\Users\chitr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57700}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57700/devtoo..., se:cdpVersion: 138.0.7204.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ec0d3352837b7ee3b96abcc24c183ef4
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+Command: [c796a5e7fa7991ca119a491d91a970dd, findElement {value=Login, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\darsh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51165}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51165/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c796a5e7fa7991ca119a491d91a970dd
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -168,18 +155,25 @@ Session ID: ec0d3352837b7ee3b96abcc24c183ef4
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at com.group3.CRMtests.CreateUserTest.testCreateUserValidData(CreateUserTest.java:69)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.group3.CRMbasics.BaseTest.initialSetup(BaseTest.java:160)
+	at com.group3.CRMbasics.BaseTest.setUpBeforeMethod(BaseTest.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
@@ -192,62 +186,11 @@ Session ID: ec0d3352837b7ee3b96abcc24c183ef4
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
 	at org.testng.TestNG.runSuites(TestNG.java:1063)
 	at org.testng.TestNG.run(TestNG.java:1031)
-=======
-                  <a name="createQuoteWithValid">
-                  </a> <!-- createQuoteWithValid -->
-                  <span class="method-name">createQuoteWithValid</span>
-                  <div class="stack-trace">java.lang.Error: Unresolved compilation problems: 
-	PropertyUtility cannot be resolved
-	Constants cannot be resolved to a variable
-
-	at com.group3.CRMbasics.BaseTest.setUpBeforeMethod(BaseTest.java:63)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 
 </div> <!-- stack-trace -->
-
-          <div class="suite-Automation-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.group3.CRMtests.LeadTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="createLeadPageOpens">
-                  </a> <!-- createLeadPageOpens -->
-                  <span class="method-name">createLeadPageOpens</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="leadtestLogin">
-                  </a> <!-- leadtestLogin -->
-                  <span class="method-name">leadtestLogin</span>
-
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -255,27 +198,23 @@ Session ID: ec0d3352837b7ee3b96abcc24c183ef4
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-
+            <span class="header-content">C:\Users\darsh\AppData\Local\Temp\testng-eclipse--267852697\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-
-      &lt;class name=&quot;com.group3.CRMtests.QuoteTest&quot;&gt;
+      &lt;class name=&quot;com.group3.CRMtests.OpportunityTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;createQuoteWithValid&quot;/&gt;
+          &lt;include name=&quot;createoppo&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.group3.CRMtests.QuoteTest --&gt;
-
+      &lt;/class&gt; &lt;!-- com.group3.CRMtests.OpportunityTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
-
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -286,7 +225,7 @@ Session ID: ec0d3352837b7ee3b96abcc24c183ef4
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-
+                <span class="test-name">Default test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -314,18 +253,16 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'leadtestLogin')
-data.setCell(1, 2, 'com.group3.CRMtests.LeadTest')
-data.setCell(1, 3, 2);
-window.suiteTableData['Automation']= { tableData: data, tableDiv: 'times-div-Automation'}
+data.setCell(0, 1, 'createoppo')
+data.setCell(0, 2, 'com.group3.CRMtests.OpportunityTest')
+data.setCell(0, 3, 0);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 24 ms</span>
-              <div id="times-div-Automation">
-
+              <span class="suite-total-time">Total running time: 0 ms</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -338,13 +275,25 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">7 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-
+              <span class="ignored-class-name">com.group3.CRMtests.OpportunityTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">login</span>
+                <span class="ignored-method-name">nextstage</span>
+                <br/>
+                <span class="ignored-method-name">salestage</span>
+                <br/>
+                <span class="ignored-method-name">opportunity</span>
+                <br/>
+                <span class="ignored-method-name">businesstypecheck</span>
+                <br/>
+                <span class="ignored-method-name">opponamecheck</span>
+                <br/>
+                <span class="ignored-method-name">oppoIdAutogeneration</span>
+                <br/>
+                <span class="ignored-method-name">amountcheck</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -356,48 +305,21 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.group3.CRMtests.QuoteTest</div> <!-- chronological-class-name -->
-
-
-              <div class="chronological-class-name">com.group3.CRMtests.QuoteTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
+              <div class="chronological-class-name">com.group3.CRMtests.OpportunityTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">setUpBeforeMethod(chrome)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
-
-              <div class="chronological-class-name">com.group3.CRMtests.LeadTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">createLeadPageOpens</span>
-                <span class="method-start">14794 ms</span>
+                <span class="method-name">createoppo</span>
+                <span class="method-start">8426 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">14822 ms</span>
+                <span class="method-start">8430 ms</span>
               </div> <!-- configuration-method after -->
-
-              <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">15089 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">leadtestLogin</span>
-                <span class="method-start">37366 ms</span>
-              </div> <!-- test-method -->
-
-              <div class="configuration-method after">
-                <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">37371 ms</span>
-              </div> <!-- configuration-method after -->
-
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
