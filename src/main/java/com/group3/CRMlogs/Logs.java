@@ -1,8 +1,9 @@
 package com.group3.CRMlogs;
 
 
-
 import org.apache.log4j.Logger;
+
+
 public class Logs {
 	// Initialize Log4j logs
 

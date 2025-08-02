@@ -1,20 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+
   <reporter-output>
   </reporter-output>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <suite started-at="2025-07-25T10:42:52 PDT" name="Default suite" finished-at="2025-07-25T10:43:03 PDT" duration-ms="11102">
+=======
+
+  <suite started-at="2025-07-29T18:43:12 PDT" name="Default suite" finished-at="2025-07-29T18:43:13 PDT" duration-ms="176">
+>>>>>>> origin/main
     <groups>
     </groups>
-    <test started-at="2025-07-25T10:42:52 PDT" name="Default test" finished-at="2025-07-25T10:43:03 PDT" duration-ms="11102">
-      <class name="com.group3.CRMtests.LoginTest">
-        <test-method signature="login()[pri:0, instance:com.group3.CRMtests.LoginTest@66d3eec0]" started-at="2025-07-25T10:42:52 PDT" name="login" finished-at="2025-07-25T10:43:03 PDT" duration-ms="11038" status="PASS">
+    <test started-at="2025-07-29T18:43:12 PDT" name="Default test" finished-at="2025-07-29T18:43:13 PDT" duration-ms="176">
+      <class name="com.group3.CRMtests.QuoteTest">
+        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.QuoteTest@6531a794]" started-at="2025-07-29T18:43:13 PDT" name="setUpBeforeMethod" finished-at="2025-07-29T18:43:13 PDT" duration-ms="24" status="FAIL">
+
+  <suite started-at="2025-07-29T15:11:42 PDT" name="Automation" finished-at="2025-07-29T15:12:20 PDT" duration-ms="37528">
+    <groups>
+    </groups>
+    <test started-at="2025-07-29T15:11:42 PDT" name="LeadTest" finished-at="2025-07-29T15:12:20 PDT" duration-ms="37528">
+      <class name="com.group3.CRMtests.LeadTest">
+        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:11:42 PDT" name="setUpBeforeMethod" finished-at="2025-07-29T15:11:57 PDT" duration-ms="14793" status="PASS">
+
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problems: 
+PropertyUtility cannot be resolved
+Constants cannot be resolved to a variable
+]]>
+            </message>
+         
+              <![CDATA[java.lang.Error: Unresolved compilation problems: 
+PropertyUtility cannot be resolved
+Constants cannot be resolved to a variable
+
+at com.group3.CRMbasics.BaseTest.setUpBeforeMethod(BaseTest.java:63)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeMethod -->
+        <test-method is-config="true" signature="login()[pri:0, instance:com.group3.CRMtests.QuoteTest@6531a794]" started-at="2025-07-29T18:43:13 PDT" name="login" finished-at="2025-07-29T18:43:13 PDT" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-      </class> <!-- com.group3.CRMtests.LoginTest -->
+        <test-method signature="createQuoteWithValid()[pri:0, instance:com.group3.CRMtests.QuoteTest@6531a794]" started-at="2025-07-29T18:43:13 PDT" name="createQuoteWithValid" finished-at="2025-07-29T18:43:13 PDT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problems: 
+PropertyUtility cannot be resolved
+Constants cannot be resolved to a variable
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problems: 
+PropertyUtility cannot be resolved
+Constants cannot be resolved to a variable
+
+at com.group3.CRMbasics.BaseTest.setUpBeforeMethod(BaseTest.java:63)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createQuoteWithValid -->
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.QuoteTest@6531a794]" started-at="2025-07-29T18:43:13 PDT" name="tearDownAfterTestMethod" finished-at="2025-07-29T18:43:13 PDT" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterTestMethod -->
+      </class> <!-- com.group3.CRMtests.QuoteTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   <suite started-at="2025-07-23T12:28:23 CDT" name="Automation" finished-at="2025-07-23T12:28:23 CDT" duration-ms="363">
@@ -43,4 +156,42 @@
   </suite> <!-- Default suite -->
 >>>>>>> 5017ebe70f363b22d5c32dee598c9deaa0d44adb
 >>>>>>> 808a7be3f63646efd797508a5d3a1145aa44cc35
+=======
+
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeMethod -->
+        <test-method signature="createLeadPageOpens()[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:11:57 PDT" name="createLeadPageOpens" finished-at="2025-07-29T15:11:57 PDT" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLeadPageOpens -->
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:11:57 PDT" name="tearDownAfterTestMethod" finished-at="2025-07-29T15:11:57 PDT" duration-ms="265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterTestMethod -->
+        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:11:57 PDT" name="setUpBeforeMethod" finished-at="2025-07-29T15:12:20 PDT" duration-ms="22277" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+              
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeMethod -->
+        <test-method signature="leadtestLogin()[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:12:20 PDT" name="leadtestLogin" finished-at="2025-07-29T15:12:20 PDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- leadtestLogin -->
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:12:20 PDT" name="tearDownAfterTestMethod" finished-at="2025-07-29T15:12:20 PDT" duration-ms="122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterTestMethod -->
+      </class> <!-- com.group3.CRMtests.LeadTest -->
+    </test> <!-- LeadTest -->
+  </suite> <!-- Automation -->
+
+
+>>>>>>> origin/main
 </testng-results>

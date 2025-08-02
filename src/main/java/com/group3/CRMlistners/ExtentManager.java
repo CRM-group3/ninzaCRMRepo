@@ -26,12 +26,19 @@ public class ExtentManager {
  	static Date currentDate = new Date();
   	static String timestamp = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(currentDate);
   	
-    private static String reportFileName = "Tekarch" +timestamp+ ".html";
+    private static String reportFileName = "NinzaCRM" +timestamp+ ".html";
     private static String fileSeperator = System.getProperty("file.separator");
     private static String reportFilepath = System.getProperty("user.dir") +fileSeperator+ "ExtentReport";
     private static String reportFileLocation =  reportFilepath +fileSeperator+ reportFileName;
   
  
+	public static ExtentTest startExtentCreateReport(String str) {
+		 extent = ExtentManager.getInstance();
+		// this will return methodname to the testlog
+		testlog = extent.createTest(str);
+		return testlog;
+	}
+    
     public static ExtentReports getInstance() {
         if (extent == null)
             createInstance();
