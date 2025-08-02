@@ -1,25 +1,17 @@
 package com.group3.CRMlistners;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.group3.CRMbasics.BasePage;
 import com.group3.CRMlogs.Logs;
 import com.group3.CRMutilities.ScreenShots;
-//import com.salesforce.utility.Constants;
 import com.group3.CRMbasics.*;
-import com.group3.CRMlistners.*;
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
 
 public class TestListner extends BaseTest implements ITestListener {
 	
 	ScreenShots ss = new ScreenShots();
-	//private static ExtentReports report = ExtentManager.getInstance();
 
 
 	public void onStart(ITestContext context) {
