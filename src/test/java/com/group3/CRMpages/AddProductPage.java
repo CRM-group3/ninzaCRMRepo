@@ -153,6 +153,7 @@ public class AddProductPage {
 	            "return arguments[0].validationMessage;", element
 	        );
 	        ExtentManager.logTestInfo("Validation message returned: " + validationMessage);
+	        System.out.println(validationMessage);
 	        return validationMessage;
 	    } catch (Exception e) {
 	        ExtentManager.logTestwithFailed("Could not get validation message: " + e.getMessage());

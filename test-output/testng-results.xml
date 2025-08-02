@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 
   <reporter-output>
   </reporter-output>
@@ -17,6 +18,17 @@
       <class name="com.group3.CRMtests.LeadTest">
         <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:11:42 PDT" name="setUpBeforeMethod" finished-at="2025-07-29T15:11:57 PDT" duration-ms="14793" status="PASS">
 
+=======
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-01T11:40:10 PDT" name="Default suite" finished-at="2025-08-01T11:40:22 PDT" duration-ms="11289">
+    <groups>
+    </groups>
+    <test started-at="2025-08-01T11:40:10 PDT" name="Default test" finished-at="2025-08-01T11:40:22 PDT" duration-ms="11289">
+      <class name="com.group3.CRMtests.AddProductTest">
+        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.AddProductTest@5d5f10b2]" started-at="2025-08-01T11:40:10 PDT" name="setUpBeforeMethod" finished-at="2025-08-01T11:40:18 PDT" duration-ms="7711" status="PASS">
+>>>>>>> Ban_2
           <params>
             <param index="0">
               <value>
@@ -126,14 +138,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="createLeadPageOpens()[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:11:57 PDT" name="createLeadPageOpens" finished-at="2025-07-29T15:11:57 PDT" duration-ms="22" status="PASS">
+        <test-method signature="product_TC006()[pri:0, instance:com.group3.CRMtests.AddProductTest@5d5f10b2]" started-at="2025-08-01T11:40:18 PDT" name="product_TC006" finished-at="2025-08-01T11:40:22 PDT" duration-ms="3404" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createLeadPageOpens -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:11:57 PDT" name="tearDownAfterTestMethod" finished-at="2025-07-29T15:11:57 PDT" duration-ms="265" status="PASS">
+        </test-method> <!-- product_TC006 -->
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.AddProductTest@5d5f10b2]" started-at="2025-08-01T11:40:22 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-01T11:40:22 PDT" duration-ms="122" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.LeadTest@18ece7f4]" started-at="2025-07-29T15:11:57 PDT" name="setUpBeforeMethod" finished-at="2025-07-29T15:12:20 PDT" duration-ms="22277" status="PASS">
           <params>
             <param index="0">
@@ -158,4 +171,9 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
   </suite> <!-- Automation -->
 
 
+=======
+      </class> <!-- com.group3.CRMtests.AddProductTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+>>>>>>> Ban_2
 </testng-results>

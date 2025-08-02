@@ -10,7 +10,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
@@ -23,6 +25,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 
     public static WebDriver driver;
+
     public BasePage basepage;
     public ExtentReports reportlog = ExtentManager.getInstance();
     public static ExtentTest testlog = ExtentManager.startExtentCreateReport("NinzaCRMReport");
@@ -59,6 +62,9 @@ public class BaseTest {
         String url = prop.getProperty("application.properties","url");
         System.out.println("Appln url:" +url);
         baseURL(url);      
+        basepage.waitUntilPageLoads(20);
+        baseURL(url);
+        
         basepage.waitUntilPageLoads(20);
         driver.manage().window().maximize();
         initialSetup();
@@ -146,7 +152,6 @@ public class BaseTest {
 
     public void initialSetup() throws Throwable {
         driver.manage().window().maximize();
-
         basepage = new BasePage(driver); 
         String username = prop.getProperty("application.properties","username");
         String passwrd = prop.getProperty("application.properties","password");
@@ -160,6 +165,8 @@ public class BaseTest {
         WebElement loginButton = driver.findElement(By.id("Login"));
         basepage.waitForVisibilty(loginButton, Duration.ofSeconds(30), "Login button");
         basepage.buttonCheck(loginButton, "Login");
+        basepage.elementSendText(password, passwrd, "Password");
+
         WebElement SignInButton = driver.findElement(By.xpath("//button[text()='Sign In']"));
         basepage.waitForVisibilty(SignInButton, Duration.ofSeconds(30), "Sign In button");
         basepage.buttonCheck(SignInButton, "Sign In");
