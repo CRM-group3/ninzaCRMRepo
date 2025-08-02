@@ -6,12 +6,10 @@
         <listener class-name="com.group3.CRMlistners.TestListner"></listener>
     </listeners>
     
-   
-    <parameter name="campaignName" value="Roshal"/>
-    <test name="LeadTests">
+    <test name="CampaignTest">
 
         <classes>
-            <class name="com.group3.CRMtests.LeadTest" />
+            <class name="com.group3.CRMtests.CampaignTest" />
         </classes>
     </test>
 </suite>
