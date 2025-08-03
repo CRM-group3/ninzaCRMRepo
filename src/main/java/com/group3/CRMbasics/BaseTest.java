@@ -21,19 +21,18 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
-	public static WebDriver driver;
+    public static WebDriver driver;
     public static BasePage basepage;
     public PropertiesFile prop = new PropertiesFile();
-   
 
     public WebDriver getDriver() {
         if (driver == null) {
             WebDriverManager.chromedriver().setup();
+            ChromeOptions options = new ChromeOptions();
             Map<String, Object> chromePrefs = new HashMap<>();
             chromePrefs.put("credentials_enable_service", false);
             chromePrefs.put("profile.password_manager_enabled", false);
             chromePrefs.put("profile.password_manager_leak_detection", false);
-            ChromeOptions options = new ChromeOptions();
             options.setExperimentalOption("prefs", chromePrefs);
             driver = new ChromeDriver(options);
         }
@@ -46,6 +45,7 @@ public class BaseTest {
             driver = null;
         }
     }
+<<<<<<< HEAD
     
 //    @BeforeSuite
 //    public void setupReport() {
@@ -58,6 +58,8 @@ public class BaseTest {
 //    }
     
     
+=======
+>>>>>>> 4003c0f4444b173c977d69f7966f648f459d5cb0
 
     @Parameters({ "browser" })
     @BeforeMethod
@@ -91,7 +93,7 @@ public class BaseTest {
             ExtentTestManager.endTest(); // flushes the report
         }
     }
-    
+
     public void initializeBrowser(String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
@@ -143,11 +145,10 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
-        //options.setHeadless(true);
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         Logs.info("Headless execution started");
-        ExtentManager.logTestInfo("Successfully logged in a headless mode to Home page");
+        ExtentManager.logTestInfo("Headless mode browser started");
     }
 
     public void initialSetup() throws Throwable {
@@ -171,5 +172,4 @@ public class BaseTest {
         Logs.info("Successfully logged in to Home page");
         ExtentManager.logTestInfo("Successfully logged in to Home page");
     }
-
 }

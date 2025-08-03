@@ -13,16 +13,34 @@
 				<configuration>
 					<source>11</source>
 					<target>11</target>
-				</configuration>
+				</configuration>		
 
 			</plugin>
+			
+			
+			<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version>
+            <configuration>
+                <testExcludes>
+                    <testExclude>com/group3/CRMtests/CreateUserTest.java</testExclude>
+                </testExcludes>
+            </configuration>
+        </plugin>
+			
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.3.0</version>
 				<configuration>
 					<suiteXmlFiles>
+<<<<<<< HEAD
 						<suiteXmlFile>campaign_testng.xml</suiteXmlFile>
+=======
+						<suiteXmlFile>leadtests.xml</suiteXmlFile>
+>>>>>>> 4003c0f4444b173c977d69f7966f648f459d5cb0
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

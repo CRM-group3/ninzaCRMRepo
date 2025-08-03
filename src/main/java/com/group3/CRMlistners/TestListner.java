@@ -63,6 +63,8 @@ public class TestListner extends BaseTest implements ITestListener {
 	        Logs.error("Failed to capture or attach screenshot: " + e.getMessage());
 	    }
 	}
+		
+	
 
 	public void onTestSkipped(ITestResult result) {
 		System.out.println("*** Test " + result.getMethod().getMethodName() + " skipped...");
