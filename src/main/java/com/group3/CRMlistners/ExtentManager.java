@@ -12,101 +12,96 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtentManager {
-	
+public class ExtentManager{
 
-	public static ExtentReports extent;
+    private static ExtentReports extent;
 
-	public static ExtentTest testlog;
-	  
- 	static Date currentDate = new Date();
-  	static String timestamp = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(currentDate);
-  	
-    private static String reportFileName = "NinzaCRM" +timestamp+ ".html";
-    private static String fileSeperator = System.getProperty("file.separator");
-    private static String reportFilepath = System.getProperty("user.dir") +fileSeperator+ "ExtentReport";
-    private static String reportFileLocation =  reportFilepath +fileSeperator+ reportFileName;
-  
- 
-	public static ExtentTest startExtentCreateReport(String str) {
-		 extent = ExtentManager.getInstance();
-		// this will return methodname to the testlog
-		testlog = extent.createTest(str);
-		return testlog;
-	}
-    
+    // Thread-safe ExtentTest storage
+    private static final ThreadLocal<ExtentTest> testlog = new ThreadLocal<>();
+
+    static Date currentDate = new Date();
+    static String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(currentDate);
+
+    private static final String reportFileName = "NinzaCRM_Report_" + timestamp + ".html";
+    private static final String fileSeparator = System.getProperty("file.separator");
+    private static final String reportDir = System.getProperty("user.dir") + fileSeparator + "ExtentReport";
+    private static final String reportPath = reportDir + fileSeparator + reportFileName;
+
     public static ExtentReports getInstance() {
-        if (extent == null)
+        if (extent == null) {
             createInstance();
+        }
         return extent;
     }
- 
-    //Create an extent report instance
-    public static ExtentReports createInstance() {
-        String fileName = getReportPath(reportFilepath);
-       
-        ExtentSparkReporter htmlReporter = new ExtentSparkReporter(fileName);
+
+    private static void createInstance() {
+        createReportDirectory(reportDir);
+
+        ExtentSparkReporter htmlReporter = new ExtentSparkReporter(reportPath);
         htmlReporter.config().setTheme(Theme.STANDARD);
-        htmlReporter.config().setDocumentTitle(reportFileName);
+        htmlReporter.config().setDocumentTitle("Automation Report");
+        htmlReporter.config().setReportName("NinzaCRM Test Execution");
         htmlReporter.config().setEncoding("utf-8");
-        htmlReporter.config().setReportName(reportFileName);
         htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
- 
+
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-        //Set environment details
-		extent.setSystemInfo("OS", "Mac");
-		extent.setSystemInfo("AUT", "Prod");
- 
-        return extent;
+
+        extent.setSystemInfo("OS", System.getProperty("os.name"));
+        extent.setSystemInfo("Environment", "QA");
+        extent.setSystemInfo("User", System.getProperty("user.name"));
     }
-     
-    //Create the report path
-    private static String getReportPath (String path) {
-    	File testDirectory = new File(path);
-        if (!testDirectory.exists()) {
-        	if (testDirectory.mkdir()) {
-                System.out.println("Directory: " + path + " is created!" );
-                return reportFileLocation;
-            } else {
-                System.out.println("Failed to create directory: " + path);
-                return System.getProperty("user.dir");
-            }
-        } else {
-            System.out.println("Directory already exists: " + path);
+
+    private static void createReportDirectory(String path) {
+        File dir = new File(path);
+        if (!dir.exists()) {
+            dir.mkdirs();
         }
-		return reportFileLocation;
     }
-    
+
+    // ---------- Logging Methods ----------
+
+    public static void setTest(ExtentTest test) {
+        testlog.set(test);
+    }
+
+    public static ExtentTest getTest() {
+        return testlog.get();
+    }
+
     public static void logTestInfo(String text) {
-
-		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
-		testlog.info(text);
-		
+        System.out.println("ObjectLogger-> " + testlog.get());
+        getTest().info(text);
     }
 
+    public static void logTestwithPassed(String text) {
+        System.out.println("ObjectLogger-> " + testlog.get());
+        getTest().pass(MarkupHelper.createLabel(text, ExtentColor.GREEN));
+    }
 
-	public static void logTestwithPassed(String text) {
-		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
-		testlog.pass(MarkupHelper.createLabel(text, ExtentColor.GREEN));
-	}
-	
-	public static void logTestfailwithException(Throwable e) {
-		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
-		testlog.fail(e);
+    public static void logTestwithFailed(String text) {
+        System.out.println("ObjectLogger-> " + testlog.get());
+        getTest().fail(MarkupHelper.createLabel(text, ExtentColor.RED));
+    }
 
-	}
+    public static void logTestfailwithException(Throwable e) {
+        System.out.println("ObjectLogger-> " + testlog.get());
+        getTest().fail(e);
+    }
 
-	public static void logTestwithFailed(String text) {
-		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
-		testlog.fail(MarkupHelper.createLabel(text, ExtentColor.RED));
+    public static void logTestfailwithScreenshot(String filepath) {
+        System.out.println("ObjectLogger-> " + testlog.get());
+        try {
+            getTest().fail(MediaEntityBuilder.createScreenCaptureFromPath(filepath).build());
+        } catch (Exception ex) {
+            getTest().fail("Screenshot path invalid or not found.");
+        }
+    }
 
-	}
-
-	public static void logTestfailwithScreenshot(String filepath) {
-		System.out.println("ObjectLogger->" + testlog);// here we are trying to print methodname
-		testlog.fail(MediaEntityBuilder.createScreenCaptureFromPath(filepath).build());
-
-	}
-	
+    public static void flushReports() {
+        if (extent != null) {
+            extent.flush();
+        }
+    }
 }
+

@@ -21,19 +21,18 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
-	public static WebDriver driver;
+    public static WebDriver driver;
     public static BasePage basepage;
     public PropertiesFile prop = new PropertiesFile();
-   
 
     public WebDriver getDriver() {
         if (driver == null) {
             WebDriverManager.chromedriver().setup();
+            ChromeOptions options = new ChromeOptions();
             Map<String, Object> chromePrefs = new HashMap<>();
             chromePrefs.put("credentials_enable_service", false);
             chromePrefs.put("profile.password_manager_enabled", false);
             chromePrefs.put("profile.password_manager_leak_detection", false);
-            ChromeOptions options = new ChromeOptions();
             options.setExperimentalOption("prefs", chromePrefs);
             driver = new ChromeDriver(options);
         }
@@ -46,24 +45,22 @@ public class BaseTest {
             driver = null;
         }
     }
-    
 
     @Parameters({ "browser" })
     @BeforeMethod
     public void setUpBeforeMethod(@Optional("chrome") String browser, Method method) throws Throwable {
         Logs.info(".........BeforeMethod executed---------------");
-        System.out.println("Method is :" + method);
-        System.out.println("Method Name  is :" + method.getName());
+
         // Start Extent test
-        ExtentManager.startExtentCreateReport("NinzaCRMReport");
         ExtentTestManager.startTest(method.getName());
-        ExtentManager.logTestInfo("Starting test: " + method.getName());
+        //ExtentManager.logTestInfo("Starting test: " + method.getName());
 
         initializeBrowser(browser);
 
         String url = prop.getProperty("application.properties", "url");
         System.out.println("App URL: " + url);
         baseURL(url);
+
         basepage.waitUntilPageLoads(20);
         driver.manage().window().maximize();
         initialSetup();
@@ -81,7 +78,7 @@ public class BaseTest {
             ExtentTestManager.endTest(); // flushes the report
         }
     }
-    
+
     public void initializeBrowser(String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
@@ -133,11 +130,10 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
-        //options.setHeadless(true);
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         Logs.info("Headless execution started");
-        ExtentManager.logTestInfo("Successfully logged in a headless mode to Home page");
+        ExtentManager.logTestInfo("Headless mode browser started");
     }
 
     public void initialSetup() throws Throwable {
@@ -161,5 +157,4 @@ public class BaseTest {
         Logs.info("Successfully logged in to Home page");
         ExtentManager.logTestInfo("Successfully logged in to Home page");
     }
-
 }
