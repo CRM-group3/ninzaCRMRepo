@@ -22,7 +22,7 @@
 				<version>3.3.0</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFiles>campaign_testng.xml</suiteXmlFiles>
+						<suiteXmlFile>campaign_testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
