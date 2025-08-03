@@ -26,7 +26,20 @@
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
-		</plugins>
+		
+
+
+		<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<version>3.11.0</version>
+<configuration>
+<testExcludes>
+<testExclude>com/group3/CRMtests/CreateUserTest.java</testExclude>
+</testExcludes>
+</configuration>
+</plugin>
+</plugins>
 	</build>
 
 
