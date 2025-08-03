@@ -13,7 +13,7 @@ import org.openqa.selenium.WebDriver;
 
 public class ScreenShots {
 	
-	public void takescreenshot(WebDriver driver) {
+	public String takescreenshot(WebDriver driver) {
 		//Take screen shot object
 		TakesScreenshot screenshot = ((TakesScreenshot) driver);
 		
@@ -38,7 +38,7 @@ public class ScreenShots {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
+		return filepath; // ✅ Return the screenshot path
 	}
 
 }
