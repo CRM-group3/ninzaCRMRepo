@@ -84,13 +84,13 @@ public class BaseTest {
         }
     }
     
-    @AfterSuite
-    public void flushReport() {
-        if (reportlog != null) {
-            reportlog.flush();
-            Logs.info("Extent Report flushed successfully.");
-        }
-    }
+//    @AfterSuite
+//    public void flushReport() {
+//        if (reportlog != null) {
+//            reportlog.flush();
+//            Logs.info("Extent Report flushed successfully.");
+//        }
+//    }
 
     public void initializeBrowser(String browser) {
         if (browser.equalsIgnoreCase("chrome")) {

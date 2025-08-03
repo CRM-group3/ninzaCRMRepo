@@ -5,8 +5,7 @@
     <classes>
       <class name="com.group3.CRMtests.ContactsTest">
         <methods>
-          <include name="flushReport"/>
-          <include name="createContactWithMandatoryFields"/>
+          <include name="createDuplicateContact"/>
           <include name="tearDownAfterTestMethod"/>
           <include name="setUpBeforeMethod"/>
         </methods>
