@@ -45,6 +45,21 @@ public class BaseTest {
             driver = null;
         }
     }
+<<<<<<< HEAD
+=======
+    
+//    @BeforeSuite
+//    public void setupReport() {
+//        ExtentManager.getInstance(); // creates the report
+//    }
+//
+//    @AfterSuite
+//    public void flushReport() {
+//        ExtentManager.getInstance().flush(); // writes it to index.html
+//    }
+    
+    
+>>>>>>> e046dfe42f34bbab90446d670541a0f41014d6b6
 
     @Parameters({ "browser" })
     @BeforeMethod
