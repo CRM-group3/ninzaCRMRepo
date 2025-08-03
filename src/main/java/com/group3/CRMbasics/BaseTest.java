@@ -21,7 +21,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
-    public static WebDriver driver;
+	public static WebDriver driver;
     public static BasePage basepage;
     public PropertiesFile prop = new PropertiesFile();
 
@@ -45,21 +45,6 @@ public class BaseTest {
             driver = null;
         }
     }
-<<<<<<< HEAD
-=======
-    
-//    @BeforeSuite
-//    public void setupReport() {
-//        ExtentManager.getInstance(); // creates the report
-//    }
-//
-//    @AfterSuite
-//    public void flushReport() {
-//        ExtentManager.getInstance().flush(); // writes it to index.html
-//    }
-    
-    
->>>>>>> e046dfe42f34bbab90446d670541a0f41014d6b6
 
     @Parameters({ "browser" })
     @BeforeMethod
