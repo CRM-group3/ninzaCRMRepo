@@ -3,6 +3,7 @@ package com.group3.CRMpages;
 
 
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.List;
 import java.util.Random;
 import java.util.regex.Pattern;
@@ -13,6 +14,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.group3.CRMlistners.ExtentTestManager;
 
 import bsh.ParseException;
 import lombok.Getter;
@@ -145,6 +151,7 @@ public class CreateUserPage {
     private List<WebElement> tableRows;
     @FindBy(xpath = "//table[@class='table table-striped table-hover']//tbody/tr[1]/td[1]")
     private WebElement firstCell;
+   
  // In CreateUserPage.java or relevant Page class
     @FindBy(name = "dob")
     private WebElement dateOfBirthInput;
@@ -161,7 +168,18 @@ public class CreateUserPage {
     private WebElement sigouthover;
     @FindBy(xpath="//div[contains(@class, 'logout') and normalize-space(text())='Logout']")
     private WebElement logout;
-  
+    private By errorMessage = By.cssSelector("div.error-message");
+
+    // Getter for the error message element
+    public WebElement getErrorMessage() {
+        return driver.findElement(errorMessage);
+    }
+
+    // Optional: get error message text directly
+    public String getEmailErrorMessageText() {
+        return getErrorMessage().getText();
+    }
+
     
     public WebElement getLogout() {
 		return logout;
@@ -299,10 +317,20 @@ public class CreateUserPage {
         enterPassword(password);
         clickSubmit();
     }
+    public String getTextFromFirstCellOf(WebElement row) {
+        return row.findElement(By.xpath("./td[1]")).getText();
+    }
     public  boolean isValidDate(String dateStr) throws java.text.ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
         sdf.setLenient(false); // disables lenient parsing (e.g., 32-01-2025 won't pass)
         sdf.parse(dateStr);
 		return true; // valid format and valid date
     }
+    public List<WebElement> waitForElement(List<WebElement> elements, Duration time) {
+		WebDriverWait wait = new WebDriverWait(driver, time);
+		ExtentTest test = ExtentTestManager.getTest();
+		return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy((By) elements));
+		
+	}
+    
 }
