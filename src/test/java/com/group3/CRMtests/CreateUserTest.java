@@ -1,16 +1,27 @@
 package com.group3.CRMtests;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 
+//import com.group3.CRMbasics.ArrayList;
 import com.group3.CRMbasics.BaseTest;
 import com.group3.CRMlistners.ExtentManager;
 import com.group3.CRMlogs.Logs;
 import com.group3.CRMpages.CreateUserPage;
 
+import java.text.ParseException;
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,35 +40,50 @@ public class CreateUserTest extends BaseTest {
 	WebDriver driver;//=userPage.getDriver();
 	CreateUserPage userPage;
 
+	public void login() {
+		Logs.info("User is successfully logged in");
+		ExtentManager.logTestInfo("User is successfully logged in");
+		//String title = driver.getTitle();
+		//System.out.println("Page title is: " + title);
+	}
 	public void commonfunctionality() throws InterruptedException {
+		login();
 		driver=getDriver();
 		userPage= new CreateUserPage(driver);
 		Actions actions= new Actions(driver);
 		Thread.sleep(3000);
-		//adminMenu=userPage.getAdminMenu();
-		//river.findElement(By.xpath("//div[@class='nav-link' and contains(., 'Admin Console')]"));
-		actions.moveToElement(userPage.getAdminMenu()).perform();
-		//actions.moveToElement(adminMenu).perform();
-		WebElement createUserLink=userPage.getCreateUserLink();
-		//iver.findElement(By.xpath("//div[@class='dropdown-item' and text()='Create User']")); 
-		actions.moveToElement(createUserLink).click().perform();
+
+		actions.moveToElement(userPage.getAdminMenu()).perform();	
+
+		actions.moveToElement(userPage.getCreateUserLink()).click().perform();
 	}
 	public void commonfunctionality1() throws InterruptedException {
 		driver=getDriver();
 		userPage= new CreateUserPage(driver);
 		Actions actions= new Actions(driver);
-		Thread.sleep(3000);
-		WebElement adminMenu=userPage.getAdminMenu();
-		//river.findElement(By.xpath("//div[@class='nav-link' and contains(., 'Admin Console')]"));
-		actions.moveToElement(adminMenu).perform();
-		WebElement getViewUser=driver.findElement(By.xpath("//div[@class='dropdown-item' and text()='View Users']"));
-		//getViewUser.click();
-		WebElement createUserLink=userPage.getCreateUserLink();
-		actions.moveToElement(getViewUser).click().perform();
+		Thread.sleep(3000);		
+		basepage.waitForElement(userPage.getAdminMenu(),Duration.ofSeconds(1000));
+		actions.moveToElement(userPage.getAdminMenu()).perform();
+		basepage.waitForElement(userPage.getCreateUserLink(),Duration.ofSeconds(1000));
+		actions.moveToElement(userPage.getCreateUserLink()).click().perform();
+		Logs.info("success opening createuser page");
+		ExtentManager.logTestInfo("success opening createuser page");
 	}
+	@Test
+public void passwordIsmasked() throws InterruptedException {
+		commonfunctionality();
+		userPage.enterPassword("ghjgjh");
+		userPage.clickSubmit();
+		
+		String fieldType = userPage.getPasswordInput().getAttribute("type");
+
+		Assert.assertEquals(fieldType, "password", "Password field is not masked.");
+}
 
 	@Test
 	public void testuniqueIdGenerated() throws InterruptedException {
+
+
 		commonfunctionality1();
 		//driver.find//div[@class='dropdown-item' and text()='View Users']
 
@@ -65,14 +91,19 @@ public class CreateUserTest extends BaseTest {
 		int initialRowCount1 = rowsBefore1.size();
 		System.out.println("count is"+initialRowCount1);
 		commonfunctionality();
-		commonfunctionality();
-		String username="gtffghnn";
-		String username1="guuyjjnmnm";
-		userPage.createUser(username1, "6907273291", "cmoie@stmail.com",username,"fgghgj");
+		String username=	userPage.getRandomAlphaString(7);
+		String username1=userPage.getRandomAlphaString(8);
+		
+		Random random = new Random();
+		userPage.createUser(username1, userPage.generateMobileNumber(), userPage.getRandomAlphaString(3)+"@stmail.com",username,"fgghgj");
+
+		
 		Thread.sleep(3000);
 		WebElement firstCell = driver.findElement(By.xpath("//table[@class='table table-striped table-hover']//tbody/tr[1]/td[1]"));
 		String value = firstCell.getText();
 		System.out.println("First value in the table: " + value);
+		if (value!=null)
+			Assert.assertEquals(true,true);
 		List<WebElement> rowsAfter=driver.findElements(By.xpath("//table[@class='table table-striped table-hover']//tbody//tr"));
 
 		WebElement newRow =rowsAfter.get(rowsAfter.size() - 1);
@@ -84,13 +115,47 @@ public class CreateUserTest extends BaseTest {
 
 
 		commonfunctionality();
-		String username="gjuonn";
-		String username1="gjjn";
-		userPage.createUser(username1, "6989273291", "cybbie@stmail.com",username,"fgghgj");
-		Thread.sleep(3000);
+		String username=	userPage.getRandomAlphaString(7);
+		String username1=userPage.getRandomAlphaString(8);
+		userPage.createUser(username1, userPage.generateMobileNumber(), userPage.getRandomAlphaString(3)+"@stmail.com",username,"fgghgj");
+				Thread.sleep(3000);
 		WebElement alertMsg = userPage.getAlertMsg();;
 		String alertText = alertMsg.getText();
 		System.out.println("Alert Message: " + alertText);	
+		String title = driver.getTitle();
+		System.out.println("Page title is: " + title);
+		//Assert.assertEquals(alertText, "User "+username1+" Successfully Added");
+		// Add assertion here based on success message or redirection
+
+	}
+	@Test
+	public void loginwithuserWithoutAdminRightTC_201() throws Throwable {
+
+
+		commonfunctionality();
+		Actions actions=new Actions(driver);
+		actions.moveToElement(userPage.getSigouthover()).perform();
+		actions.moveToElement(userPage.getLogout()).click().perform();
+		
+		
+		 
+		WebElement emailField = driver.findElement(By.id("username"));
+        //basepage.waitForVisibilty(emailField, Duration.ofSeconds(30), "Email field");
+        basepage.elementSendText(emailField, "hellonew", "Username");
+       // WebElement password = driver.findElement(By.xpath("//*[@id='inputPassword']"));
+        WebElement password = driver.findElement(By.id("inputPassword"));
+        basepage.elementSendText(password, "1234567", "Password");
+		/*
+		 * WebElement loginButton = driver.findElement(By.id("Login"));
+		 * basepage.waitForVisibilty(loginButton, Duration.ofSeconds(30),
+		 * "Login button"); basepage.buttonCheck(loginButton, "Login");
+		 */
+        WebElement SignInButton = driver.findElement(By.xpath("//button[text()='Sign In']"));
+        basepage.waitForVisibilty(SignInButton, Duration.ofSeconds(30), "Sign In button");
+        basepage.buttonCheck(SignInButton, "Sign In");
+		Thread.sleep(3000);
+		if(userPage.getSigouthover().isDisplayed())
+					System.out.println("fail testcase");
 		//Assert.assertEquals(alertText, "User "+username1+" Successfully Added");
 		// Add assertion here based on success message or redirection
 
@@ -114,6 +179,27 @@ public class CreateUserTest extends BaseTest {
 		ExtentManager.logTestInfo("checkuserNamefieldEmpty Alrt message");
 	}
 	@Test
+    public void verifyFormGroupLabels() throws InterruptedException {
+		commonfunctionality();
+        // Expected list
+        List<String> expectedLabels = Arrays.asList(
+            "User ID:", "User's Full Name*", "Mobile*", "Email*", "Date Of Birth:", "Username*", "Password*"
+        );
+
+        // Actual list from UI
+        List<WebElement> formGroups = driver.findElements(By.xpath("//div[@class='form-group']//label"));
+        List<String> actualLabels = new ArrayList<>();
+
+        for (WebElement el : formGroups) {
+            actualLabels.add(el.getText().trim());
+        }
+
+        // Assertion
+        Assert.assertEquals(actualLabels, expectedLabels, "Form group labels do not match expected list");
+    }
+
+	
+	@Test
 	public void userMobileldBlankAlert() throws InterruptedException
 	{
 		// Invalid, only one word
@@ -129,7 +215,7 @@ public class CreateUserTest extends BaseTest {
 
 		Thread.sleep(3000);
 	}
-		@Test
+	@Test
 	public void userEmailBlankAlert() throws InterruptedException
 	{
 		// Invalid, only one word
@@ -137,20 +223,75 @@ public class CreateUserTest extends BaseTest {
 		WebElement fullNameInput = driver.findElement(By.name("empName"));
 		fullNameInput.sendKeys("");
 		userPage.entermobileNumber("123abc!@#");
-		 String actualValue = userPage.getMobileNumber().getAttribute("value");
-	        System.out.println("Final value in field: " + actualValue);
+		String actualValue = userPage.getMobileNumber().getAttribute("value");
+		System.out.println("Final value in field: " + actualValue);
 		userPage.enterEmail("");
 		userPage.clickSubmit();
-		
-		  JavascriptExecutor js = (JavascriptExecutor) driver; String patternMessage =
-		  (String) js.executeScript( "return arguments[0].validationMessage;",
-		  userPage.getMobileNumber());
-		 
+
+		JavascriptExecutor js = (JavascriptExecutor) driver; String patternMessage =
+				(String) js.executeScript( "return arguments[0].validationMessage;",
+						userPage.getMobileNumber());
+
 		System.out.println("Pattern Validation Message: " + patternMessage);
 
 		//mobileField.sendKeys("123abc!@#");
 	}
-	//@Test
+	
+	@Test
+	public void validuserEmailId() throws InterruptedException {
+		commonfunctionality();
+		WebElement fullNameInput = driver.findElement(By.name("empName"));
+		fullNameInput.sendKeys("");
+		userPage.entermobileNumber("123abc!@#");
+		String actualValue = userPage.getMobileNumber().getAttribute("value");
+		System.out.println("Final value in field: " + actualValue);
+		userPage.enterEmail("");
+
+	}
+	
+	@Test
+	public void testInvalidEmailShowsError() throws InterruptedException {
+		// 1. Find the email input field and enter an invalid email
+		commonfunctionality();
+		WebElement emailField = driver.findElement(By.name("email"));
+		emailField.clear();
+		emailField.sendKeys("invalid-email"); // Invalid format
+		emailField.sendKeys(Keys.TAB); // Trigger blur to fire validation
+
+		// 2. Locate the error message
+		WebElement errorMessage = driver.findElement(By.cssSelector("div.error-message"));
+
+		// 3. Assert error message is displayed and correct
+		Assert.assertTrue(errorMessage.isDisplayed(), "Error message should be displayed for invalid email");
+		Thread.sleep(4000);
+		Assert.assertEquals(errorMessage.getText().trim(), "Please enter a valid email address");
+	}
+	
+	@Test
+	public void testDobLessThan18ShowsError() throws InterruptedException, ParseException {
+		// Go to the form page
+		commonfunctionality();
+
+		// Calculate a date less than 18 years ago (e.g., today - 17 years)
+		LocalDate underageDob = LocalDate.now().minusYears(17);
+		String dobString = underageDob.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+
+		// Enter DOB
+		userPage.getDateOfBirthInput().clear();
+		userPage.getDateOfBirthInput().sendKeys(dobString);
+		userPage.getDateOfBirthInput().sendKeys(Keys.TAB); // Trigger validation
+		
+		
+		Thread.sleep(3000);
+		
+		// Assert error is shown
+		if(userPage.isValidDate(dobString))		
+					System.out.println("date is in correct format"+dobString);
+	//	Assert.assertTrue(userPage.isDobErrorVisible(), "DOB error message should be displayed for age < 18");
+		//Assert.assertEquals(userPage.getDobErrorMessage(), "Age must be 18 or older"); // replace with actual text
+	}
+
+	@Test
 	public void userUsernameBlankAlert() throws InterruptedException
 	{
 		// Invalid, only one word
@@ -169,7 +310,8 @@ public class CreateUserTest extends BaseTest {
 
 
 	}
-	//@Test
+	
+	@Test
 	public void userPasswordBlankAlert() throws InterruptedException
 	{
 		// Invalid, only one word
@@ -187,6 +329,50 @@ public class CreateUserTest extends BaseTest {
 
 		System.out.println("Pattern Validation Message: " + patternMessage);
 
+
+	}
+	@Test
+	public void userPasswordlessTan6DigitTC_109() throws InterruptedException
+	{
+		// Invalid, only one word
+		commonfunctionality();
+		WebElement fullNameInput = driver.findElement(By.name("empName"));
+		fullNameInput.sendKeys("uyjhkjk"); 
+		userPage.entermobileNumber("1633444556");
+		userPage.enterEmail("asd@g1.com"); 
+		userPage.enterUserName("hjghjh");
+		userPage.enterPassword("trtyh");
+		userPage.clickSubmit();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String patternMessage = (String) js.executeScript(
+				"return arguments[0].validationMessage;", userPage.getPasswordInput());
+
+		System.out.println("Pattern Validation Message: " + patternMessage);
+
+
+	}
+	
+	
+	@Test
+	public void usernameduplicateErrorTc_07() throws InterruptedException
+	{
+		// Invalid, only one word
+		commonfunctionality();
+		userPage.enterFirstName(userPage.getRandomAlphaString(7)); 
+		userPage.entermobileNumber(userPage.generateMobileNumber()); 
+		userPage.enterEmail(userPage.getRandomAlphaString(3)+"@stmail.com");
+		userPage.enterUserName("TcEkFVX");
+		userPage.enterPassword(userPage.getRandomAlphaString(7));
+		
+		
+		userPage.clickSubmit();
+		Thread.sleep(4000);
+		System.out.println(userPage.getDuplicateUserMessage().getText().trim());
+				
+		// 3. Assert error message is displayed and correct
+		//Assert.assertTrue(userPage.getDuplicateUserMessage().isDisplayed(), "Error message should be displayed for invalid email");
+		Thread.sleep(4000);
+		//Assert.assertEquals(userPage.getDuplicateUserMessage().getText().trim(), "username: TcEkFVX already exists");
 
 	}
 

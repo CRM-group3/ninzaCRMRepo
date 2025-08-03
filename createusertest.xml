@@ -11,7 +11,7 @@
     <test name="LeadTests">
 
         <classes>
-            <class name="com.group3.CRMtests.LeadTest" />
+            <class name="com.group3.CRMtests.CreateUserTest" />
         </classes>
     </test>
 </suite>
