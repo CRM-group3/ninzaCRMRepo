@@ -5,8 +5,10 @@ import java.util.Set;
 import java.util.UUID;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -26,41 +28,46 @@ public class AddContactsPage extends BasePage{
 
 	
 	@FindBy(xpath="//button[@class='btn btn-info']")
+//	@FindBy(xpath = "//*[@id='content']/div[2]/div[1]/div/div[1]/div/div[2]/button/span")
 	WebElement createContact;
 	
-	@FindBy(xpath="input[@name='contactId']")
+	@FindBy(xpath="//*[@id='content']/div[2]/div[1]/div/table/tbody/tr[1]/td[1]")
+	//*[@id="content"]/div[2]/div[1]/div/table/tbody/tr[1]/td[1]
 	WebElement contactID;
 	
 	@FindBy(xpath="//*[@name='organizationName']")
-	WebElement organization;
+	public WebElement organization;
 	
-	@FindBy(xpath = "//input[@name='title']")
-	WebElement titleField;
+	 @FindBy(xpath = "//input[@name='title']")
+	public WebElement titleField;
 	
 	
 	@FindBy(xpath = "//*[@name='department']")
-	WebElement departmentField;
+	public WebElement departmentField;
 	
 	@FindBy(xpath = "//input[@type='tel']")
-	WebElement officePhoneField;
+	public WebElement officePhoneField;
 	
 	@FindBy(xpath = "//*[@name='contactName']")
-	WebElement contactNameField;
+	public WebElement contactNameField;
 	
 	@FindBy(xpath = "//input[@name='mobile']")
-	WebElement mobileField;
+	public WebElement mobileField;
 	
 	@FindBy(xpath = "//*[@name='email']")
-	WebElement emailField;
+	public WebElement emailField;
 	
 	@FindBy(xpath = "(//button[@type='button'])[2]")
-	WebElement campaignLookupButton;
+	public WebElement campaignLookupButton;
 	
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement createContactSaveButton;
 	
 	@FindBy (xpath="(//button[@class='select-btn'][normalize-space()='Select'])[1]")
 	WebElement selectButton;
+	
+//	@FindBy(xpath ="//div[contains(text(), 'Successfully')]")
+//	private WebElement alertMsg;
 	
 	public boolean clickOnContacts() {
 	    try {
@@ -86,9 +93,22 @@ public class AddContactsPage extends BasePage{
 		    }
 		}
 	
+	
+
+	public String getGeneratedContactId() {
+	    return contactID.getText();
+	}
+	
 	public void enterOrganization(String orgName) {
         organization.sendKeys(orgName);
-    }
+		
+////		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+////		    WebElement orgField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("organizationName")));
+////		    orgField.clear();
+//		    orgField.sendKeys(orgName);
+		}
+
+   
 
     public void enterTitle(String title) {
         titleField.sendKeys(title);
@@ -120,7 +140,22 @@ public class AddContactsPage extends BasePage{
     }
     
     public String getAlertText() {
-        return driver.getPageSource(); // or use alert.getText() if it's a popup for duplicate contact name
+        return driver.getPageSource(); 
+    }
+    
+//	public boolean isFieldValid(WebElement element) {
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		boolean isValid = (Boolean) js.executeScript("return arguments[0].checkValidity();", element);
+//        System.out.println("Valid: " + isValid);
+//		return isValid;
+//    }
+
+	// Returns the validation message shown by the browser if the field is invalid.
+	public String getValidationMessage(WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		 String tooltipMessage = (String) js.executeScript("return arguments[0].validationMessage;", element);
+		 System.out.println("Tooltip Message: " + tooltipMessage);
+		return tooltipMessage;
     }
 
 
@@ -157,24 +192,7 @@ public class AddContactsPage extends BasePage{
 	  public void clickCreateContact() {
 		  createContactSaveButton.click();
 	    }
-	  
-//	  public String getSuccessMessage() {
-//	        try {
-//	            return new WebDriverWait(driver, Duration.ofSeconds(10))
-//	                .until(ExpectedConditions.visibilityOf(successMessage))
-//	                .getText();
-//	        } catch (Exception e) {
-//	            return null;
-//	        }
-	    //}
-	  
-	  public String generateUniqueContactId() {
-		    return "CID_" + UUID.randomUUID().toString().substring(0, 8); // Shortened UUID
-		}
-
-	
-
-}
+	  }
   
 
 
