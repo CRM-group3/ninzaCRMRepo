@@ -39,12 +39,32 @@ public class TestListner extends BaseTest implements ITestListener {
 	}
 
 	public void onTestFailure(ITestResult result) {
-		System.out.println("*** Test execution " + result.getMethod().getMethodName() + " failed...");
-		Logs.error("*** Test execution " + result.getMethod().getMethodName() + " failed...");
-		ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");
-		ss.takescreenshot(driver);
-		
+	    String testName = result.getMethod().getMethodName();
+	    System.out.println("*** Test " + testName + " failed...");
+	    Logs.error("*** Test " + testName + " failed...");
+
+	    Throwable throwable = result.getThrowable();
+	    ExtentManager.logTestfailwithException(throwable);
+
+	    try {
+	        //WebDriver driver = null;
+	        Object testClass = result.getInstance();
+	        if (testClass instanceof BaseTest) {
+	            driver = ((BaseTest) testClass).getDriver(); // Safely get driver
+	        }
+
+	        if (driver != null) {
+	            String screenshotPath = ss.takescreenshot(driver);  
+	            ExtentManager.logTestfailwithScreenshot(screenshotPath);
+	        } else {
+	            Logs.error("WebDriver instance is null, cannot take screenshot.");
+	        }
+	    } catch (Exception e) {
+	        Logs.error("Failed to capture or attach screenshot: " + e.getMessage());
+	    }
 	}
+		
+	
 
 	public void onTestSkipped(ITestResult result) {
 		System.out.println("*** Test " + result.getMethod().getMethodName() + " skipped...");
