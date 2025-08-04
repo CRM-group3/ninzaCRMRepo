@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -82,6 +83,57 @@ for(int i=1;i<=sheet.getLastRowNum();i++) {
 			e.printStackTrace();
 		}
 	}
+	
+	public static List<String> getColumnValues(String excelPath, String sheetName, String columnHeader, int headerRowIndex) 
+	{
+        List<String> columnValues = new ArrayList<>();
+
+        try (FileInputStream fis = new FileInputStream(excelPath);
+             Workbook workbook = new XSSFWorkbook(fis)) {
+
+            Sheet sheet = workbook.getSheet(sheetName);
+            if (sheet == null) {
+                throw new RuntimeException("Sheet '" + sheetName + "' not found in Excel file.");
+            }
+
+            Row headerRow = sheet.getRow(headerRowIndex);
+            if (headerRow == null) {
+                throw new RuntimeException("Header row " + headerRowIndex + " is empty.");
+            }
+
+            // Find the column index for the given header
+            int columnIndex = -1;
+            for (Cell cell : headerRow) {
+                if (cell.getStringCellValue().trim().equalsIgnoreCase(columnHeader.trim())) {
+                    columnIndex = cell.getColumnIndex();
+                    break;
+                }
+            }
+
+            if (columnIndex == -1) {
+                throw new RuntimeException("Column '" + columnHeader + "' not found in header row.");
+            }
+
+            // Read all values below the header row
+            for (int i = headerRowIndex + 1; i <= sheet.getLastRowNum(); i++) {
+                Row row = sheet.getRow(i);
+                if (row != null) {
+                    Cell cell = row.getCell(columnIndex);
+                    if (cell != null && cell.getCellType() != CellType.BLANK) {
+                        cell.setCellType(CellType.STRING);
+                        columnValues.add(cell.getStringCellValue().trim());
+                    }
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Failed to read Excel file: " + e.getMessage());
+        }
+
+        return columnValues;
+    }
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -1,25 +1,17 @@
 package com.group3.CRMlistners;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.group3.CRMbasics.BasePage;
 import com.group3.CRMlogs.Logs;
 import com.group3.CRMutilities.ScreenShots;
-//import com.salesforce.utility.Constants;
 import com.group3.CRMbasics.*;
-import com.group3.CRMlistners.*;
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
 
 public class TestListner extends BaseTest implements ITestListener {
 	
 	ScreenShots ss = new ScreenShots();
-	private static ExtentReports report = ExtentManager.getInstance();
 
 
 	public void onStart(ITestContext context) {
@@ -43,20 +35,36 @@ public class TestListner extends BaseTest implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		System.out.println("*** Executed " + result.getMethod().getMethodName() + " test successfully...");
 		Logs.info("*** Executed " + result.getMethod().getMethodName() + " test successfully...");
-		ExtentTestManager.getTest().log(Status.PASS, "Test passed");
-		//ExtentManager.logTestwithPassed("NinaCRMpass");
+		ExtentTestManager.getTest().log(Status.PASS, "Test passed");		
 	}
 
 	public void onTestFailure(ITestResult result) {
-		System.out.println("*** Test execution " + result.getMethod().getMethodName() + " failed...");
-		Logs.error("*** Test execution " + result.getMethod().getMethodName() + " failed...");
-		ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");
-		ss.takescreenshot(getDriver());
-		//String filename = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new Date());
-		//String path = constants.screenshotsFilepath + filename + ".png";
-		//report.logTestfailwithScreenshot(path);
-		//report.logTestfailwithException(result.getThrowable());
+	    String testName = result.getMethod().getMethodName();
+	    System.out.println("*** Test " + testName + " failed...");
+	    Logs.error("*** Test " + testName + " failed...");
+
+	    Throwable throwable = result.getThrowable();
+	    ExtentManager.logTestfailwithException(throwable);
+
+	    try {
+	        //WebDriver driver = null;
+	        Object testClass = result.getInstance();
+	        if (testClass instanceof BaseTest) {
+	            driver = ((BaseTest) testClass).getDriver(); // Safely get driver
+	        }
+
+	        if (driver != null) {
+	            String screenshotPath = ss.takescreenshot(driver);  
+	            ExtentManager.logTestfailwithScreenshot(screenshotPath);
+	        } else {
+	            Logs.error("WebDriver instance is null, cannot take screenshot.");
+	        }
+	    } catch (Exception e) {
+	        Logs.error("Failed to capture or attach screenshot: " + e.getMessage());
+	    }
 	}
+		
+	
 
 	public void onTestSkipped(ITestResult result) {
 		System.out.println("*** Test " + result.getMethod().getMethodName() + " skipped...");

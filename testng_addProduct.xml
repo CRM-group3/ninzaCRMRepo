@@ -6,11 +6,14 @@
         <listener class-name="com.group3.CRMlistners.TestListner"></listener>
     </listeners>
     
-<<<<<<< HEAD:testng.xml
-    <test name="LeadTests">
-=======
+
+
     <test name="AddProductTest">
->>>>>>> Ban_2:testng_addProduct.xml
+
+   
+ 
+
+
         <classes>
             <class name="com.group3.CRMtests.AddProductTest" />
         </classes>
