@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<suite name="Automation">
+    <listeners>
+        <listener class-name="com.group3.CRMlistners.TestListner"></listener>
+    </listeners>
+    
+   
+    <parameter name="campaignName" value="Roshal"/>
+    <test name="LeadTests">
+        <classes>
+            <class name="com.group3.CRMtests.LeadTest" />
+        </classes>
+    </test>
+</suite>
