@@ -63,6 +63,7 @@ public class ExtentManager{
         }
     }
 
+
     // ---------- Logging Methods ----------
 
     public static void setTest(ExtentTest test) {
@@ -72,6 +73,7 @@ public class ExtentManager{
     public static ExtentTest getTest() {
         return testlog.get();
     }
+
 
     public static void logTestInfo(String text) {
         System.out.println("ObjectLogger-> " + testlog.get());

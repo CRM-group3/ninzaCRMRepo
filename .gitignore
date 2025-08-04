@@ -4,7 +4,10 @@ target/
 # TestNG Reports
 test-output/
 
-
+*.log
+screenshots/
+ExtentReport/
+*.numbers
 
 # ExtentReports
 

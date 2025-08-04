@@ -17,17 +17,17 @@
 
 			</plugin>
 			
-			
 			<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.11.0</version>
-            <configuration>
-                <testExcludes>
-                    <testExclude>com/group3/CRMtests/CreateUserTest.java</testExclude>
-                </testExcludes>
-            </configuration>
-        </plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-compiler-plugin</artifactId>
+           <version>3.11.0</version>
+           <configuration>
+               <testExcludes>
+                   <testExclude>com/group3/CRMtests/CreateUserTest.java</testExclude>
+               </testExcludes>
+           </configuration>
+       </plugin>
+			
 			
 			
 			<plugin>
@@ -114,6 +114,12 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.github.javafaker</groupId>
+		    <artifactId>javafaker</artifactId>
+		    <version>1.0.2</version>
 		</dependency>
 
 	</dependencies>

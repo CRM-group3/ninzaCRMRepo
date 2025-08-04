@@ -18,6 +18,7 @@ import com.group3.CRMlistners.ExtentManager;
 import com.group3.CRMlistners.ExtentTestManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.log4j.xml.DOMConfigurator;
 
 public class BaseTest {
 
@@ -45,12 +46,12 @@ public class BaseTest {
             driver = null;
         }
     }
-
+    
     @Parameters({ "browser" })
     @BeforeMethod
     public void setUpBeforeMethod(@Optional("chrome") String browser, Method method) throws Throwable {
         Logs.info(".........BeforeMethod executed---------------");
-
+        DOMConfigurator.configure("log4j.xml");
         // Start Extent test
         ExtentTestManager.startTest(method.getName());
         //ExtentManager.logTestInfo("Starting test: " + method.getName());
@@ -102,7 +103,9 @@ public class BaseTest {
         basepage = new BasePage(driver);
         Logs.info(browser + " browser launched.");
         ExtentManager.logTestInfo(browser + " browser launched.");
+        
     }
+    
 
     public void baseURL(String url) throws Exception {
         try {
