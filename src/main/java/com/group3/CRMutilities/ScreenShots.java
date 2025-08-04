@@ -37,7 +37,20 @@ public class ScreenShots {
 	            e.printStackTrace();
 	        }
 
+
 	        return filepath; // ✅ Return the screenshot path
 	    }
 }
 
+        // Copy source file to destination
+        try {
+            FileUtils.copyFile(srcFile, destFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return filepath; // ✅ Return the screenshot path
+    }
+
+
+}

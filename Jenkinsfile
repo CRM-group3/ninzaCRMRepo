@@ -16,9 +16,15 @@ pipeline {
             steps {
                 // This runs TestNG tests using your root-level testng.xml
 
+
                 sh 'mvn clean test -DsuiteXmlFile=campaign_testng.xml'
 
    
+
+          
+
+                sh 'mvn clean test -DsuiteXmlFile=testng_addProduct.xml'
+
 
             }
         }

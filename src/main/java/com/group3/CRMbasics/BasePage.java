@@ -1,5 +1,4 @@
 package com.group3.CRMbasics;
-
 import com.google.common.io.Files;
 import static org.testng.Assert.assertEquals;
 import com.group3.CRMlogs.Logs;
@@ -583,6 +582,53 @@ public class BasePage {
 		}
 	}
 
+	public void selectByValueWebElement(WebElement element, String value) throws Exception {
+		WebElement dropdownElement = element;
+		dropdownElement.click();
+		Logs.info("Dropdown element is clicked");
+		ExtentManager.logTestInfo("Dropdown element is clicked");
+		Select dropdown = new Select(dropdownElement);
+		try {
+			dropdown.selectByValue(value);
+
+			String selectedOptionValue = dropdown.getFirstSelectedOption().getAttribute("value");
+
+			Assert.assertEquals(selectedOptionValue, value);
+			Logs.info("Selected option matches the expected value: " + value);
+			ExtentManager.logTestInfo("Selected option matches the expected value:" + value);
+
+		} catch (Exception e) {
+			Logs.info("Desired value '" + value + "' is not selected. Error: " + e.getMessage());
+			ExtentManager.logTestfailwithException(e);
+			throw e;
+		}
+	}
+
+public void selectByVisibleTextWebElement(WebElement element, String visibleText) throws Exception {
+		WebElement dropdownElement = element;
+		dropdownElement.click();
+		Logs.info("Dropdown element is clicked");
+		ExtentManager.logTestInfo("Dropdown element is clicked");
+
+		Select dropdown = new Select(dropdownElement);
+
+		try {
+			dropdown.selectByVisibleText(visibleText);
+			Logs.info("Text '" + visibleText + "' is selected from dropdown");
+
+			String selectedOptionText = dropdown.getFirstSelectedOption().getText();
+			Assert.assertEquals(visibleText, selectedOptionText);
+			Logs.info("Selected option matches expected value.");
+			ExtentManager.logTestInfo("Selected option matches expected value");
+
+		} catch (Exception e) {
+			System.err.println("Failed to select '" + visibleText + "' from dropdown. Error: " + e.getMessage());
+			ExtentManager.logTestfailwithException(e);
+			throw e;
+		}
+	}
+
 	
+
 
 }
