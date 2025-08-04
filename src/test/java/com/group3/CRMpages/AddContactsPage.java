@@ -66,6 +66,8 @@ public class AddContactsPage extends BasePage{
 	@FindBy (xpath="(//button[@class='select-btn'][normalize-space()='Select'])[1]")
 	WebElement selectButton;
 	
+	
+	
 //	@FindBy(xpath ="//div[contains(text(), 'Successfully')]")
 //	private WebElement alertMsg;
 	
@@ -158,8 +160,18 @@ public class AddContactsPage extends BasePage{
 		return tooltipMessage;
     }
 
-
 	
+	  public boolean isSaveButtonPresent() {
+	        return driver.findElements(By.xpath("//button[contains(text(),'Save')]")).size() > 0;
+	    }
+
+	    public boolean isCancelButtonPresent() {
+	        return driver.findElements(By.xpath("//button[contains(text(),'Cancel')]")).size() > 0;
+	    }
+
+	    public boolean areSaveAndCancelButtonsPresent() {
+	        return isSaveButtonPresent() && isCancelButtonPresent();
+	    }
 
     public void selectCampaignFromLookup(String campaignName) {
 		

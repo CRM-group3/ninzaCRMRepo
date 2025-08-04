@@ -115,7 +115,7 @@ import org.testng.annotations.Test;
 	    	 }
 	    	 
 	    	 @Test(priority=4)
-	    	 public void createContactWithSpecialCharacters() throws InterruptedException {
+	    	 public void createContactWithAlphanumericSpecialCharacters() throws InterruptedException {
 	    	     AddContactsPage contactPage = new AddContactsPage(driver);
 
 	    	     contactPage.clickOnContacts();
@@ -764,6 +764,28 @@ import org.testng.annotations.Test;
 	    	        ExtentManager.logTestInfo("Validation for empty Contact Name field verified.");
 	    	    }
 	    	 
+	    	 @Test(priority=20)
+	    	 public void verifySaveAndCancelButtons() throws Throwable {
+	    	     AddContactsPage contactPage = new AddContactsPage(driver);
+	    	     contactPage.clickOnContacts();
+	    	     Thread.sleep(2000);
+	    	     
+	    	     contactPage.clickOnCreateContact();
+	    	        Thread.sleep(2000);
+
+	    	     //Assert.assertTrue(driver.getCurrentUrl().contains("/contacts"), "Contacts URL not loaded.");
+
+	    	     Thread.sleep(2000);
+	    	     if (contactPage.areSaveAndCancelButtonsPresent()) {
+	    	         ExtentManager.logTestInfo("Save and Cancel buttons are present");
+	    	     } else {
+	    	         ExtentManager.logTestInfo("Save and/or Cancel button is NOT present");
+	    	         Assert.fail("Save and/or Cancel buttons are missing");
+	    	     }
+
+	    	     driver.quit();
+	    	 }
+
 	    } 
 	    	 
 	    	
