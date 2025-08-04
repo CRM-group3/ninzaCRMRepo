@@ -7,7 +7,7 @@
     </listeners>
     
    
-    <parameter name="campaignName" value="Roshal"/>
+    
     <test name="Createuser">
 
         <classes>
