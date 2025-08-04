@@ -17,3 +17,4 @@ test-output/
 *_*BASE_*.java
 *_*LOCAL_*.java
 *_*REMOTE_*.java
+/bin/

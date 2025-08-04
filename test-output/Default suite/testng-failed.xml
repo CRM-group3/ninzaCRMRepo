@@ -4,6 +4,7 @@
   <test thread-count="5" name="Default test(failed)">
     <classes>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       </class> <!-- com.group3.CRMtests.QuoteTest -->
 
@@ -11,11 +12,20 @@
       <class name="com.group3.CRMtests.AddProductTest">
         <methods>
           <include name="product_TC005"/>
+=======
+      <class name="com.group3.CRMtests.ContactsTest">
+        <methods>
+          <include name="createContactWithMandatoryFields"/>
+>>>>>>> sowmya
           <include name="tearDownAfterTestMethod"/>
-          <include name="setUpBeforeMethod"/>
+          <include name="setUpBeforeClass"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- com.group3.CRMtests.AddProductTest -->
 >>>>>>> Ban_2
+=======
+      </class> <!-- com.group3.CRMtests.ContactsTest -->
+>>>>>>> sowmya
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

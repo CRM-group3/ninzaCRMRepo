@@ -22,7 +22,13 @@ public class ExtentTestManager {
     }
 
     public static synchronized void endTest() {
+
         extentTestThread.remove();      // ✅ Clear thread-local storage
         extent.flush();
+
+        extentTestThread.remove();     
+        extent.flush();
+	
+
     }
 }

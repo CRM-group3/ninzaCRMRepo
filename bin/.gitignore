@@ -1,0 +1,24 @@
+# Ignore Maven build output
+target/
+
+# TestNG Reports
+test-output/
+*.html
+*.xml
+
+# ExtentReports
+extent-reports/
+ExtentReports.html
+ExtentReport.html
+
+# Ignore Eclipse IDE specific files
+.classpath
+.project
+.settings/
+
+
+# Ignore Git conflict backup files
+*_*BACKUP_*.java
+*_*BASE_*.java
+*_*LOCAL_*.java
+*_*REMOTE_*.java

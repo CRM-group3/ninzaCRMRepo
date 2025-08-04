@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
 <<<<<<< HEAD
@@ -7,9 +8,21 @@
         <methods>
           <include name="createQuoteWithValid"/>
           <include name="login"/>
+=======
+<suite name="Failed suite [Automation]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.group3.CRMlistners.TestListner"/>
+  </listeners>
+  <test thread-count="5" name="ContactsTest(failed)">
+    <classes>
+      <class name="com.group3.CRMtests.ContactsTest">
+        <methods>
+>>>>>>> sowmya
           <include name="tearDownAfterTestMethod"/>
-          <include name="setUpBeforeMethod"/>
+          <include name="verifySaveAndCancelButtons"/>
+          <include name="setUpBeforeClass"/>
         </methods>
+<<<<<<< HEAD
 
       </class> <!-- com.group3.CRMtests.QuoteTest -->
 
@@ -29,6 +42,9 @@
 =======
       </class> <!-- com.group3.CRMtests.AddProductTest -->
 >>>>>>> Ban_2
+=======
+      </class> <!-- com.group3.CRMtests.ContactsTest -->
+>>>>>>> sowmya
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- ContactsTest(failed) -->
+</suite> <!-- Failed suite [Automation] -->
