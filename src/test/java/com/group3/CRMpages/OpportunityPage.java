@@ -2,6 +2,8 @@ package com.group3.CRMpages;
 
 
 
+import java.text.SimpleDateFormat;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,6 +21,7 @@ public class OpportunityPage extends BasePage{
 	}
 	
 	public @FindBy(xpath="//a[@class='nav-link' and text()='Opportunities']")
+	
 	WebElement opportunity;
 	
 	public @FindBy(xpath="//span[contains(text(),'Create Opportunity')]")
@@ -39,11 +42,20 @@ public class OpportunityPage extends BasePage{
 	public @FindBy(xpath="//input[@name='businessType']")
 	WebElement businesstype;
 	
-	public @FindBy(xpath="//input[@name='nextStep']")
+	public@FindBy(xpath="//input[@name='nextStep']")
 	WebElement nextstep;
 	
 	public @FindBy(xpath="//input[@name='salesStage']")
 	WebElement salesstage;
+	
+	public @FindBy(xpath="//input[@name='probability']")
+	WebElement probability;
+	
+	public @FindBy(xpath="//input[@type='text']")
+	WebElement lead;
+	
+	public @FindBy(xpath="//input[@type='date']")
+	WebElement closedate;
 	
 	public void clickOpportunity() throws InterruptedException
 	{
@@ -126,6 +138,116 @@ public class OpportunityPage extends BasePage{
 		System.out.println("Error message : Please fill out field" + actualvalue);
 		Assert.assertEquals(actualvalue, "salestage is empty", 
                 "Error message");
+	}
+	
+	public void checkLead()
+	{
+		lead.clear();
+		lead.click();
+		String actualvalue=nextstep.getText();
+		System.out.println("Error message : Please fill out field" + actualvalue);
+		Assert.assertEquals(actualvalue, "Lead is empty", 
+                "Error message");
+	}
+	
+	public void optionalProbability()
+	{
+	    probability.click();
+		
+		String defaultvalue=probability.getAttribute("value");
+		
+		if("0".equals(defaultvalue))
+		{
+			System.out.println("default value is zero");
+		}
+		else
+		{
+			System.out.println("Default value is not zero" + defaultvalue);
+		}
+		
+		String required=probability.getAttribute("required");
+		if(required==null || required.equals("false"))
+		{
+			System.out.println("Probability field is optional");
+		}
+		else
+		{
+			System.out.println("Probability field is not optional");
+		}
+	}
+	
+	public void probablityValidation()
+	{
+		probability.click();
+		
+		String actualvalue=probability.getAttribute("value");
+		int num=Integer.parseInt(actualvalue);
+		
+		if(num >= 0 && num <=100)
+		{
+			System.out.println("Number is between 0 and 100");
+		}
+		else
+		{
+			System.out.println("Number is not valid");
+		}
+		
+	}
+	
+	public void checkClosedate()
+	{
+		closedate.click();
+		SimpleDateFormat sdf=new SimpleDateFormat("MM-DD-YYYY");
+		closedate.clear();
+		closedate.click();
+		closedate.sendKeys("sdf");
+	}
+	
+	public void saveWithallfields()
+	{
+		opponame.clear();
+		opponame.sendKeys("abc");
+		
+		amount.clear();
+		amount.sendKeys("1234");
+		
+		businesstype.clear();
+		businesstype.sendKeys("Renewal");
+		
+		nextstep.clear();
+		nextstep.sendKeys("Send proposal");
+		
+		salesstage.clear();
+		salesstage.sendKeys("Qualification");
+		
+		
+		
+		submit.click();
+		
+		
+	}
+	
+	public void saveWithmandatory()
+	{
+		opponame.clear();
+		opponame.sendKeys("abc");
+		
+		amount.clear();
+		amount.sendKeys("1234");
+		
+		businesstype.clear();
+		businesstype.sendKeys("Renewal");
+		
+		nextstep.clear();
+		nextstep.sendKeys("Send proposal");
+		
+		salesstage.clear();
+		salesstage.sendKeys("Qualification");
+		
+		lead.clear();
+		lead.sendKeys("Abcd");
+		
+		submit.click();
 	}
 }
 
