@@ -1,389 +1,552 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="20" passed="20" failed="0" skipped="0">
+<testng-results ignored="0" total="21" passed="20" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-02T20:29:30 PDT" name="Automation" finished-at="2025-08-02T20:37:44 PDT" duration-ms="493668">
+  <suite started-at="2025-08-03T19:12:48 PDT" name="Automation" finished-at="2025-08-03T19:20:53 PDT" duration-ms="484410">
     <groups>
     </groups>
-    <test started-at="2025-08-02T20:29:30 PDT" name="ContactsTest" finished-at="2025-08-02T20:37:44 PDT" duration-ms="493668">
+    <test started-at="2025-08-03T19:12:48 PDT" name="ContactsTest" finished-at="2025-08-03T19:20:53 PDT" duration-ms="484410">
       <class name="com.group3.CRMtests.ContactsTest">
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:29:30 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:29:39 PDT" duration-ms="8488" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:12:48 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:12:56 PDT" duration-ms="8029" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.clickContacts() throws java.lang.Throwable]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="clickContacts()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:29:39 PDT" name="clickContacts" finished-at="2025-08-02T20:29:43 PDT" duration-ms="4189" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="clickContacts()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:12:56 PDT" name="clickContacts" finished-at="2025-08-03T19:13:00 PDT" duration-ms="4056" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickContacts -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:29:43 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:29:43 PDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:01 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:13:01 PDT" duration-ms="309" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:29:43 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:29:51 PDT" duration-ms="7591" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:01 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:13:07 PDT" duration-ms="6529" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.clickCreateContactButton() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="clickCreateContactButton()[pri:1, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:29:51 PDT" name="clickCreateContactButton" finished-at="2025-08-02T20:29:55 PDT" duration-ms="3931" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="clickCreateContactButton()[pri:1, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:07 PDT" name="clickCreateContactButton" finished-at="2025-08-03T19:13:11 PDT" duration-ms="3886" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickCreateContactButton -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:29:55 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:30:03 PDT" duration-ms="8020" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:11 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:13:11 PDT" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterTestMethod -->
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:11 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:13:18 PDT" duration-ms="7082" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.createContactWithMandatoryFields() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:29:55 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:29:55 PDT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method signature="createContactWithMandatoryFields()[pri:2, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:30:03 PDT" name="createContactWithMandatoryFields" finished-at="2025-08-02T20:30:20 PDT" duration-ms="17820" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="createContactWithMandatoryFields()[pri:2, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:18 PDT" name="createContactWithMandatoryFields" finished-at="2025-08-03T19:13:36 PDT" duration-ms="17355" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithMandatoryFields -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:30:20 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:30:21 PDT" duration-ms="306" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:36 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:13:36 PDT" duration-ms="361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:30:21 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:30:30 PDT" duration-ms="9352" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:36 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:13:43 PDT" duration-ms="6551" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.createContactWithAllFields() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="createContactWithAllFields()[pri:3, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:30:30 PDT" name="createContactWithAllFields" finished-at="2025-08-02T20:30:54 PDT" duration-ms="24258" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="createContactWithAllFields()[pri:3, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:43 PDT" name="createContactWithAllFields" finished-at="2025-08-03T19:14:06 PDT" duration-ms="23566" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithAllFields -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:30:54 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:30:55 PDT" duration-ms="337" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:14:06 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:14:07 PDT" duration-ms="378" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:30:55 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:31:02 PDT" duration-ms="6979" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:14:07 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:14:14 PDT" duration-ms="7569" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.createContactWithAlphanumericSpecialCharacters() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="createContactWithSpecialCharacters()[pri:4, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:31:02 PDT" name="createContactWithSpecialCharacters" finished-at="2025-08-02T20:31:24 PDT" duration-ms="22484" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="createContactWithAlphanumericSpecialCharacters()[pri:4, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:14:14 PDT" name="createContactWithAlphanumericSpecialCharacters" finished-at="2025-08-03T19:14:36 PDT" duration-ms="21626" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createContactWithSpecialCharacters -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:31:24 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:31:25 PDT" duration-ms="437" status="PASS">
+        </test-method> <!-- createContactWithAlphanumericSpecialCharacters -->
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:14:36 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:14:36 PDT" duration-ms="318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:31:25 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:31:32 PDT" duration-ms="6936" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:14:36 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:14:43 PDT" duration-ms="7020" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.titleInputWithVariousRoles() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="titleInputWithVariousRoles()[pri:5, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:31:32 PDT" name="titleInputWithVariousRoles" finished-at="2025-08-02T20:31:49 PDT" duration-ms="17769" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="titleInputWithVariousRoles()[pri:5, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:14:43 PDT" name="titleInputWithVariousRoles" finished-at="2025-08-03T19:15:00 PDT" duration-ms="17159" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- titleInputWithVariousRoles -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:31:49 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:31:50 PDT" duration-ms="314" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:00 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:15:01 PDT" duration-ms="376" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:31:50 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:31:57 PDT" duration-ms="7708" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:01 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:15:08 PDT" duration-ms="7013" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.leaveOrgBlank() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="leaveOrgBlank()[pri:6, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:31:57 PDT" name="leaveOrgBlank" finished-at="2025-08-02T20:32:15 PDT" duration-ms="17996" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="leaveOrgBlank()[pri:6, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:08 PDT" name="leaveOrgBlank" finished-at="2025-08-03T19:15:25 PDT" duration-ms="17261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leaveOrgBlank -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:32:15 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:32:16 PDT" duration-ms="367" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:25 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:15:25 PDT" duration-ms="342" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:32:16 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:32:23 PDT" duration-ms="7162" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:25 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:15:32 PDT" duration-ms="7140" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.leaveTitleBlank() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="leaveTitleBlank()[pri:7, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:32:23 PDT" name="leaveTitleBlank" finished-at="2025-08-02T20:32:41 PDT" duration-ms="17878" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="leaveTitleBlank()[pri:7, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:32 PDT" name="leaveTitleBlank" finished-at="2025-08-03T19:15:50 PDT" duration-ms="17213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leaveTitleBlank -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:32:41 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:32:41 PDT" duration-ms="398" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:50 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:15:50 PDT" duration-ms="377" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:32:41 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:32:48 PDT" duration-ms="7250" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:50 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:15:57 PDT" duration-ms="7185" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.leaveContactNameBlank() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="leaveContactNameBlank()[pri:8, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:32:48 PDT" name="leaveContactNameBlank" finished-at="2025-08-02T20:33:06 PDT" duration-ms="17796" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="leaveContactNameBlank()[pri:8, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:57 PDT" name="leaveContactNameBlank" finished-at="2025-08-03T19:16:14 PDT" duration-ms="17271" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leaveContactNameBlank -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:33:06 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:33:07 PDT" duration-ms="370" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:16:14 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:16:15 PDT" duration-ms="311" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:33:07 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:33:14 PDT" duration-ms="7652" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:16:15 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:16:22 PDT" duration-ms="7329" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.leaveMobileBlank() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="leaveMobileBlank()[pri:9, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:33:14 PDT" name="leaveMobileBlank" finished-at="2025-08-02T20:33:32 PDT" duration-ms="17723" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="leaveMobileBlank()[pri:9, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:16:22 PDT" name="leaveMobileBlank" finished-at="2025-08-03T19:16:39 PDT" duration-ms="17130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leaveMobileBlank -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:33:32 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:33:32 PDT" duration-ms="379" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:16:39 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:16:40 PDT" duration-ms="340" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:33:32 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:33:40 PDT" duration-ms="7639" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:16:40 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:16:46 PDT" duration-ms="6529" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.leaveCampaignBlank() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="leaveCampaignBlank()[pri:10, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:33:40 PDT" name="leaveCampaignBlank" finished-at="2025-08-02T20:33:56 PDT" duration-ms="15866" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="leaveCampaignBlank()[pri:10, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:16:46 PDT" name="leaveCampaignBlank" finished-at="2025-08-03T19:17:01 PDT" duration-ms="15350" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leaveCampaignBlank -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:33:56 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:33:56 PDT" duration-ms="273" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:01 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:17:02 PDT" duration-ms="309" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:33:56 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:34:03 PDT" duration-ms="6879" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:02 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:17:08 PDT" duration-ms="6530" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.shortMobileNumber() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="shortMobileNumber()[pri:11, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:34:03 PDT" name="shortMobileNumber" finished-at="2025-08-02T20:34:21 PDT" duration-ms="17782" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="shortMobileNumber()[pri:11, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:08 PDT" name="shortMobileNumber" finished-at="2025-08-03T19:17:25 PDT" duration-ms="17109" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shortMobileNumber -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:34:21 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:34:21 PDT" duration-ms="385" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:25 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:17:26 PDT" duration-ms="320" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:34:21 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:34:29 PDT" duration-ms="7331" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:26 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:17:33 PDT" duration-ms="7328" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.createContactWithOptionalFields() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="createContactWithOptionalFields()[pri:12, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:34:29 PDT" name="createContactWithOptionalFields" finished-at="2025-08-02T20:34:42 PDT" duration-ms="13945" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="createContactWithOptionalFields()[pri:12, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:33 PDT" name="createContactWithOptionalFields" finished-at="2025-08-03T19:17:46 PDT" duration-ms="13418" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithOptionalFields -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:34:42 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:34:43 PDT" duration-ms="378" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:46 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:17:47 PDT" duration-ms="259" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:34:43 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:34:50 PDT" duration-ms="7373" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:47 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:17:53 PDT" duration-ms="6729" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.createContactWithInvalidEmail() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="createContactWithInvalidEmail()[pri:13, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:34:50 PDT" name="createContactWithInvalidEmail" finished-at="2025-08-02T20:35:04 PDT" duration-ms="13950" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="createContactWithInvalidEmail()[pri:13, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:53 PDT" name="createContactWithInvalidEmail" finished-at="2025-08-03T19:18:07 PDT" duration-ms="13327" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithInvalidEmail -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:35:04 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:35:05 PDT" duration-ms="358" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:07 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:18:07 PDT" duration-ms="301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:35:05 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:35:12 PDT" duration-ms="7181" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:07 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:18:14 PDT" duration-ms="7083" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.verifyContactIdIsAutoGeneratedAndUnique() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="verifyContactIdIsAutoGeneratedAndUnique()[pri:14, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:35:12 PDT" name="verifyContactIdIsAutoGeneratedAndUnique" finished-at="2025-08-02T20:35:23 PDT" duration-ms="11237" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="verifyContactIdIsAutoGeneratedAndUnique()[pri:14, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:14 PDT" name="verifyContactIdIsAutoGeneratedAndUnique" finished-at="2025-08-03T19:18:25 PDT" duration-ms="10671" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyContactIdIsAutoGeneratedAndUnique -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:35:23 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:35:31 PDT" duration-ms="7767" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:25 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:18:25 PDT" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterTestMethod -->
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:25 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:18:32 PDT" duration-ms="6642" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.createContactWithvalidDept() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:35:23 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:35:23 PDT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method signature="createContactWithvalidDept()[pri:15, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:35:31 PDT" name="createContactWithvalidDept" finished-at="2025-08-02T20:35:51 PDT" duration-ms="20016" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="createContactWithvalidDept()[pri:15, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:32 PDT" name="createContactWithvalidDept" finished-at="2025-08-03T19:18:51 PDT" duration-ms="19340" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithvalidDept -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:35:51 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:35:51 PDT" duration-ms="385" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:51 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:18:51 PDT" duration-ms="345" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:35:51 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:35:59 PDT" duration-ms="7732" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:51 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:18:58 PDT" duration-ms="7049" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.createContactWithvalidEmailFormat() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="createContactWithvalidEmailFormat()[pri:16, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:35:59 PDT" name="createContactWithvalidEmailFormat" finished-at="2025-08-02T20:36:19 PDT" duration-ms="20101" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="createContactWithvalidEmailFormat()[pri:16, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:58 PDT" name="createContactWithvalidEmailFormat" finished-at="2025-08-03T19:19:17 PDT" duration-ms="19200" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithvalidEmailFormat -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:36:19 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:36:19 PDT" duration-ms="308" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:19:17 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:19:18 PDT" duration-ms="324" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:36:19 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:36:26 PDT" duration-ms="7151" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:19:18 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:19:26 PDT" duration-ms="8417" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.createContactWithvalidMobile() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="createContactWithvalidMobile()[pri:17, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:36:26 PDT" name="createContactWithvalidMobile" finished-at="2025-08-02T20:36:46 PDT" duration-ms="19424" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="createContactWithvalidMobile()[pri:17, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:19:26 PDT" name="createContactWithvalidMobile" finished-at="2025-08-03T19:19:44 PDT" duration-ms="17595" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithvalidMobile -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:36:46 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:36:46 PDT" duration-ms="298" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:19:44 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:19:44 PDT" duration-ms="319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:36:46 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:36:53 PDT" duration-ms="7140" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:19:44 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:19:51 PDT" duration-ms="6577" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.createContactWithvalidOffice() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="createContactWithvalidOffice()[pri:18, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:36:53 PDT" name="createContactWithvalidOffice" finished-at="2025-08-02T20:37:13 PDT" duration-ms="19636" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="createContactWithvalidOffice()[pri:18, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:19:51 PDT" name="createContactWithvalidOffice" finished-at="2025-08-03T19:20:10 PDT" duration-ms="19259" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithvalidOffice -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:37:13 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:37:13 PDT" duration-ms="392" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:20:10 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:20:10 PDT" duration-ms="272" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeMethod(java.lang.String)[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:37:13 PDT" name="setUpBeforeMethod" finished-at="2025-08-02T20:37:21 PDT" duration-ms="8007" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:20:10 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:20:16 PDT" duration-ms="6002" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.createContactWithAllFieldsBlank() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeMethod -->
-        <test-method signature="createContactWithAllFieldsBlank()[pri:19, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:37:21 PDT" name="createContactWithAllFieldsBlank" finished-at="2025-08-02T20:37:44 PDT" duration-ms="22324" status="PASS">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="createContactWithAllFieldsBlank()[pri:19, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:20:16 PDT" name="createContactWithAllFieldsBlank" finished-at="2025-08-03T19:20:38 PDT" duration-ms="21722" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithAllFieldsBlank -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@446a1e84]" started-at="2025-08-02T20:37:44 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-02T20:37:44 PDT" duration-ms="396" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:20:38 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:20:38 PDT" duration-ms="475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterTestMethod -->
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:20:38 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:20:45 PDT" duration-ms="7021" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.group3.CRMtests.ContactsTest.verifySaveAndCancelButtons() throws java.lang.Throwable]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="verifySaveAndCancelButtons()[pri:20, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:20:45 PDT" name="verifySaveAndCancelButtons" finished-at="2025-08-03T19:20:52 PDT" duration-ms="6857" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Save and/or Cancel buttons are missing]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Save and/or Cancel buttons are missing
+at org.testng.Assert.fail(Assert.java:99)
+at com.group3.CRMtests.ContactsTest.verifySaveAndCancelButtons(ContactsTest.java:783)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySaveAndCancelButtons -->
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:20:52 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:20:53 PDT" duration-ms="286" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->

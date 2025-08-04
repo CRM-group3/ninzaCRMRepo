@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Automation" class="navigator-link">
-              <span class="suite-name border-passed">Automation</span>
+              <span class="suite-name border-failed">Automation</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">20 methods,   20 passed</span>
+                    <span class="method-stats">21 methods, 1 failed,   20 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Automation" class="hide-methods failed suite-Automation"> (hide)</a> <!-- hide-methods failed suite-Automation -->
+                      <a href="#" panel-name="suite-Automation" class="show-methods failed suite-Automation"> (show)</a> <!-- show-methods failed suite-Automation -->
+                    </span>
+                    <div class="method-list-content failed suite-Automation">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Automation" title="com.group3.CRMtests.ContactsTest" class="method navigator-link" hash-for-method="verifySaveAndCancelButtons">verifySaveAndCancelButtons</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Automation -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -124,6 +138,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Automation" title="com.group3.CRMtests.ContactsTest" class="method navigator-link" hash-for-method="createContactWithAlphanumericSpecialCharacters">createContactWithAlphanumericSpecialCharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Automation" title="com.group3.CRMtests.ContactsTest" class="method navigator-link" hash-for-method="createContactWithInvalidEmail">createContactWithInvalidEmail</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -135,11 +154,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Automation" title="com.group3.CRMtests.ContactsTest" class="method navigator-link" hash-for-method="createContactWithOptionalFields">createContactWithOptionalFields</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Automation" title="com.group3.CRMtests.ContactsTest" class="method navigator-link" hash-for-method="createContactWithSpecialCharacters">createContactWithSpecialCharacters</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -214,6 +228,26 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Automation" class="panel Automation">
+          <div class="suite-Automation-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.group3.CRMtests.ContactsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySaveAndCancelButtons">
+                  </a> <!-- verifySaveAndCancelButtons -->
+                  <span class="method-name">verifySaveAndCancelButtons</span>
+                  <div class="stack-trace">java.lang.AssertionError: Save and/or Cancel buttons are missing
+	at com.group3.CRMtests.ContactsTest.verifySaveAndCancelButtons(ContactsTest.java:783)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Automation-class-failed -->
           <div class="suite-Automation-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -250,6 +284,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="createContactWithAlphanumericSpecialCharacters">
+                  </a> <!-- createContactWithAlphanumericSpecialCharacters -->
+                  <span class="method-name">createContactWithAlphanumericSpecialCharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="createContactWithInvalidEmail">
                   </a> <!-- createContactWithInvalidEmail -->
                   <span class="method-name">createContactWithInvalidEmail</span>
@@ -267,13 +308,6 @@
                   <a name="createContactWithOptionalFields">
                   </a> <!-- createContactWithOptionalFields -->
                   <span class="method-name">createContactWithOptionalFields</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createContactWithSpecialCharacters">
-                  </a> <!-- createContactWithSpecialCharacters -->
-                  <span class="method-name">createContactWithSpecialCharacters</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -371,7 +405,7 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Automation&quot;&gt;
+&lt;suite name=&quot;Automation&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.group3.CRMlistners.TestListner&quot;/&gt;
   &lt;/listeners&gt;
@@ -417,87 +451,91 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(20);
+data.addRows(21);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'createContactWithAllFields')
 data.setCell(0, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(0, 3, 24258);
+data.setCell(0, 3, 23566);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createContactWithSpecialCharacters')
+data.setCell(1, 1, 'createContactWithAllFieldsBlank')
 data.setCell(1, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(1, 3, 22484);
+data.setCell(1, 3, 21722);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'createContactWithAllFieldsBlank')
+data.setCell(2, 1, 'createContactWithAlphanumericSpecialCharacters')
 data.setCell(2, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(2, 3, 22324);
+data.setCell(2, 3, 21626);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'createContactWithvalidEmailFormat')
+data.setCell(3, 1, 'createContactWithvalidDept')
 data.setCell(3, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(3, 3, 20101);
+data.setCell(3, 3, 19340);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'createContactWithvalidDept')
+data.setCell(4, 1, 'createContactWithvalidOffice')
 data.setCell(4, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(4, 3, 20016);
+data.setCell(4, 3, 19259);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'createContactWithvalidOffice')
+data.setCell(5, 1, 'createContactWithvalidEmailFormat')
 data.setCell(5, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(5, 3, 19636);
+data.setCell(5, 3, 19200);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'createContactWithvalidMobile')
 data.setCell(6, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(6, 3, 19424);
+data.setCell(6, 3, 17595);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'leaveOrgBlank')
+data.setCell(7, 1, 'createContactWithMandatoryFields')
 data.setCell(7, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(7, 3, 17996);
+data.setCell(7, 3, 17355);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'leaveTitleBlank')
+data.setCell(8, 1, 'leaveContactNameBlank')
 data.setCell(8, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(8, 3, 17878);
+data.setCell(8, 3, 17271);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'createContactWithMandatoryFields')
+data.setCell(9, 1, 'leaveOrgBlank')
 data.setCell(9, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(9, 3, 17820);
+data.setCell(9, 3, 17261);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'leaveContactNameBlank')
+data.setCell(10, 1, 'leaveTitleBlank')
 data.setCell(10, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(10, 3, 17796);
+data.setCell(10, 3, 17213);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'shortMobileNumber')
+data.setCell(11, 1, 'titleInputWithVariousRoles')
 data.setCell(11, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(11, 3, 17782);
+data.setCell(11, 3, 17159);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'titleInputWithVariousRoles')
+data.setCell(12, 1, 'leaveMobileBlank')
 data.setCell(12, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(12, 3, 17769);
+data.setCell(12, 3, 17130);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'leaveMobileBlank')
+data.setCell(13, 1, 'shortMobileNumber')
 data.setCell(13, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(13, 3, 17723);
+data.setCell(13, 3, 17109);
 data.setCell(14, 0, 14)
 data.setCell(14, 1, 'leaveCampaignBlank')
 data.setCell(14, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(14, 3, 15866);
+data.setCell(14, 3, 15350);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'createContactWithInvalidEmail')
+data.setCell(15, 1, 'createContactWithOptionalFields')
 data.setCell(15, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(15, 3, 13950);
+data.setCell(15, 3, 13418);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'createContactWithOptionalFields')
+data.setCell(16, 1, 'createContactWithInvalidEmail')
 data.setCell(16, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(16, 3, 13945);
+data.setCell(16, 3, 13327);
 data.setCell(17, 0, 17)
 data.setCell(17, 1, 'verifyContactIdIsAutoGeneratedAndUnique')
 data.setCell(17, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(17, 3, 11237);
+data.setCell(17, 3, 10671);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'clickContacts')
+data.setCell(18, 1, 'verifySaveAndCancelButtons')
 data.setCell(18, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(18, 3, 4189);
+data.setCell(18, 3, 6857);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'clickCreateContactButton')
+data.setCell(19, 1, 'clickContacts')
 data.setCell(19, 2, 'com.group3.CRMtests.ContactsTest')
-data.setCell(19, 3, 3931);
+data.setCell(19, 3, 4056);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'clickCreateContactButton')
+data.setCell(20, 2, 'com.group3.CRMtests.ContactsTest')
+data.setCell(20, 3, 3886);
 window.suiteTableData['Automation']= { tableData: data, tableDiv: 'times-div-Automation'}
 return data;
 }
@@ -530,244 +568,258 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.group3.CRMtests.ContactsTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.clickContacts() throws java.lang.Throwable)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">clickContacts</span>
-                <span class="method-start">8491 ms</span>
+                <span class="method-start">8030 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">12684 ms</span>
+                <span class="method-start">12092 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">12689 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.clickCreateContactButton() throws java.lang.Int...)</span>
+                <span class="method-start">12403 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">clickCreateContactButton</span>
-                <span class="method-start">20280 ms</span>
+                <span class="method-start">18932 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">24216 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">24216 ms</span>
+                <span class="method-start">22821 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.createContactWithMandatoryFields() throws java....)</span>
+                <span class="method-start">22852 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createContactWithMandatoryFields</span>
-                <span class="method-start">32236 ms</span>
+                <span class="method-start">29934 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">50063 ms</span>
+                <span class="method-start">47295 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">50369 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.createContactWithAllFields() throws java.lang.I...)</span>
+                <span class="method-start">47656 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createContactWithAllFields</span>
-                <span class="method-start">59721 ms</span>
+                <span class="method-start">54207 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">83983 ms</span>
+                <span class="method-start">77779 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">84320 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.createContactWithAlphanumericSpecialCharacters(...)</span>
+                <span class="method-start">78159 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">createContactWithSpecialCharacters</span>
-                <span class="method-start">91300 ms</span>
+                <span class="method-name">createContactWithAlphanumericSpecialCharacters</span>
+                <span class="method-start">85728 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">113785 ms</span>
+                <span class="method-start">107358 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">114225 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.titleInputWithVariousRoles() throws java.lang.I...)</span>
+                <span class="method-start">107676 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">titleInputWithVariousRoles</span>
-                <span class="method-start">121161 ms</span>
+                <span class="method-start">114696 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">138935 ms</span>
+                <span class="method-start">131855 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">139249 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.leaveOrgBlank() throws java.lang.InterruptedExc...)</span>
+                <span class="method-start">132231 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">leaveOrgBlank</span>
-                <span class="method-start">146957 ms</span>
+                <span class="method-start">139244 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">164961 ms</span>
+                <span class="method-start">156505 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">165328 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.leaveTitleBlank() throws java.lang.InterruptedE...)</span>
+                <span class="method-start">156847 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">leaveTitleBlank</span>
-                <span class="method-start">172490 ms</span>
+                <span class="method-start">163988 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">190368 ms</span>
+                <span class="method-start">181201 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">190767 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.leaveContactNameBlank() throws java.lang.Interr...)</span>
+                <span class="method-start">181580 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">leaveContactNameBlank</span>
-                <span class="method-start">198017 ms</span>
+                <span class="method-start">188765 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">215826 ms</span>
+                <span class="method-start">206036 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">216196 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.leaveMobileBlank() throws java.lang.Interrupted...)</span>
+                <span class="method-start">206347 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">leaveMobileBlank</span>
-                <span class="method-start">223848 ms</span>
+                <span class="method-start">213676 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">241571 ms</span>
+                <span class="method-start">230806 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">241950 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.leaveCampaignBlank() throws java.lang.Interrupt...)</span>
+                <span class="method-start">231146 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">leaveCampaignBlank</span>
-                <span class="method-start">249589 ms</span>
+                <span class="method-start">237675 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">265457 ms</span>
+                <span class="method-start">253025 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">265730 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.shortMobileNumber() throws java.lang.Interrupte...)</span>
+                <span class="method-start">253336 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">shortMobileNumber</span>
-                <span class="method-start">272609 ms</span>
+                <span class="method-start">259866 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">290404 ms</span>
+                <span class="method-start">276975 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">290789 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.createContactWithOptionalFields() throws java.l...)</span>
+                <span class="method-start">277295 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createContactWithOptionalFields</span>
-                <span class="method-start">298120 ms</span>
+                <span class="method-start">284623 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">312065 ms</span>
+                <span class="method-start">298041 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">312443 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.createContactWithInvalidEmail() throws java.lan...)</span>
+                <span class="method-start">298300 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createContactWithInvalidEmail</span>
-                <span class="method-start">319816 ms</span>
+                <span class="method-start">305030 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">333768 ms</span>
+                <span class="method-start">318365 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">334128 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.verifyContactIdIsAutoGeneratedAndUnique() throw...)</span>
+                <span class="method-start">318666 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyContactIdIsAutoGeneratedAndUnique</span>
-                <span class="method-start">341309 ms</span>
+                <span class="method-start">325749 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">352549 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">352549 ms</span>
+                <span class="method-start">336420 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.createContactWithvalidDept() throws java.lang.I...)</span>
+                <span class="method-start">336450 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createContactWithvalidDept</span>
-                <span class="method-start">360316 ms</span>
+                <span class="method-start">343092 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">380337 ms</span>
+                <span class="method-start">362438 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">380722 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.createContactWithvalidEmailFormat() throws java...)</span>
+                <span class="method-start">362785 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createContactWithvalidEmailFormat</span>
-                <span class="method-start">388454 ms</span>
+                <span class="method-start">369834 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">408555 ms</span>
+                <span class="method-start">389042 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">408866 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.createContactWithvalidMobile() throws java.lang...)</span>
+                <span class="method-start">389366 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createContactWithvalidMobile</span>
-                <span class="method-start">416017 ms</span>
+                <span class="method-start">397783 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">435441 ms</span>
+                <span class="method-start">415392 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">435739 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.createContactWithvalidOffice() throws java.lang...)</span>
+                <span class="method-start">415711 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createContactWithvalidOffice</span>
-                <span class="method-start">442879 ms</span>
+                <span class="method-start">422288 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">462521 ms</span>
+                <span class="method-start">441548 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBeforeMethod(chrome)</span>
-                <span class="method-start">462913 ms</span>
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.createContactWithAllFieldsBlank() throws java.l...)</span>
+                <span class="method-start">441822 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createContactWithAllFieldsBlank</span>
-                <span class="method-start">470920 ms</span>
+                <span class="method-start">447824 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfterTestMethod</span>
-                <span class="method-start">493244 ms</span>
+                <span class="method-start">469554 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpBeforeClass(chrome, public void com.group3.CRMtests.ContactsTest.verifySaveAndCancelButtons() throws java.lang.T...)</span>
+                <span class="method-start">470029 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifySaveAndCancelButtons</span>
+                <span class="method-start">477050 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownAfterTestMethod</span>
+                <span class="method-start">484062 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

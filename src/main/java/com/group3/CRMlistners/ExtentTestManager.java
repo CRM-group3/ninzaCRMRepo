@@ -9,19 +9,22 @@ public class ExtentTestManager {
 	private static final ThreadLocal<ExtentTest> extentTestThread = new ThreadLocal<>();
     private static final ExtentReports extent = ExtentManager.getInstance();
 
+    public static synchronized ExtentTest startTest(String testName) {
+        if (extentTestThread.get() == null) {
+            ExtentTest test = extent.createTest(testName);
+            extentTestThread.set(test);
+            ExtentManager.setTest(test);
+        }
+        return extentTestThread.get();
+    }
+
     public static synchronized ExtentTest getTest() {
         return extentTestThread.get();
     }
 
-    public static synchronized ExtentTest startTest(String testName) {
-        ExtentTest test = extent.createTest(testName);
-        extentTestThread.set(test);
-        return test;
-    }
-
     public static synchronized void endTest() {
-        extent.flush(); 
-    }
+        extentTestThread.remove();      // ✅ Clear thread-local storage
+        extent.flush();
 	
-
+    }
 }

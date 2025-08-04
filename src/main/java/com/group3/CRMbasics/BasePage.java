@@ -48,7 +48,7 @@ public class BasePage {
 	public void waitForElement(WebElement element, Duration time) {
 		WebDriverWait wait = new WebDriverWait(driver, time);
 		wait.until(ExpectedConditions.visibilityOf(element));
-		//ExtentTest test = ExtentTestManager.getTest();
+		ExtentTest test = ExtentTestManager.getTest();
 	}
 
 //Soumya
