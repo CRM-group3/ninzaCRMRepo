@@ -40,5 +40,5 @@ public class ScreenShots {
 
         return filepath; // ✅ Return the screenshot path
     }
-}
 
+}
