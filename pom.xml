@@ -36,11 +36,8 @@
 				<version>3.3.0</version>
 				<configuration>
 					<suiteXmlFiles>
-<<<<<<< HEAD
+
 						<suiteXmlFile>campaign_testng.xml</suiteXmlFile>
-=======
-						<suiteXmlFile>leadtests.xml</suiteXmlFile>
->>>>>>> 4003c0f4444b173c977d69f7966f648f459d5cb0
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

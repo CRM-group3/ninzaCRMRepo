@@ -45,22 +45,7 @@ public class BaseTest {
             driver = null;
         }
     }
-<<<<<<< HEAD
     
-//    @BeforeSuite
-//    public void setupReport() {
-//        ExtentManager.getInstance(); // creates the report
-//    }
-//
-//    @AfterSuite
-//    public void flushReport() {
-//        ExtentManager.getInstance().flush(); // writes it to index.html
-//    }
-    
-    
-=======
->>>>>>> 4003c0f4444b173c977d69f7966f648f459d5cb0
-
     @Parameters({ "browser" })
     @BeforeMethod
     public void setUpBeforeMethod(@Optional("chrome") String browser, Method method) throws Throwable {
@@ -117,7 +102,9 @@ public class BaseTest {
         basepage = new BasePage(driver);
         Logs.info(browser + " browser launched.");
         ExtentManager.logTestInfo(browser + " browser launched.");
+        
     }
+    
 
     public void baseURL(String url) throws Exception {
         try {

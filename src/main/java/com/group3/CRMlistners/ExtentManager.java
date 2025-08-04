@@ -58,10 +58,7 @@ public class ExtentManager{
             dir.mkdirs();
         }
     }
-<<<<<<< HEAD
-    
-    
-=======
+
 
     // ---------- Logging Methods ----------
 
@@ -73,7 +70,7 @@ public class ExtentManager{
         return testlog.get();
     }
 
->>>>>>> 4003c0f4444b173c977d69f7966f648f459d5cb0
+
     public static void logTestInfo(String text) {
         System.out.println("ObjectLogger-> " + testlog.get());
         getTest().info(text);
