@@ -45,7 +45,7 @@ public class BaseTest {
             driver = null;
         }
     }
-
+    
     @Parameters({ "browser" })
     @BeforeMethod
     public void setUpBeforeMethod(@Optional("chrome") String browser, Method method) throws Throwable {
@@ -102,7 +102,9 @@ public class BaseTest {
         basepage = new BasePage(driver);
         Logs.info(browser + " browser launched.");
         ExtentManager.logTestInfo(browser + " browser launched.");
+        
     }
+    
 
     public void baseURL(String url) throws Exception {
         try {

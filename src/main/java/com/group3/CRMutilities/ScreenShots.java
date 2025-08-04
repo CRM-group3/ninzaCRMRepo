@@ -11,6 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class ScreenShots {
+
 	 public String takescreenshot(WebDriver driver) {
 	        // Take screenshot object
 	        TakesScreenshot screenshot = ((TakesScreenshot) driver);
