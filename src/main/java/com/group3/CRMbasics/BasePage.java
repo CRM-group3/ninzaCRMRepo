@@ -1,9 +1,7 @@
 package com.group3.CRMbasics;
-
 import com.google.common.io.Files;
 import static org.testng.Assert.assertEquals;
 import com.group3.CRMlogs.Logs;
-import com.group3.CRMutilities.ScreenShots;
 import com.group3.CRMlistners.ExtentTestManager;
 import com.group3.CRMlistners.TestListner;
 import com.group3.CRMlistners.ExtentManager;
@@ -12,9 +10,6 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
@@ -34,8 +29,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 
-	WebDriver driver;
-	WebDriverWait wait;
+	public WebDriver driver;
+	public WebDriverWait wait;
 	protected Alert alert;
 	protected Actions action;
 	public ExtentReports reportlog = ExtentManager.getInstance();
@@ -357,54 +352,9 @@ public class BasePage {
 
 		}
 	}
-	public void selectByVisibleTextWebElement(WebElement element, String visibleText) throws Exception {
-		WebElement dropdownElement = element;
-		dropdownElement.click();
-		Logs.info("Dropdown element is clicked");
-		ExtentManager.logTestInfo("Dropdown element is clicked");
-
-		Select dropdown = new Select(dropdownElement);
-
-		try {
-			dropdown.selectByVisibleText(visibleText);
-			Logs.info("Text '" + visibleText + "' is selected from dropdown");
-
-			String selectedOptionText = dropdown.getFirstSelectedOption().getText();
-			Assert.assertEquals(visibleText, selectedOptionText);
-			Logs.info("Selected option matches expected value.");
-			ExtentManager.logTestInfo("Selected option matches expected value");
-
-		} catch (Exception e) {
-			System.err.println("Failed to select '" + visibleText + "' from dropdown. Error: " + e.getMessage());
-			ExtentManager.logTestfailwithException(e);
-			throw e;
-		}
-	}
 
 	public void selectByValue(By locator, String value) throws Exception {
 		WebElement dropdownElement = driver.findElement(locator);
-		dropdownElement.click();
-		Logs.info("Dropdown element is clicked");
-		ExtentManager.logTestInfo("Dropdown element is clicked");
-		Select dropdown = new Select(dropdownElement);
-		try {
-			dropdown.selectByValue(value);
-
-			String selectedOptionValue = dropdown.getFirstSelectedOption().getAttribute("value");
-
-			Assert.assertEquals(selectedOptionValue, value);
-			Logs.info("Selected option matches the expected value: " + value);
-			ExtentManager.logTestInfo("Selected option matches the expected value:" + value);
-
-		} catch (Exception e) {
-			Logs.info("Desired value '" + value + "' is not selected. Error: " + e.getMessage());
-			ExtentManager.logTestfailwithException(e);
-			throw e;
-		}
-	}
-	
-	public void selectByValueWebElement(WebElement element, String value) throws Exception {
-		WebElement dropdownElement = element;
 		dropdownElement.click();
 		Logs.info("Dropdown element is clicked");
 		ExtentManager.logTestInfo("Dropdown element is clicked");
@@ -631,56 +581,52 @@ public class BasePage {
 			Logs.error(buttonName + " is not clickable");
 		}
 	}
-
-	public void selectByIndex(WebElement element, int Index) {
-		// TODO Auto-generated method stub
+	public void selectByValueWebElement(WebElement element, String value) throws Exception {
 		WebElement dropdownElement = element;
 		dropdownElement.click();
+		Logs.info("Dropdown element is clicked");
+		ExtentManager.logTestInfo("Dropdown element is clicked");
+		Select dropdown = new Select(dropdownElement);
+		try {
+			dropdown.selectByValue(value);
 
+			String selectedOptionValue = dropdown.getFirstSelectedOption().getAttribute("value");
+
+			Assert.assertEquals(selectedOptionValue, value);
+			Logs.info("Selected option matches the expected value: " + value);
+			ExtentManager.logTestInfo("Selected option matches the expected value:" + value);
+
+		} catch (Exception e) {
+			Logs.info("Desired value '" + value + "' is not selected. Error: " + e.getMessage());
+			ExtentManager.logTestfailwithException(e);
+			throw e;
+		}
+	}
+
+public void selectByVisibleTextWebElement(WebElement element, String visibleText) throws Exception {
+		WebElement dropdownElement = element;
+		dropdownElement.click();
 		Logs.info("Dropdown element is clicked");
 		ExtentManager.logTestInfo("Dropdown element is clicked");
 
 		Select dropdown = new Select(dropdownElement);
+
 		try {
-			dropdown.selectByIndex(Index);
-			Logs.info(Index + "' is selected from dropdown");
+			dropdown.selectByVisibleText(visibleText);
+			Logs.info("Text '" + visibleText + "' is selected from dropdown");
+
 			String selectedOptionText = dropdown.getFirstSelectedOption().getText();
-			Assert.assertTrue(true, selectedOptionText);
-			Logs.info("selected option matches to the Actual option");
+			Assert.assertEquals(visibleText, selectedOptionText);
+			Logs.info("Selected option matches expected value.");
+			ExtentManager.logTestInfo("Selected option matches expected value");
 
-			ExtentManager.logTestInfo("Selected option matches to the expected Visible text");
 		} catch (Exception e) {
-
-			Logs.info("Desired Index" + Index + "is not selected");
+			System.err.println("Failed to select '" + visibleText + "' from dropdown. Error: " + e.getMessage());
 			ExtentManager.logTestfailwithException(e);
 			throw e;
-
 		}
-		
 	}
-	 public static boolean validateTableCellValue(WebElement tableLocator, String expectedValue) {
-	        try {
-	            WebElement table = tableLocator;
-	            List<WebElement> rows = table.findElements(By.tagName("tr"));
 
-	            for (WebElement row : rows) {
-	                List<WebElement> cells = row.findElements(By.tagName("td"));
-	                for (WebElement cell : cells) {
-	                    String actualValue = cell.getText().trim();
-	                    if (actualValue.equalsIgnoreCase(expectedValue.trim())) {
-	                        Logs.info(" Value found in table: " + expectedValue);
-	                        ExtentManager.logTestwithPassed(" Value found in table: " + expectedValue);
-	                        return true;
-	                    }
-	                }
-	            }
+	
 
-	            Logs.warn("❌ Value not found in table: " + expectedValue);
-	            ExtentManager.logTestwithFailed(" Value not found in table: " + expectedValue);
-	        } catch (NoSuchElementException e) {
-	            Logs.error(" Table or cell not found.");
-	            ExtentManager.logTestwithFailed(" Table or cell not found. Exception: " + e.getMessage());
-	        }
-	        return false;
-	    }
-	}
+}

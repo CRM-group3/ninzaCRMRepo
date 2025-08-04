@@ -40,7 +40,7 @@ public class AddProductTest extends BaseTest {
 		prodPage = new AddProductPage(driver);
 		prodPage.preConditionMethod();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		basePage.waitForVisibilty(prodPage.productName, Duration.ofSeconds(2000), "Product Name");
+		basepage.waitForVisibilty(prodPage.productName, Duration.ofSeconds(2000), "Product Name");
 		String uniqeProductName=prodPage.addProduct();
 		// Wait for the product table to be visible
 		wait.until(ExpectedConditions.visibilityOf(prodPage.productTable));
@@ -93,11 +93,11 @@ public class AddProductTest extends BaseTest {
 		prodPage.preConditionMethod();
 		prodPage.pricePerUnit.sendKeys(prop.getProperty("addproduct.proprties", "testcase5.pricePerUnit"));
 		prodPage.quantity.sendKeys(prop.getProperty("addproduct.proprties", "testcase5.quantity"));
-		basePage.selectByVisibleTextWebElement(prodPage.selectCategory,
+		basepage.selectByVisibleTextWebElement(prodPage.selectCategory,
 				prop.getProperty("addproduct.proprties", "testcase1.selectCategory"));
 		wait.until(ExpectedConditions
 				.presenceOfElementLocated(By.xpath("//select[@name='vendorId']/option[@value='VID_006']")));
-		basePage.selectByValueWebElement(prodPage.selectVendor,
+		basepage.selectByValueWebElement(prodPage.selectVendor,
 				prop.getProperty("addproduct.proprties", "testcase5.selectVendor"));
 		prodPage.saveButton.click();
 		prodPage.getValidationMessage(prodPage.productName);
@@ -118,7 +118,7 @@ public class AddProductTest extends BaseTest {
 		prodPage.quantity.sendKeys(prop.getProperty("addproduct.proprties", "testcase5.quantity"));
 		wait.until(ExpectedConditions
 				.presenceOfElementLocated(By.xpath("//select[@name='vendorId']/option[@value='VID_006']")));
-		basePage.selectByValueWebElement(prodPage.selectVendor,
+		basepage.selectByValueWebElement(prodPage.selectVendor,
 				prop.getProperty("addproduct.proprties", "testcase5.selectVendor"));
 		prodPage.saveButton.click();
 		String actualErrorMessage = prodPage.getValidationMessage(prodPage.selectCategory);
@@ -153,11 +153,11 @@ public class AddProductTest extends BaseTest {
 		String uniqueProductName = AddProductPage.generateUniqueProductName("keyboard");
 		prodPage.productName.sendKeys(uniqueProductName);
 		prodPage.pricePerUnit.sendKeys(prop.getProperty("addproduct.proprties", "testcase5.pricePerUnit"));
-		basePage.selectByVisibleTextWebElement(prodPage.selectCategory,
+		basepage.selectByVisibleTextWebElement(prodPage.selectCategory,
 				prop.getProperty("addproduct.proprties", "testcase1.selectCategory"));
 		wait.until(ExpectedConditions
 				.presenceOfElementLocated(By.xpath("//select[@name='vendorId']/option[@value='VID_006']")));
-		basePage.selectByValueWebElement(prodPage.selectVendor,
+		basepage.selectByValueWebElement(prodPage.selectVendor,
 				prop.getProperty("addproduct.proprties", "testcase5.selectVendor"));
 		prodPage.saveButton.click();
 		String actualErrorMessage = prodPage.getValidationMessage(prodPage.quantity);
@@ -179,11 +179,11 @@ public class AddProductTest extends BaseTest {
 		prodPage.productName.sendKeys(uniqueProductName);
 		prodPage.pricePerUnit.clear();
 		prodPage.pricePerUnit.sendKeys(prop.getProperty("addproduct.proprties", "testcase5.pricePerUnit"));
-		basePage.selectByVisibleTextWebElement(prodPage.selectCategory,
+		basepage.selectByVisibleTextWebElement(prodPage.selectCategory,
 				prop.getProperty("addproduct.proprties", "testcase1.selectCategory"));
 		wait.until(ExpectedConditions
 				.presenceOfElementLocated(By.xpath("//select[@name='vendorId']/option[@value='VID_006']")));
-		basePage.selectByValueWebElement(prodPage.selectVendor,
+		basepage.selectByValueWebElement(prodPage.selectVendor,
 				prop.getProperty("addproduct.proprties", "testcase5.selectVendor"));
 		prodPage.setTxtForNumericFiledWithJS(prodPage.quantity, prop.getProperty("addproduct.proprties", "testcase9.quantity"));
 		prodPage.saveButton.click();
@@ -200,7 +200,7 @@ public class AddProductTest extends BaseTest {
 	public void product_TC010() throws Exception {
 		prodPage = new AddProductPage(driver);
 		prodPage.preConditionMethod();
-		basePage.waitForVisibilty(prodPage.productName, Duration.ofSeconds(2000), "Product Name");
+		basepage.waitForVisibilty(prodPage.productName, Duration.ofSeconds(2000), "Product Name");
 		prodPage.addProduct();
 		Assert.assertTrue(prodPage.verifyThatProductIsAddedWithExistingProductNameMessage());
 		ExtentManager.logTestwithPassed("Quantity Field accept posative numbers......");
@@ -219,11 +219,11 @@ public class AddProductTest extends BaseTest {
 		String uniqueProductName = AddProductPage.generateUniqueProductName("keyboard");
 		prodPage.productName.sendKeys(uniqueProductName);
 		prodPage.pricePerUnit.sendKeys(prop.getProperty("addproduct.proprties", "testcase5.pricePerUnit"));
-		basePage.selectByVisibleTextWebElement(prodPage.selectCategory,
+		basepage.selectByVisibleTextWebElement(prodPage.selectCategory,
 				prop.getProperty("addproduct.proprties", "testcase1.selectCategory"));
 		wait.until(ExpectedConditions
 				.presenceOfElementLocated(By.xpath("//select[@name='vendorId']/option[@value='VID_006']")));
-		basePage.selectByValueWebElement(prodPage.selectVendor,
+		basepage.selectByValueWebElement(prodPage.selectVendor,
 				prop.getProperty("addproduct.proprties", "testcase5.selectVendor"));
 		prodPage.quantity.clear();
 		prodPage.quantity.sendKeys( prop.getProperty("addproduct.proprties", "testcase10.quantity"));
@@ -259,11 +259,11 @@ public class AddProductTest extends BaseTest {
 		prodPage.quantity.clear();
 		prodPage.quantity.sendKeys(prop.getProperty("addproduct.proprties", "testcase5.quantity"));
 		
-		basePage.selectByVisibleTextWebElement(prodPage.selectCategory,
+		basepage.selectByVisibleTextWebElement(prodPage.selectCategory,
 				prop.getProperty("addproduct.proprties", "testcase1.selectCategory"));
 		wait.until(ExpectedConditions
 				.presenceOfElementLocated(By.xpath("//select[@name='vendorId']/option[@value='VID_010']")));
-		basePage.selectByValueWebElement(prodPage.selectVendor,
+		basepage.selectByValueWebElement(prodPage.selectVendor,
 				prop.getProperty("addproduct.proprties", "testcase13.selectVendor"));
 		prodPage.pricePerUnit.clear();
 		Thread.sleep(6000);
@@ -287,11 +287,11 @@ public class AddProductTest extends BaseTest {
 		prodPage.productName.sendKeys(uniqueProductName);
 		prodPage.quantity.clear();
 		prodPage.quantity.sendKeys(prop.getProperty("addproduct.proprties", "testcase14.quantity"));
-		basePage.selectByVisibleTextWebElement(prodPage.selectCategory,
+		basepage.selectByVisibleTextWebElement(prodPage.selectCategory,
 				prop.getProperty("addproduct.proprties", "testcase1.selectCategory"));
 		wait.until(ExpectedConditions
 				.presenceOfElementLocated(By.xpath("//select[@name='vendorId']/option[@value='VID_006']")));
-		basePage.selectByValueWebElement(prodPage.selectVendor,
+		basepage.selectByValueWebElement(prodPage.selectVendor,
 				prop.getProperty("addproduct.proprties", "testcase5.selectVendor"));
 		prodPage.pricePerUnit.clear();
 		//prodPage.pricePerUnit.sendKeys(prop.getProperty("addproduct.proprties", "testcase14.pricePerUnit"));
@@ -315,11 +315,11 @@ public class AddProductTest extends BaseTest {
 		String uniqueProductName = AddProductPage.generateUniqueProductName("keyboard");
 		prodPage.productName.sendKeys(uniqueProductName);
 		prodPage.pricePerUnit.sendKeys(prop.getProperty("addproduct.proprties", "testcase5.pricePerUnit"));
-		basePage.selectByVisibleTextWebElement(prodPage.selectCategory,
+		basepage.selectByVisibleTextWebElement(prodPage.selectCategory,
 				prop.getProperty("addproduct.proprties", "testcase1.selectCategory"));
 		wait.until(ExpectedConditions
 				.presenceOfElementLocated(By.xpath("//select[@name='vendorId']/option[@value='VID_006']")));
-		basePage.selectByValueWebElement(prodPage.selectVendor,
+		basepage.selectByValueWebElement(prodPage.selectVendor,
 				prop.getProperty("addproduct.proprties", "testcase5.selectVendor"));
 		prodPage.quantity.clear();
 		prodPage.quantity.sendKeys( prop.getProperty("addproduct.proprties", "testcase15.quantity"));
