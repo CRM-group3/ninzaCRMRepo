@@ -1,0 +1,49 @@
+error.message=Please select an item in the list.
+numeric.error.message=Value must be greater than or equal to 1.
+priceNumeric.error.message=Value must be greater than or equal to 0.01.
+txtToNumericFiled.error.message=Please fill out this field.
+
+testcase1.productName=Keyboard1111
+testcase1.quantity=10
+testcase1.pricePerUnit=25.99
+testcase1.selectCategory=Electronics
+testcase1.selectVendor=VID_004
+
+testcase2.productName=Monitor
+testcase2.quantity=8
+testcase2.pricePerUnit=200.00
+testcase2.expectedResult=Pass
+
+testcase3.productName=Pen
+testcase3.quantity=100
+testcase3.pricePerUnit=0.80
+testcase3.expectedResult=Pass
+
+testcase4.productName=Pen
+testcase4.quantity=100
+testcase4.pricePerUnit=0.80
+testcase4.expectedResult=Pass
+
+testcase5.productName=Pen
+testcase5.quantity=100
+testcase5.pricePerUnit=0.80
+testcase5.selectVendor=VID_006
+testcase5.expectedResult=Pass
+
+
+
+testcase13.selectVendor=VID_010
+
+testcase14.pricePerUnit=rty
+testcase14.quantity=10000
+
+testcase15.pricePerUnit=-7
+testcase15.quantity=10000
+
+# invalid test data
+testcase9.quantity=asdf
+testcase9.pricePerUnit=0.ioh
+
+
+testcase10.quantity=-4
+
