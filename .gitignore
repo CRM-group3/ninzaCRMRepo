@@ -3,13 +3,11 @@ target/
 
 # TestNG Reports
 test-output/
-*.html
-*.xml
+
+
 
 # ExtentReports
-extent-reports/
-ExtentReports.html
-ExtentReport.html
+
 
 
 
