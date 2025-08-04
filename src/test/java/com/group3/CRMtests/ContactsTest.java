@@ -758,10 +758,10 @@ import org.testng.annotations.Test;
 
 	    	        // Assertion
 	    	        Assert.assertEquals(validationMsg, "Please fill out this field.", 
-	    	                "Expected validation message not shown for missing Contact Name");
+	    	                "Expected validation message not shown for missing fields");
 
-	    	        Logs.info("Validation for empty Contact Name field verified.");
-	    	        ExtentManager.logTestInfo("Validation for empty Contact Name field verified.");
+	    	        Logs.info("Validation for empty fields verified.");
+	    	        ExtentManager.logTestInfo("Validation for empty fields verified.");
 	    	    }
 	    	 
 	    	 @Test(priority=20)

@@ -26,7 +26,7 @@ public class ScreenShots {
 		//path for storing a file
 		String userDir = System.getProperty("user.dir");
 		String fileseparator = System.getProperty("file.separator");
-		String filepath = userDir + fileseparator + "screenshots" + fileseparator + "NinzaCRM"+timestamp+".jpeg";
+		String filepath = userDir + fileseparator + "Screenshots" + fileseparator + "NinzaCRM_" + timestamp + ".jpeg";
 		
 		//Convert file path to file object
 		File destFile = new File(filepath);

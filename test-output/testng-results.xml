@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="21" passed="20" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-03T19:12:48 PDT" name="Automation" finished-at="2025-08-03T19:20:53 PDT" duration-ms="484410">
+  <suite started-at="2025-08-03T23:26:29 PDT" name="Automation" finished-at="2025-08-03T23:35:11 PDT" duration-ms="522640">
     <groups>
     </groups>
-    <test started-at="2025-08-03T19:12:48 PDT" name="ContactsTest" finished-at="2025-08-03T19:20:53 PDT" duration-ms="484410">
+    <test started-at="2025-08-03T23:26:29 PDT" name="ContactsTest" finished-at="2025-08-03T23:35:11 PDT" duration-ms="522640">
       <class name="com.group3.CRMtests.ContactsTest">
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:12:48 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:12:56 PDT" duration-ms="8029" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:26:29 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:26:40 PDT" duration-ms="11086" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,15 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="clickContacts()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:12:56 PDT" name="clickContacts" finished-at="2025-08-03T19:13:00 PDT" duration-ms="4056" status="PASS">
+        <test-method signature="clickContacts()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:26:40 PDT" name="clickContacts" finished-at="2025-08-03T23:26:44 PDT" duration-ms="4164" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickContacts -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:01 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:13:01 PDT" duration-ms="309" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:26:44 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:26:44 PDT" duration-ms="552" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:01 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:13:07 PDT" duration-ms="6529" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:26:44 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:26:57 PDT" duration-ms="12618" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,15 +47,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="clickCreateContactButton()[pri:1, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:07 PDT" name="clickCreateContactButton" finished-at="2025-08-03T19:13:11 PDT" duration-ms="3886" status="PASS">
+        <test-method signature="clickCreateContactButton()[pri:1, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:26:57 PDT" name="clickCreateContactButton" finished-at="2025-08-03T23:27:01 PDT" duration-ms="4008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickCreateContactButton -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:11 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:13:11 PDT" duration-ms="29" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:27:01 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:27:01 PDT" duration-ms="35" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:11 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:13:18 PDT" duration-ms="7082" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:27:01 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:27:10 PDT" duration-ms="8425" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -71,15 +71,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="createContactWithMandatoryFields()[pri:2, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:18 PDT" name="createContactWithMandatoryFields" finished-at="2025-08-03T19:13:36 PDT" duration-ms="17355" status="PASS">
+        <test-method signature="createContactWithMandatoryFields()[pri:2, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:27:10 PDT" name="createContactWithMandatoryFields" finished-at="2025-08-03T23:27:27 PDT" duration-ms="17632" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithMandatoryFields -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:36 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:13:36 PDT" duration-ms="361" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:27:27 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:27:28 PDT" duration-ms="371" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:36 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:13:43 PDT" duration-ms="6551" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:27:28 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:27:35 PDT" duration-ms="7565" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -95,15 +95,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="createContactWithAllFields()[pri:3, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:13:43 PDT" name="createContactWithAllFields" finished-at="2025-08-03T19:14:06 PDT" duration-ms="23566" status="PASS">
+        <test-method signature="createContactWithAllFields()[pri:3, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:27:35 PDT" name="createContactWithAllFields" finished-at="2025-08-03T23:28:00 PDT" duration-ms="24421" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithAllFields -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:14:06 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:14:07 PDT" duration-ms="378" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:28:00 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:28:00 PDT" duration-ms="279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:14:07 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:14:14 PDT" duration-ms="7569" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:28:00 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:28:07 PDT" duration-ms="7674" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -119,15 +119,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="createContactWithAlphanumericSpecialCharacters()[pri:4, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:14:14 PDT" name="createContactWithAlphanumericSpecialCharacters" finished-at="2025-08-03T19:14:36 PDT" duration-ms="21626" status="PASS">
+        <test-method signature="createContactWithAlphanumericSpecialCharacters()[pri:4, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:28:07 PDT" name="createContactWithAlphanumericSpecialCharacters" finished-at="2025-08-03T23:28:30 PDT" duration-ms="22254" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithAlphanumericSpecialCharacters -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:14:36 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:14:36 PDT" duration-ms="318" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:28:30 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:28:30 PDT" duration-ms="351" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:14:36 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:14:43 PDT" duration-ms="7020" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:28:30 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:28:37 PDT" duration-ms="7324" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -143,15 +143,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="titleInputWithVariousRoles()[pri:5, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:14:43 PDT" name="titleInputWithVariousRoles" finished-at="2025-08-03T19:15:00 PDT" duration-ms="17159" status="PASS">
+        <test-method signature="titleInputWithVariousRoles()[pri:5, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:28:37 PDT" name="titleInputWithVariousRoles" finished-at="2025-08-03T23:28:55 PDT" duration-ms="18065" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- titleInputWithVariousRoles -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:00 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:15:01 PDT" duration-ms="376" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:28:55 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:28:56 PDT" duration-ms="328" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:01 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:15:08 PDT" duration-ms="7013" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:28:56 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:29:03 PDT" duration-ms="7585" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -167,15 +167,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="leaveOrgBlank()[pri:6, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:08 PDT" name="leaveOrgBlank" finished-at="2025-08-03T19:15:25 PDT" duration-ms="17261" status="PASS">
+        <test-method signature="leaveOrgBlank()[pri:6, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:29:03 PDT" name="leaveOrgBlank" finished-at="2025-08-03T23:29:21 PDT" duration-ms="17401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leaveOrgBlank -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:25 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:15:25 PDT" duration-ms="342" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:29:21 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:29:21 PDT" duration-ms="341" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:25 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:15:32 PDT" duration-ms="7140" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:29:21 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:29:29 PDT" duration-ms="7514" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -191,15 +191,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="leaveTitleBlank()[pri:7, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:32 PDT" name="leaveTitleBlank" finished-at="2025-08-03T19:15:50 PDT" duration-ms="17213" status="PASS">
+        <test-method signature="leaveTitleBlank()[pri:7, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:29:29 PDT" name="leaveTitleBlank" finished-at="2025-08-03T23:29:46 PDT" duration-ms="17735" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leaveTitleBlank -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:50 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:15:50 PDT" duration-ms="377" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:29:46 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:29:47 PDT" duration-ms="361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:50 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:15:57 PDT" duration-ms="7185" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:29:47 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:29:55 PDT" duration-ms="8033" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -215,15 +215,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="leaveContactNameBlank()[pri:8, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:15:57 PDT" name="leaveContactNameBlank" finished-at="2025-08-03T19:16:14 PDT" duration-ms="17271" status="PASS">
+        <test-method signature="leaveContactNameBlank()[pri:8, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:29:55 PDT" name="leaveContactNameBlank" finished-at="2025-08-03T23:30:13 PDT" duration-ms="18101" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leaveContactNameBlank -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:16:14 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:16:15 PDT" duration-ms="311" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:30:13 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:30:13 PDT" duration-ms="309" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:16:15 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:16:22 PDT" duration-ms="7329" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:30:13 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:30:22 PDT" duration-ms="8478" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -239,15 +239,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="leaveMobileBlank()[pri:9, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:16:22 PDT" name="leaveMobileBlank" finished-at="2025-08-03T19:16:39 PDT" duration-ms="17130" status="PASS">
+        <test-method signature="leaveMobileBlank()[pri:9, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:30:22 PDT" name="leaveMobileBlank" finished-at="2025-08-03T23:30:39 PDT" duration-ms="17752" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leaveMobileBlank -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:16:39 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:16:40 PDT" duration-ms="340" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:30:39 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:30:40 PDT" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:16:40 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:16:46 PDT" duration-ms="6529" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:30:40 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:30:51 PDT" duration-ms="11044" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -263,15 +263,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="leaveCampaignBlank()[pri:10, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:16:46 PDT" name="leaveCampaignBlank" finished-at="2025-08-03T19:17:01 PDT" duration-ms="15350" status="PASS">
+        <test-method signature="leaveCampaignBlank()[pri:10, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:30:51 PDT" name="leaveCampaignBlank" finished-at="2025-08-03T23:31:06 PDT" duration-ms="15717" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leaveCampaignBlank -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:01 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:17:02 PDT" duration-ms="309" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:31:06 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:31:07 PDT" duration-ms="272" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:02 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:17:08 PDT" duration-ms="6530" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:31:07 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:31:14 PDT" duration-ms="6967" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -287,15 +287,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="shortMobileNumber()[pri:11, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:08 PDT" name="shortMobileNumber" finished-at="2025-08-03T19:17:25 PDT" duration-ms="17109" status="PASS">
+        <test-method signature="shortMobileNumber()[pri:11, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:31:14 PDT" name="shortMobileNumber" finished-at="2025-08-03T23:31:31 PDT" duration-ms="16939" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shortMobileNumber -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:25 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:17:26 PDT" duration-ms="320" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:31:31 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:31:31 PDT" duration-ms="254" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:26 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:17:33 PDT" duration-ms="7328" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:31:31 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:31:40 PDT" duration-ms="9036" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -311,15 +311,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="createContactWithOptionalFields()[pri:12, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:33 PDT" name="createContactWithOptionalFields" finished-at="2025-08-03T19:17:46 PDT" duration-ms="13418" status="PASS">
+        <test-method signature="createContactWithOptionalFields()[pri:12, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:31:40 PDT" name="createContactWithOptionalFields" finished-at="2025-08-03T23:31:54 PDT" duration-ms="13754" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithOptionalFields -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:46 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:17:47 PDT" duration-ms="259" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:31:54 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:31:54 PDT" duration-ms="404" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:47 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:17:53 PDT" duration-ms="6729" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:31:54 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:32:02 PDT" duration-ms="7878" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -335,15 +335,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="createContactWithInvalidEmail()[pri:13, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:17:53 PDT" name="createContactWithInvalidEmail" finished-at="2025-08-03T19:18:07 PDT" duration-ms="13327" status="PASS">
+        <test-method signature="createContactWithInvalidEmail()[pri:13, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:32:02 PDT" name="createContactWithInvalidEmail" finished-at="2025-08-03T23:32:16 PDT" duration-ms="13849" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithInvalidEmail -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:07 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:18:07 PDT" duration-ms="301" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:32:16 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:32:16 PDT" duration-ms="398" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:07 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:18:14 PDT" duration-ms="7083" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:32:16 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:32:24 PDT" duration-ms="7497" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -359,15 +359,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="verifyContactIdIsAutoGeneratedAndUnique()[pri:14, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:14 PDT" name="verifyContactIdIsAutoGeneratedAndUnique" finished-at="2025-08-03T19:18:25 PDT" duration-ms="10671" status="PASS">
+        <test-method signature="verifyContactIdIsAutoGeneratedAndUnique()[pri:14, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:32:24 PDT" name="verifyContactIdIsAutoGeneratedAndUnique" finished-at="2025-08-03T23:32:35 PDT" duration-ms="11799" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyContactIdIsAutoGeneratedAndUnique -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:25 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:18:25 PDT" duration-ms="30" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:32:35 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:32:36 PDT" duration-ms="48" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:25 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:18:32 PDT" duration-ms="6642" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:32:36 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:32:43 PDT" duration-ms="7068" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -383,15 +383,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="createContactWithvalidDept()[pri:15, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:32 PDT" name="createContactWithvalidDept" finished-at="2025-08-03T19:18:51 PDT" duration-ms="19340" status="PASS">
+        <test-method signature="createContactWithvalidDept()[pri:15, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:32:43 PDT" name="createContactWithvalidDept" finished-at="2025-08-03T23:33:03 PDT" duration-ms="20419" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithvalidDept -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:51 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:18:51 PDT" duration-ms="345" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:33:03 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:33:03 PDT" duration-ms="358" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:51 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:18:58 PDT" duration-ms="7049" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:33:03 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:33:10 PDT" duration-ms="7027" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -407,15 +407,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="createContactWithvalidEmailFormat()[pri:16, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:18:58 PDT" name="createContactWithvalidEmailFormat" finished-at="2025-08-03T19:19:17 PDT" duration-ms="19200" status="PASS">
+        <test-method signature="createContactWithvalidEmailFormat()[pri:16, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:33:10 PDT" name="createContactWithvalidEmailFormat" finished-at="2025-08-03T23:33:31 PDT" duration-ms="20100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithvalidEmailFormat -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:19:17 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:19:18 PDT" duration-ms="324" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:33:31 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:33:31 PDT" duration-ms="334" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:19:18 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:19:26 PDT" duration-ms="8417" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:33:31 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:33:41 PDT" duration-ms="10123" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -431,15 +431,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="createContactWithvalidMobile()[pri:17, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:19:26 PDT" name="createContactWithvalidMobile" finished-at="2025-08-03T19:19:44 PDT" duration-ms="17595" status="PASS">
+        <test-method signature="createContactWithvalidMobile()[pri:17, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:33:41 PDT" name="createContactWithvalidMobile" finished-at="2025-08-03T23:33:59 PDT" duration-ms="18063" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithvalidMobile -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:19:44 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:19:44 PDT" duration-ms="319" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:33:59 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:33:59 PDT" duration-ms="346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:19:44 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:19:51 PDT" duration-ms="6577" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:33:59 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:34:07 PDT" duration-ms="7237" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -455,15 +455,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="createContactWithvalidOffice()[pri:18, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:19:51 PDT" name="createContactWithvalidOffice" finished-at="2025-08-03T19:20:10 PDT" duration-ms="19259" status="PASS">
+        <test-method signature="createContactWithvalidOffice()[pri:18, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:34:07 PDT" name="createContactWithvalidOffice" finished-at="2025-08-03T23:34:27 PDT" duration-ms="19966" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithvalidOffice -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:20:10 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:20:10 PDT" duration-ms="272" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:34:27 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:34:27 PDT" duration-ms="244" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:20:10 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:20:16 PDT" duration-ms="6002" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:34:27 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:34:34 PDT" duration-ms="7348" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -479,15 +479,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="createContactWithAllFieldsBlank()[pri:19, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:20:16 PDT" name="createContactWithAllFieldsBlank" finished-at="2025-08-03T19:20:38 PDT" duration-ms="21722" status="PASS">
+        <test-method signature="createContactWithAllFieldsBlank()[pri:19, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:34:34 PDT" name="createContactWithAllFieldsBlank" finished-at="2025-08-03T23:34:56 PDT" duration-ms="21981" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactWithAllFieldsBlank -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:20:38 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:20:38 PDT" duration-ms="475" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:34:56 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:34:57 PDT" duration-ms="352" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->
-        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:20:38 PDT" name="setUpBeforeClass" finished-at="2025-08-03T19:20:45 PDT" duration-ms="7021" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:34:57 PDT" name="setUpBeforeClass" finished-at="2025-08-03T23:35:04 PDT" duration-ms="7327" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -503,7 +503,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="verifySaveAndCancelButtons()[pri:20, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:20:45 PDT" name="verifySaveAndCancelButtons" finished-at="2025-08-03T19:20:52 PDT" duration-ms="6857" status="FAIL">
+        <test-method signature="verifySaveAndCancelButtons()[pri:20, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:35:04 PDT" name="verifySaveAndCancelButtons" finished-at="2025-08-03T23:35:11 PDT" duration-ms="6963" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Save and/or Cancel buttons are missing]]>
@@ -546,7 +546,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySaveAndCancelButtons -->
-        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@5158b42f]" started-at="2025-08-03T19:20:52 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T19:20:53 PDT" duration-ms="286" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterTestMethod()[pri:0, instance:com.group3.CRMtests.ContactsTest@7b9a4292]" started-at="2025-08-03T23:35:11 PDT" name="tearDownAfterTestMethod" finished-at="2025-08-03T23:35:11 PDT" duration-ms="220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterTestMethod -->

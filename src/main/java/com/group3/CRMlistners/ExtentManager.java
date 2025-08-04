@@ -17,6 +17,7 @@ public class ExtentManager{
     private static ExtentReports extent;
 
     // Thread-safe ExtentTest storage
+    //test log holds ExtentTest instance for currently running testmethod, running in parallel
     private static final ThreadLocal<ExtentTest> testlog = new ThreadLocal<>();
 
     static Date currentDate = new Date();
