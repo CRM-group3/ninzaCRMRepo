@@ -10,7 +10,6 @@
 
     <test name="AddProductTest">
 
-   
 
  
 
@@ -19,7 +18,10 @@
             <class name="com.group3.CRMtests.AddProductTest" />
 
    
-  
+    <test name="opportunityTests">
+
+        <classes>
+            <class name="com.group3.CRMtests.OpportunityTest" />
 
         </classes>
     </test>

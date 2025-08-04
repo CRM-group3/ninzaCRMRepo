@@ -14,7 +14,11 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentManager{
 
+
+	//private static ExtentReports extent;
+
     private static ExtentReports extent;
+
 
     // Thread-safe ExtentTest storage
 
@@ -60,7 +64,7 @@ public class ExtentManager{
         }
     }
 
- 
+
 
     public static void setTest(ExtentTest test) {
         testlog.set(test);
@@ -69,6 +73,7 @@ public class ExtentManager{
     public static ExtentTest getTest() {
         return testlog.get();
     }
+
 
     public static void logTestInfo(String text) {
         System.out.println("ObjectLogger-> " + testlog.get());
@@ -104,4 +109,15 @@ public class ExtentManager{
             extent.flush();
         }
     }
+
+
+
+
 }
+
+
+
+
+
+
+

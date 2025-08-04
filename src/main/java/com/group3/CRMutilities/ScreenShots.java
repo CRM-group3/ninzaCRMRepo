@@ -13,6 +13,35 @@ import org.openqa.selenium.WebDriver;
 public class ScreenShots {
 
 
+//	 public String takescreenshot(WebDriver driver) {
+//	        // Take screenshot object
+//	        TakesScreenshot screenshot = ((TakesScreenshot) driver);
+//
+//	        // Store this object in a file object
+//	        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+//
+//	        // Timestamp for unique filename
+//	        Date current = new Date();
+//	        String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(current);
+//
+//	        // File path
+//	        String userDir = System.getProperty("user.dir");
+//	        String fileSeparator = System.getProperty("file.separator");
+//	        String filepath = userDir + fileSeparator + "screenshots" + fileSeparator + "NinzaCRM_" + timestamp + ".jpeg";
+//
+//	        // Destination file
+//	        File destFile = new File(filepath);
+//
+//	        // Copy source file to destination
+//	        try {
+//	            FileUtils.copyFile(srcFile, destFile);
+//	        } catch (IOException e) {
+//	            e.printStackTrace();
+//	        }
+
+
+
+
     public String takescreenshot(WebDriver driver) {
         // Take screenshot object
         TakesScreenshot screenshot = ((TakesScreenshot) driver);
@@ -32,6 +61,7 @@ public class ScreenShots {
         // Destination file
         File destFile = new File(filepath);
 
+
         // Copy source file to destination
         try {
             FileUtils.copyFile(srcFile, destFile);
@@ -41,6 +71,7 @@ public class ScreenShots {
 
         return filepath; // ✅ Return the screenshot path
     }
+
 
 
 	
@@ -74,4 +105,12 @@ public class ScreenShots {
 //	}
 
 
+
+
+
 }
+
+
+
+
+

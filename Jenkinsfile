@@ -15,15 +15,25 @@ pipeline {
         stage('Build & Test') {
             steps {
                 // This runs TestNG tests using your root-level testng.xml
-<<<<<<< HEAD
 
-               
+
+
+                sh 'mvn clean test -DsuiteXmlFile=leadtests.xml'
+
+                sh 'mvn clean test -DsuiteXmlFile=campaign_testng.xml'
+
 
                 sh 'mvn clean test -DsuiteXmlFile=testng_addProduct.xml'
 
-=======
+
+
                 sh 'mvn clean test -DsuiteXmlFile=contacts.xml'
->>>>>>> sowmya
+
+
+                sh 'mvn clean test -DsuiteXmlFile=opportunitytests.xml'
+
+
+
             }
         }
     }
