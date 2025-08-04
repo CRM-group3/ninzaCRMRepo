@@ -15,12 +15,13 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class ExtentManager{
 
 
-	private static ExtentReports extent;
+	//private static ExtentReports extent;
 
     private static ExtentReports extent;
 
 
     // Thread-safe ExtentTest storage
+
     private static final ThreadLocal<ExtentTest> testlog = new ThreadLocal<>();
 
     static Date currentDate = new Date();
@@ -64,7 +65,6 @@ public class ExtentManager{
     }
 
 
-    // ---------- Logging Methods ----------
 
     public static void setTest(ExtentTest test) {
         testlog.set(test);
@@ -111,10 +111,13 @@ public class ExtentManager{
     }
 
 
-}
-
-
 
 
 }
+
+
+
+
+
+
 

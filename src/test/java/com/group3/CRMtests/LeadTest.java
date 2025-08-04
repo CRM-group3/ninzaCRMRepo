@@ -15,14 +15,30 @@ import org.testng.annotations.Test;
 import com.group3.CRMbasics.BaseTest;
 import com.group3.CRMlistners.ExtentManager;
 import com.group3.CRMlogs.Logs;
+
+import com.group3.CRMutilities.PropertiesFile;
+import com.group3.CRMutilities.ScreenShots;
+
+
 import com.group3.CRMutilities.Excel;
+
 import com.group3.CRMpages.LeadPage;
 
 
+
 public class LeadTest extends BaseTest{
+	WebDriver driver;
+	PropertiesFile prop;
+	ScreenShots screensht = new ScreenShots();
 	
+
+
+	
+	public int openLeadsPage() throws InterruptedException //returns 0 if successful and 1 if not
+
 	@Test
 	public void openLeadsPageTest() //returns 0 if successful and 1 if not
+
 	{
 		
 		ExtentManager.logTestInfo("Opening Lead Page");
@@ -280,3 +296,12 @@ public class LeadTest extends BaseTest{
 
 	
 }
+
+	@Test
+	public void test() {
+		System.out.println("I am in a test");
+	}
+	
+		
+}
+

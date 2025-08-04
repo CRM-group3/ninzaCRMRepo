@@ -22,7 +22,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 
 public class BaseTest {
 
-    public static WebDriver driver;
+	public static WebDriver driver;
     public static BasePage basepage;
     public PropertiesFile prop = new PropertiesFile();
 

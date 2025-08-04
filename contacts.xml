@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Automation">
+  <listeners>
+    <listener class-name="com.group3.CRMlistners.TestListner" />
+  </listeners>
+  <test name="ContactsTest">
+    <classes>
+      <class name="com.group3.CRMtests.ContactsTest" />
+    </classes>
+  </test>
+</suite>

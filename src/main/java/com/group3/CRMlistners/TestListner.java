@@ -14,6 +14,7 @@ public class TestListner extends BaseTest implements ITestListener {
 	ScreenShots ss = new ScreenShots();
 
 
+
 	public void onStart(ITestContext context) {
 		System.out.println("*** Test Suite " + context.getName() + " started ***");
 		Logs.info("*** Test Suite " + context.getName() + " started ***");
@@ -39,6 +40,7 @@ public class TestListner extends BaseTest implements ITestListener {
 	}
 
 	public void onTestFailure(ITestResult result) {
+
 	    String testName = result.getMethod().getMethodName();
 	    System.out.println("*** Test " + testName + " failed...");
 	    Logs.error("*** Test " + testName + " failed...");
@@ -63,6 +65,7 @@ public class TestListner extends BaseTest implements ITestListener {
 	        Logs.error("Failed to capture or attach screenshot: " + e.getMessage());
 	    }
 	}
+
 		
 	
 

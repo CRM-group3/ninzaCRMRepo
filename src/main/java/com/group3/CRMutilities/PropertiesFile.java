@@ -25,7 +25,7 @@ public class PropertiesFile {
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
+			} 
 			
 			Properties prop = new Properties();
 			try {
