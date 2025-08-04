@@ -2,6 +2,7 @@ package com.group3.CRMbasics;
 import com.google.common.io.Files;
 import static org.testng.Assert.assertEquals;
 import com.group3.CRMlogs.Logs;
+import com.group3.CRMutilities.ScreenShots;
 import com.group3.CRMlistners.ExtentTestManager;
 import com.group3.CRMlistners.TestListner;
 import com.group3.CRMlistners.ExtentManager;
@@ -10,6 +11,8 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
