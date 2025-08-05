@@ -39,7 +39,7 @@
 
 
 						
-						<suiteXmlFiles>leadstests1.xml</suiteXmlFiles>
+						<suiteXmlFiles>leadtests1.xml</suiteXmlFiles>
 
 						<suiteXmlFiles>contacts.xml</suiteXmlFiles>
 
