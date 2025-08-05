@@ -3,7 +3,7 @@
   <suite-files>
     <suite-file path="testng_addProduct.xml"/>
     <suite-file path="opportunitytests.xml"/>
-    <suite-file path="leadtests.xml"/>
+    <suite-file path="leadtests1.xml"/>
     <suite-file path="contacts.xml"/>
     <suite-file path="campaign_testng.xml"/>
   </suite-files>
