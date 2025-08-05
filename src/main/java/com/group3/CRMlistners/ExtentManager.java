@@ -27,7 +27,8 @@ public class ExtentManager{
     static Date currentDate = new Date();
     static String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(currentDate);
 
-    private static final String reportFileName = "NinzaCRM_Report_" + timestamp + ".html";
+    //private static final String reportFileName = "NinzaCRM_Report_" + timestamp + ".html";
+    private static final String reportFileName = "report.html";
     private static final String fileSeparator = System.getProperty("file.separator");
     private static final String reportDir = System.getProperty("user.dir") + fileSeparator + "ExtentReport";
     private static final String reportPath = reportDir + fileSeparator + reportFileName;
