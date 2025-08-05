@@ -46,6 +46,19 @@ public class BaseTest {
             driver = null;
         }
     }
+
+   @BeforeSuite
+    public void startExtentReport() {
+        ExtentManager.getInstance(); // ✅ Initialize only once
+    }
+
+    @AfterSuite
+    public void flushExtentReport() {
+        ExtentManager.flushReports(); // ✅ Flush once after all tests
+    }
+
+
+	
     
     @Parameters({ "browser" })
     @BeforeMethod
