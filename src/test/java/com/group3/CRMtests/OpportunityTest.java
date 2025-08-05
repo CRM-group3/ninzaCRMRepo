@@ -19,44 +19,44 @@ import com.group3.CRMpages.OpportunityPage;
 public class OpportunityTest extends BaseTest{
 
 	
-	
-	OpportunityPage oppo;
-	@Test public void opportunity() throws InterruptedException 
-	{
-	 ExtentManager.logTestInfo("Opening opportunity Page"); 
-	Logs.info("OPening opportunity Page"); 
-	oppo=new OpportunityPage(driver); 
-	basepage.waitForElement(oppo.opportunity, Duration.ofSeconds(2000)); 
-	oppo.clickOpportunity(); 
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
-	WebElement header = wait.until(ExpectedConditions .visibilityOfElementLocated(By.xpath("//h1[contains(text(),'Opportunities')]"))); 
-	Assert.assertTrue(driver.getCurrentUrl().contains("/opportunities"), "Failed to navigate to Opportunities page"); 
-	
-	}
-	
-	@Test
-	public void createoppo() throws InterruptedException
-	{
-		
-		oppo=new OpportunityPage(driver);
-		Thread.sleep(2000);
-		oppo.clickOpportunity();
-		oppo.createopportunity();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-	       WebElement header = wait.until(ExpectedConditions
-	         .visibilityOfElementLocated(By.xpath("//h1[contains(text(),'Opportunities')]")));
-	   
-	   Assert.assertTrue(driver.getCurrentUrl().contains("/opportunities"),
-		        "Failed to navigate to Opportunities page");
-	   
-	   driverClose();
-	   
-	}
-	
-	@Test
-	public void oppoIdAutogeneration() throws InterruptedException
-	{
+//	
+//	OpportunityPage oppo;
+//	@Test public void opportunity() throws InterruptedException 
+//	{
+//	 ExtentManager.logTestInfo("Opening opportunity Page"); 
+//	Logs.info("OPening opportunity Page"); 
+//	oppo=new OpportunityPage(driver); 
+//	basepage.waitForElement(oppo.opportunity, Duration.ofSeconds(2000)); 
+//	oppo.clickOpportunity(); 
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
+//	WebElement header = wait.until(ExpectedConditions .visibilityOfElementLocated(By.xpath("//h1[contains(text(),'Opportunities')]"))); 
+//	Assert.assertTrue(driver.getCurrentUrl().contains("/opportunities"), "Failed to navigate to Opportunities page"); 
+//	
+//	}
+//	
+//	@Test
+//	public void createoppo() throws InterruptedException
+//	{
+//		
+//		oppo=new OpportunityPage(driver);
+//		Thread.sleep(2000);
+//		oppo.clickOpportunity();
+//		oppo.createopportunity();
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//
+//	       WebElement header = wait.until(ExpectedConditions
+//	         .visibilityOfElementLocated(By.xpath("//h1[contains(text(),'Opportunities')]")));
+//	   
+//	   Assert.assertTrue(driver.getCurrentUrl().contains("/opportunities"),
+//		        "Failed to navigate to Opportunities page");
+//	   
+//	   driverClose();
+//	   
+//	}
+//	
+//	@Test
+//	public void oppoIdAutogeneration() throws InterruptedException
+//	{
 
 	
 	

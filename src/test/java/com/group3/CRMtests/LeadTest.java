@@ -27,14 +27,14 @@ import com.group3.CRMpages.LeadPage;
 
 
 public class LeadTest extends BaseTest{
-	WebDriver driver;
+	//WebDriver driver;
 	PropertiesFile prop;
 	ScreenShots screensht = new ScreenShots();
 	
 
 
 	
-	public int openLeadsPage() throws InterruptedException //returns 0 if successful and 1 if not
+	//public int openLeadsPage() throws InterruptedException //returns 0 if successful and 1 if not
 
 	@Test
 	public void openLeadsPageTest() //returns 0 if successful and 1 if not
@@ -286,22 +286,15 @@ public class LeadTest extends BaseTest{
 	    
 	}
 	
+}	
 	
-	    
 
-	    
-	    
-	
-		
 
-	
-}
-
-	@Test
-	public void test() {
-		System.out.println("I am in a test");
-	}
-	
-		
-}
+//	@Test
+//	public void test() {
+//		System.out.println("I am in a test");
+//	}
+//	
+//		
+//}
 

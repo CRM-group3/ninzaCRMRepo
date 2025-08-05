@@ -23,58 +23,58 @@ public class OpportunityPage extends BasePage{
 
 	}
 
-	public @FindBy(xpath="//a[@class='nav-link' and text()='Opportunities']")
-	WebElement opportunity;
-	
-	public @FindBy(xpath="//span[contains(text(),'Create Opportunity')]")
-	WebElement createoppo;
-	
-	public @FindBy(xpath="//input[@value='Auto Generated']")
-	WebElement oppoid;
-	
-	public @FindBy(xpath="//input[@name='opportunityName']")
-	WebElement opponame;
-	
-	public @FindBy(xpath="//button[@type='submit']")
-	WebElement submit;
-		
-	public @FindBy(xpath="//input[@name='amount']")
-	WebElement amount;
-	
-	public @FindBy(xpath="//input[@name='businessType']")
-	WebElement businesstype;
-	
-	public @FindBy(xpath="//input[@name='nextStep']")
-	WebElement nextstep;
-	
-	public @FindBy(xpath="//input[@name='salesStage']")
-	WebElement salesstage;
-	
-	public void clickOpportunity() throws InterruptedException
-	{
-		Thread.sleep(2000);
-		opportunity.click();
-		
-	}
-	
-	public void createopportunity()
-	{
-		createoppo.click();
-	}
-	
-	public void checkoppoid()
-	{
-		
-		 String actualValue = oppoid.getAttribute("value");  
-	        System.out.println("Opportunity ID Value: " + actualValue);
-	        Assert.assertEquals(actualValue, "Auto Generated", 
-	                "Opportunity ID is not auto-generated as expected.");
-	}
-
-
-		
-	}
-	
+//	public @FindBy(xpath="//a[@class='nav-link' and text()='Opportunities']")
+//	WebElement opportunity;
+//	
+//	public @FindBy(xpath="//span[contains(text(),'Create Opportunity')]")
+//	WebElement createoppo;
+//	
+//	public @FindBy(xpath="//input[@value='Auto Generated']")
+//	WebElement oppoid;
+//	
+//	public @FindBy(xpath="//input[@name='opportunityName']")
+//	WebElement opponame;
+//	
+//	public @FindBy(xpath="//button[@type='submit']")
+//	WebElement submit;
+//		
+//	public @FindBy(xpath="//input[@name='amount']")
+//	WebElement amount;
+//	
+//	public @FindBy(xpath="//input[@name='businessType']")
+//	WebElement businesstype;
+//	
+//	public @FindBy(xpath="//input[@name='nextStep']")
+//	WebElement nextstep;
+//	
+//	public @FindBy(xpath="//input[@name='salesStage']")
+//	WebElement salesstage;
+//	
+//	public void clickOpportunity() throws InterruptedException
+//	{
+//		Thread.sleep(2000);
+//		opportunity.click();
+//		
+//	}
+//	
+//	public void createopportunity()
+//	{
+//		createoppo.click();
+//	}
+//	
+//	public void checkoppoid()
+//	{
+//		
+//		 String actualValue = oppoid.getAttribute("value");  
+//	        System.out.println("Opportunity ID Value: " + actualValue);
+//	        Assert.assertEquals(actualValue, "Auto Generated", 
+//	                "Opportunity ID is not auto-generated as expected.");
+//	}
+//
+//
+//		
+//	}
+//	
 	public @FindBy(xpath="//a[@class='nav-link' and text()='Opportunities']")
 	
 	WebElement opportunity;
@@ -195,7 +195,7 @@ public class OpportunityPage extends BasePage{
                 "Error message");
 	}
 
-}
+
 
 
 
