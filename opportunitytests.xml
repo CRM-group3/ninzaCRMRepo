@@ -4,20 +4,8 @@
 <suite name="Automation">
     <listeners>
         <listener class-name="com.group3.CRMlistners.TestListner"></listener>
-    </listeners>
-    
+    </listeners>    
 
-
-    <test name="AddProductTest">
-
-
- 
-
-
-        <classes>
-            <class name="com.group3.CRMtests.AddProductTest" />
-
-   
     <test name="opportunityTests">
 
         <classes>
