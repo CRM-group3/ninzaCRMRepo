@@ -39,7 +39,7 @@
 
 
 						
-						<suiteXmlFiles>testng_addProduct.xml</suiteXmlFiles>
+						<suiteXmlFiles>leadstest1.xml</suiteXmlFiles>
 
 						<suiteXmlFiles>contacts.xml</suiteXmlFiles>
 
