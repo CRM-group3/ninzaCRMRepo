@@ -36,9 +36,10 @@
 				<version>3.3.0</version>
 				<configuration>
 					<suiteXmlFiles>
-
-
-
+						<suiteXmlFiles>leadstests1.xml</suiteXmlFiles>
+						<suiteXmlFiles>contacts.xml</suiteXmlFiles>
+						<suiteXmlFile>campaign_testng.xml</suiteXmlFile>		
+						<suiteXmlFiles>testng_addProduct.xml</suiteXmlFiles>
 						<suiteXmlFile>opportunitytests.xml</suiteXmlFile>
 
 					</suiteXmlFiles>
